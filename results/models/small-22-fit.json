@@ -1,0 +1,23 @@
+{
+  "model_id": "small-22",
+  "seed": 22,
+  "size": "small",
+  "parameters": 337,
+  "fit_seconds": 0.4942867079516873,
+  "iterations": 516,
+  "training_loss": 2.8953852132315135e-06,
+  "optimizer": {
+    "solver": "lbfgs",
+    "activation": "tanh",
+    "alpha": 1e-06,
+    "max_iter": 800,
+    "max_fun": 2000,
+    "tol": 1e-07
+  },
+  "converged": true,
+  "warnings": [],
+  "potential_rmse": 0.0005365632079531626,
+  "acceleration_rmse": 0.0035951879917009845,
+  "potential_absolute_error_95": 0.00102104984523083,
+  "validation_count": 1024
+}

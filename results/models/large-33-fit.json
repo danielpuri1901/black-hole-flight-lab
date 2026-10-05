@@ -1,0 +1,23 @@
+{
+  "model_id": "large-33",
+  "seed": 33,
+  "size": "large",
+  "parameters": 4417,
+  "fit_seconds": 1.401101249968633,
+  "iterations": 397,
+  "training_loss": 4.075950594370959e-06,
+  "optimizer": {
+    "solver": "lbfgs",
+    "activation": "tanh",
+    "alpha": 1e-06,
+    "max_iter": 800,
+    "max_fun": 2000,
+    "tol": 1e-07
+  },
+  "converged": true,
+  "warnings": [],
+  "potential_rmse": 0.0006197219541183279,
+  "acceleration_rmse": 0.003330739686624348,
+  "potential_absolute_error_95": 0.0010657469618061465,
+  "validation_count": 1024
+}

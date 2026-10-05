@@ -1,0 +1,31 @@
+{
+  "verified_at_utc": "2026-10-04T19:31:52.183090+00:00",
+  "verification": "Independent read-only AWS API checks after remote run",
+  "cloudformation_status": "DELETE_COMPLETE",
+  "stack_absent_by_name": true,
+  "instance_status": "terminated",
+  "instance_block_device_mappings_empty": true,
+  "volumes_attached_to_instance": 0,
+  "instance_profile_detached": true,
+  "temporary_role_deleted": true,
+  "temporary_instance_profile_deleted": true,
+  "temporary_security_group_deleted": true,
+  "all_stack_resources_delete_complete": true,
+  "cleanup_passed": true,
+  "limitations": [
+    "The root volume ID was not recorded; no attached volumes and no matching-size encrypted gp3 volumes created during the run window remain."
+  ],
+  "no_matching_volumes_in_creation_window": true,
+  "volume_creation_window_utc": {
+    "start": "2026-10-04T19:21:24.721822+00:00",
+    "end": "2026-10-04T19:31:31.873673+00:00"
+  },
+  "volume_search_criteria": {
+    "region": "us-east-1",
+    "size_gib": 12,
+    "volume_type": "gp3",
+    "encrypted": true,
+    "state_filter": "all states"
+  },
+  "matching_volume_count": 0
+}

@@ -1,0 +1,125 @@
+{
+  "region": "us-east-1",
+  "instance_type": "c7i.xlarge",
+  "source_file_sha256": {
+    "train_pilot.py": "391bddc260a12ca9bfa8a7fc08b034de90a8c582a13f00eb7b7025a2ca9beb0c",
+    "pilot_model.py": "0aeddd034dbba7979f3a3b5f723fa454176819187fa23c2d8e130758b638d4de"
+  },
+  "data_file_sha256": "c1bb1bef16c2f0c459d3bcb020131ed32329e928237cc54dc2a33bd310aaba14",
+  "training_options": [
+    "--seed",
+    "1729",
+    "--ae-epochs",
+    "200",
+    "--diffusion-steps",
+    "4000"
+  ],
+  "extra_seeds": [
+    1730,
+    1731
+  ],
+  "training_returncode": 0,
+  "artifact_files": [
+    {
+      "name": "install.log",
+      "bytes": 18207,
+      "sha256": "d45493d93a4f51eec88dae2f1ad34987864b7d868e83436799aed1c9cc263378"
+    },
+    {
+      "name": "model.json",
+      "bytes": 4315,
+      "sha256": "d2a663d702b0f31ecad2620495fc2b54c04efb1e951859cf2dc1090afc3e0dd8"
+    },
+    {
+      "name": "parity.json",
+      "bytes": 341,
+      "sha256": "089510a43371b8aca53d623fde74f219217dfbf9a84995a5a947e5b303e0dd4f"
+    },
+    {
+      "name": "python-packages.txt",
+      "bytes": 1492,
+      "sha256": "aa1acf71081f045b6f508497ca8fed44410b791c426f32c97e5a67ecceeeafdf"
+    },
+    {
+      "name": "seed-1730/model.json",
+      "bytes": 4328,
+      "sha256": "1e578be071f66eaba1644dd858b4af23858666ea1d0ea79d94c66b2d8e6dba86"
+    },
+    {
+      "name": "seed-1730/parity.json",
+      "bytes": 343,
+      "sha256": "561be6f0a33eff0a0b07a51726108d8f06b745d4349f3071e32ccfa8c0584e3e"
+    },
+    {
+      "name": "seed-1730/training-log.json",
+      "bytes": 14234,
+      "sha256": "b087e23bf733f47a24845572ce418a6e5f6ee1efa7df9b83583dddef3e4101b3"
+    },
+    {
+      "name": "seed-1730/weights.npz",
+      "bytes": 101036,
+      "sha256": "70f4c75828be49ba439aea472beb9e3b46f032a68ce7c6189f043946027b1ca3"
+    },
+    {
+      "name": "seed-1731/model.json",
+      "bytes": 4319,
+      "sha256": "aac0c01122b37f37b9a89b053e1a0af9c561a61b0d90a5a7399aa8560590332f"
+    },
+    {
+      "name": "seed-1731/parity.json",
+      "bytes": 343,
+      "sha256": "0dd6932df60ba1ab72dc331e4753afeaa8c073a9c8218ae4fb346313e9f67061"
+    },
+    {
+      "name": "seed-1731/training-log.json",
+      "bytes": 15387,
+      "sha256": "cd020752042f993f7b43ae7b907cd4a541569737a583f42da3bc701fb9393484"
+    },
+    {
+      "name": "seed-1731/weights.npz",
+      "bytes": 101026,
+      "sha256": "371f62313ccc1b6b47dc92e429cce38da9c1bfa98d6826308937b5c4fb62fb49"
+    },
+    {
+      "name": "torch-version.txt",
+      "bytes": 11,
+      "sha256": "7c5e223da2b46dac423b4d617ca68fba8cbcaa70dee059f289e67c25f3a54e5a"
+    },
+    {
+      "name": "training-log.json",
+      "bytes": 13925,
+      "sha256": "82cd4622283db579e12b0dda455fa178ac20ca340c216b9ce58eb8231db8f15a"
+    },
+    {
+      "name": "training.log",
+      "bytes": 39115,
+      "sha256": "ae1f7f1d8865ae5304a7c262c92770085a342ad88aecba71bdbe31b441013000"
+    },
+    {
+      "name": "ubuntu-packages.txt",
+      "bytes": 19818,
+      "sha256": "b71f129aa10bf5ce1f7863df207e673390e4d2004281d79472c9e960f48d93ac"
+    },
+    {
+      "name": "weights.npz",
+      "bytes": 101017,
+      "sha256": "f0e554b39b0536862d2238e5bf004754d9f2e20ded28d95daecafae0dd9d99ff"
+    }
+  ],
+  "cleanup": "DELETE_COMPLETE",
+  "cleanup_checks": {
+    "stack_deleted": true,
+    "instance_terminated": true,
+    "no_attached_root_volume": true,
+    "root_volumes_deleted": true,
+    "role_deleted": true,
+    "profile_deleted": true,
+    "securitygroup_deleted": true,
+    "artifacts_deleted": true,
+    "verified_at_utc": "2026-10-04T20:13:08.897299+00:00",
+    "passed": true
+  },
+  "elapsed_seconds": 381.38658216700424,
+  "estimated_infrastructure_usd": 0.019672320451159915,
+  "cost_note": "Estimate from elapsed time; excludes S3, data transfer, and taxes."
+}

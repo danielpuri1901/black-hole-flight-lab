@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Can AI escape a black hole? | Research notes</title>
+<style>
+:root{color-scheme:light;--ink:#252b33;--muted:#657080;--line:#dce0e5;--blue:#24628b}
+*{box-sizing:border-box}body{margin:0;background:#fafbfc;color:var(--ink);font:19px/1.75 Georgia,'Times New Roman',serif}a{color:var(--blue);text-underline-offset:.2em}a:focus-visible{outline:3px solid #bc7135;outline-offset:4px}header{background:#080914;color:#f2efea;padding:22px max(5vw,24px);display:flex;justify-content:space-between;font:14px/1.5 -apple-system,BlinkMacSystemFont,sans-serif}header a{color:#f2efea}.layout{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:230px minmax(0,820px);gap:64px;padding:70px 32px 110px}aside{font:12px/1.6 -apple-system,BlinkMacSystemFont,sans-serif}aside .toc{position:sticky;top:30px;max-height:90vh;overflow:auto}aside ul{padding:0;list-style:none}aside li{margin:10px 0}aside li li{margin-left:0}aside>div>ul>li>a{font-weight:600}aside a{text-decoration:none;color:var(--muted)}aside a:hover{color:var(--blue)}article{min-width:0}h1{text-wrap:balance;font-weight:400;font-size:clamp(54px,6vw,88px);line-height:1.04;letter-spacing:-.055em;margin:0 0 24px}h2{font-weight:400;font-size:32px;line-height:1.25;letter-spacing:-.025em;margin:58px 0 22px;scroll-margin-top:28px}h1+h2{margin-top:0;font-size:26px;color:var(--muted)}p{margin:0 0 24px}strong{font-weight:700}img{width:100%;height:auto;border-radius:3px;display:block}p:has(>img){margin:36px 0 12px}em{font-size:16px;color:var(--muted)}pre{background:#101622;color:#e4ebf2;padding:24px;overflow:auto;font:13px/1.8 ui-monospace,Menlo,monospace;border-radius:4px}code{font: .83em ui-monospace,Menlo,monospace;overflow-wrap:anywhere}pre code{font:inherit}table{font:13px/1.55 -apple-system,BlinkMacSystemFont,sans-serif;border-collapse:collapse;width:100%;margin:28px 0}th,td{text-align:left;border-bottom:1px solid var(--line);padding:13px 10px;vertical-align:top}th{color:#3a495b;font-weight:600;background:#eef1f4}td:first-child{font-weight:500}blockquote{margin:28px 0;border-left:3px solid #bc7135;padding-left:22px}footer{border-top:1px solid var(--line);padding:30px;text-align:center;font:13px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--muted)}
+@media(max-width:1000px){.layout{display:block;max-width:840px;padding:42px 24px 70px}aside{display:none}}
+@media(max-width:600px){body{font-size:17px}.layout{padding:35px 20px 60px}h2{font-size:28px}table{font-size:11px;display:block;overflow:auto}pre{font-size:11px;padding:15px}header{font-size:12px;gap:18px}}
+@media print{header,aside,footer{display:none}.layout{display:block;padding:0}body{font-size:11pt;background:white}h1{font-size:36pt}h2{font-size:20pt;page-break-after:avoid}pre{white-space:pre-wrap;background:#eee;color:#111}a{color:inherit}img,table{break-inside:avoid}}
+</style></head><body><header><span>Black Hole Flight Lab / Research notes</span><a href="/pilot">Enter the observatory</a></header><div class="layout"><aside aria-label="Article contents"><div class="toc">
+<ul>
+<li><a href="#can-ai-escape-a-black-hole">Can AI escape a black hole?</a><ul>
+<li><a href="#a-diffusion-pilot-near-the-event-horizon-judged-by-relativity">A diffusion pilot near the event horizon, judged by relativity</a></li>
+<li><a href="#from-an-unpowered-predictor-to-a-powered-controller">From an unpowered predictor to a powered controller</a></li>
+<li><a href="#a-powered-flight-model-with-explicit-limits">A powered flight model with explicit limits</a></li>
+<li><a href="#learning-a-distribution-of-burn-plans">Learning a distribution of burn plans</a></li>
+<li><a href="#measured-training-and-export-checks">Measured training and export checks</a></li>
+<li><a href="#feedback-selection-and-comparison">Feedback, selection, and comparison</a></li>
+<li><a href="#checks-before-training">Checks before training</a></li>
+<li><a href="#a-fixed-experiment-and-saved-checkpoints">A fixed experiment and saved checkpoints</a></li>
+<li><a href="#what-happened-in-448-flights">What happened in 448 flights</a></li>
+<li><a href="#one-launch-two-decisions">One launch, two decisions</a></li>
+<li><a href="#supplemental-controls-and-fit-sensitivity">Supplemental controls and fit sensitivity</a></li>
+<li><a href="#what-this-experiment-establishes">What this experiment establishes</a></li>
+<li><a href="#a-temporary-aws-training-job">A temporary AWS training job</a></li>
+<li><a href="#reproduce-the-saved-experiment">Reproduce the saved experiment</a></li>
+<li><a href="#what-the-cockpit-shows">What the cockpit shows</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</aside><article><h1 id="can-ai-escape-a-black-hole">Can AI escape a black hole?</h1>
+<h2 id="a-diffusion-pilot-near-the-event-horizon-judged-by-relativity">A diffusion pilot near the event horizon, judged by relativity</h2>
+<p>Inside the event horizon, escape is impossible in this Schwarzschild model.
+This experiment starts outside it and asks whether a learned pilot can steer away before reaching a safety cutoff.</p>
+<p>A small diffusion transformer learned to propose rocket burns from classical demonstrations.
+On 64 held-out launches, its first proposal escaped in 44 cases.
+Ranking 16 proposals with relativistic equations increased that count to 55, rescuing 11 flights without losing a successful raw flight.
+Classical search escaped in 60 cases.
+A later control using 29 fixed burn plans also escaped in 60 cases, without learned weights.
+The learned controller improved with numerical checking, but these results do not establish that this task needs learning.</p>
+<p><a href="/pilot">Enter the powered cockpit</a> to replay the same launch under both learned controllers or calculate a new flight.
+The experiment combines an action autoencoder, conditional diffusion, a small transformer, and feedback control in a powered Schwarzschild simulator.
+Three model fits ran on temporary AWS compute for an estimated infrastructure cost of about two cents.
+All temporary resources were deleted and checked.</p>
+<p><img alt="Escape counts and 95 percent Wilson intervals for the seven original controllers." src="../results/pilot/success.svg" /></p>
+<p><em>Each panel contains 32 frozen launches.
+The closer-launch panel tests a radius range excluded from training.
+Intervals describe sample uncertainty under binomial assumptions; they are not guarantees for arbitrary flight conditions.</em></p>
+<h2 id="from-an-unpowered-predictor-to-a-powered-controller">From an unpowered predictor to a powered controller</h2>
+<p>The first black-hole experiment asked whether a learned gravitational potential could predict escape correctly.
+Its small neural models could conserve their own energy while giving the wrong escape decision.
+An exact Schwarzschild calculation exposed those errors on fixed-energy, fixed-angular-momentum trajectories.
+That experiment remains separate from the powered pilot described here.
+The earlier rational certificate does not certify thrust commands, arbitrary generated paths, or the new numerical engine.</p>
+<p>The experiment asks a specific control question:
+<strong>Can a learned proposal distribution improve short burn-plan selection on a fixed, fuel-limited Schwarzschild benchmark?</strong>
+The model proposes controls, the physical simulator scores them, and the controller executes one command before observing the next state.
+The model does not predict flight dynamics.
+The contribution is the measured comparison between these controller arrangements.
+The experiment introduces no new learning algorithm or physical law.</p>
+<h2 id="a-powered-flight-model-with-explicit-limits">A powered flight model with explicit limits</h2>
+<p>The ship follows an equatorial timelike trajectory around a nonrotating black hole.
+The engine uses geometric units, <code>G=c=M=1</code>, and the ship's proper time.
+The state is radius <code>r</code>, radial four-velocity component <code>u=dr/dτ</code>, angular momentum <code>L</code>, angle <code>φ</code>, and consumed proper impulse <code>q</code>.
+With <code>f=1−2/r</code>, its instantaneous energy is</p>
+<pre><code>E = sqrt(u² + f(1 + L²/r²)).
+</code></pre>
+<p>Energy and angular momentum change during thrust.
+They are constants only during the unpowered part of a trajectory.</p>
+<p>Each command has two components, radial and tangential, constrained to the unit disk.
+The engine scales this command to a maximum proper acceleration of <code>0.035</code> in the chosen geometric units.
+It constructs the four-acceleration in instantaneous rest axes obtained from the static observer's axes by a rotationless boost.
+This construction satisfies <code>U·A=0</code> and gives the commanded proper acceleration magnitude.
+The axes are defined anew at each state; the model does not evolve spacecraft attitude.
+The covariant force construction and ideal rocket mass law follow <a href="https://arxiv.org/abs/1105.5235">Henriques and Natário's rocket formulation</a>.
+The background metric and connection follow <a href="https://arxiv.org/abs/gr-qc/9712019">Carroll's general relativity notes</a>.
+The reduced equations and implementation checks are recorded in <a href="pilot-physics-report.md">the powered physics report</a>.</p>
+<p>The equations use <code>h=√f</code>, <code>p=L/r</code>, and <code>S=u*a_r+h*p*a_φ</code>, where <code>a_r</code> and <code>a_φ</code> are the scaled proper accelerations.
+The stable reduced system is</p>
+<pre><code>dr/dτ = u
+du/dτ = −1/r² + L²/r³ − 3L²/r⁴ + h*a_r + u*S/(E+h)
+dL/dτ = r*a_φ + L*S/(E+h)
+dφ/dτ = L/r²
+dq/dτ = sqrt(a_r² + a_φ²)
+dE/dτ = S
+</code></pre>
+<p>The implementation derives <code>E</code> from the state rather than integrating an additional energy variable.
+The work identity <code>dE/dτ=S</code> supplies a separate check on that derivative.
+Setting both controls to zero recovers the unpowered equations and preserves energy and angular momentum.
+The <code>E+h</code> denominators avoid an unnecessary subtraction in the boosted force terms.</p>
+<p>The proper-impulse budget is <code>q=0.7</code>.
+An ideal constant exhaust speed of <code>0.7c</code> gives the mass law <code>m/m₀=exp(−q/0.7)</code>.
+This is extreme idealized propulsion, not a human spacecraft engineering model.
+The black-hole mass is unspecified, so absolute acceleration and elapsed seconds depend on the chosen mass scale.</p>
+<p>The numerical mission ends at the safety surface <code>r=2.1</code> or at the escape surface <code>r=20</code>.
+Escape also requires outward motion and <code>E≥1+10⁻⁶</code>, followed by an intended unpowered continuation.
+A safety cutoff does not prove horizon capture or that every possible future maneuver must fail.
+An escape label does not certify the result of arbitrary later thrust.
+Flights still unresolved at the mission deadline remain unresolved.</p>
+<h2 id="learning-a-distribution-of-burn-plans">Learning a distribution of burn plans</h2>
+<p>A classical planner generates the training targets using the powered engine.
+Each target contains 12 two-component commands, with each command held for two units of proper time.
+The 24 control values are the object being compressed and generated.
+The six conditioning values describe radius, radial motion, angular momentum, consumed impulse, instantaneous energy, and inverse radius.
+Angle is omitted because Schwarzschild dynamics are axially symmetric.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Implemented role</th>
+<th>Small-model configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autoencoder</td>
+<td>Compress and reconstruct a burn plan</td>
+<td>24 controls, 64-unit hidden layers, 8 latent values</td>
+</tr>
+<tr>
+<td>Transformer</td>
+<td>Estimate latent noise conditioned on state and diffusion time</td>
+<td>Four latent tokens, width 32, two blocks, two attention heads</td>
+</tr>
+<tr>
+<td>Diffusion process</td>
+<td>Generate different plausible latent plans</td>
+<td>32 cosine-schedule noise levels</td>
+</tr>
+<tr>
+<td>Sampler</td>
+<td>Convert fresh noise into a latent proposal</td>
+<td>16 deterministic DDIM denoising steps</td>
+</tr>
+<tr>
+<td>Decoder</td>
+<td>Return bounded radial and tangential commands</td>
+<td>Unit-disk projection of each command</td>
+</tr>
+</tbody>
+</table>
+<p>These components have distinct jobs.
+The autoencoder reduces the plan representation; it does not discover a new physical state space.
+The transformer models relationships between latent plan components; it is not a learned time-step simulator.
+Diffusion supplies alternative proposals so physical scoring can choose between them.</p>
+<p><a href="https://arxiv.org/abs/2205.09991">Diffuser</a> motivates generation as a planning mechanism.
+<a href="https://arxiv.org/abs/2112.10752">Latent diffusion</a> motivates denoising in a compressed representation.
+<a href="https://arxiv.org/abs/2212.09748">Diffusion Transformers</a> motivate a transformer denoiser, and <a href="https://arxiv.org/abs/2010.02502">DDIM</a> supplies the sampling construction.
+Those papers do not establish performance on this black-hole task.
+This implementation uses a small control representation and state conditioning, rather than reproducing their image or trajectory benchmarks.</p>
+<p>The completed teacher dataset contains 2,794 decisions from 80 successful flights.
+Of these, 2,248 decisions belong to training and 546 to validation.
+Only 94 training decisions and 28 validation decisions begin with an active burn above the specified command-norm threshold of <code>0.05</code>.
+The combined active-burn fraction is about 4.37%.
+The training sampler balances active-burn and coast examples, while validation retains its natural distribution.
+This choice aims to prevent a low average reconstruction loss from hiding failure on rare active burns.
+All three saved model files confirm that balanced training was applied.</p>
+<h2 id="measured-training-and-export-checks">Measured training and export checks</h2>
+<p>The fits used seeds 1729, 1730, and 1731 on CPU PyTorch 2.13.0.
+Python 3.12.3, NumPy 1.26.4, two Torch threads, and deterministic Torch algorithms were recorded with the weights.
+Validation selected the autoencoder and diffusion checkpoints independently.
+The diffusion update count refers to optimizer updates; its noise schedule still has 32 levels.</p>
+<table>
+<thead>
+<tr>
+<th>Fit seed</th>
+<th>Selected AE epoch</th>
+<th>Selected diffusion update</th>
+<th>AE validation MSE</th>
+<th>Diffusion noise MSE</th>
+<th>Decoder parity error</th>
+<th>Denoiser parity error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1729</td>
+<td>66</td>
+<td>3,100</td>
+<td><code>7.65×10⁻⁵</code></td>
+<td><code>0.02273</code></td>
+<td><code>1.24×10⁻⁷</code></td>
+<td><code>3.33×10⁻⁶</code></td>
+</tr>
+<tr>
+<td>1730</td>
+<td>78</td>
+<td>3,600</td>
+<td><code>7.29×10⁻⁵</code></td>
+<td><code>0.01352</code></td>
+<td><code>1.57×10⁻⁷</code></td>
+<td><code>2.77×10⁻⁶</code></td>
+</tr>
+<tr>
+<td>1731</td>
+<td>116</td>
+<td>3,800</td>
+<td><code>7.22×10⁻⁵</code></td>
+<td><code>0.01136</code></td>
+<td><code>1.23×10⁻⁷</code></td>
+<td><code>2.47×10⁻⁶</code></td>
+</tr>
+</tbody>
+</table>
+<p>MSE means mean squared error over the specified validation outputs.
+Decoder and denoiser parity errors are maximum absolute differences between PyTorch and the exported NumPy implementations on fixed fixtures.
+All six parity errors were below the specified <code>10⁻⁵</code> tolerance.
+All fits generated finite unit-disk commands and preserved the first proposal when the requested candidate count changed.</p>
+<p>The overall autoencoder error hides a large difference between active burns and coasts.
+For seed 1729, active-burn reconstruction MSE was <code>0.001489</code>, compared with <code>1.46×10⁻⁷</code> on coast examples.
+The diffusion noise MSE was <code>0.2941</code> on active burns and <code>0.00806</code> on coasts.
+Balanced sampling therefore did not remove the harder active-burn prediction problem.
+These losses and implementation checks do not establish successful flight control.
+The saved <a href="../results/pilot/model/model.json">model metadata</a> and <a href="../results/pilot/model/parity.json">parity report</a> contain the exact values.</p>
+<h2 id="feedback-selection-and-comparison">Feedback, selection, and comparison</h2>
+<p>At each decision, the pilot generates candidate plans, executes only the first command, observes the resulting state, and plans again.
+Candidate scoring uses batched RK4 integration through the burn horizon and a subsequent coast.
+Executed flight uses the separate DOP853 integration path.
+The score rewards escape, penalizes impulse expenditure and safety cutoffs, and assigns progress scores to unresolved plans.
+These scoring choices are part of the benchmark specification, not universal definitions of safe control.</p>
+<table>
+<thead>
+<tr>
+<th>Controller</th>
+<th>What it executes</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coast</td>
+<td>Zero thrust</td>
+<td>Unpowered reference</td>
+</tr>
+<tr>
+<td>Radial</td>
+<td>Fixed outward control</td>
+<td>Simple powered reference</td>
+</tr>
+<tr>
+<td>Raw learned</td>
+<td>First of 16 generated plans</td>
+<td>Isolate proposal quality without physical ranking</td>
+</tr>
+<tr>
+<td>Checked learned</td>
+<td>Best physical score among 16 generated plans</td>
+<td>Measure the effect of numerical ranking</td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td>Best among 16 learned plans and 29 fixed plans</td>
+<td>Test a simple classical fallback library</td>
+</tr>
+<tr>
+<td>Random checked</td>
+<td>Best among 16 smooth random plans</td>
+<td>Candidate-count-matched comparison for checked learned</td>
+</tr>
+<tr>
+<td>Classical teacher</td>
+<td>Repeated search with a larger candidate population</td>
+<td>Stronger reference that generated the demonstrations</td>
+</tr>
+</tbody>
+</table>
+<p>The checked controller ranks plans; it does not strictly reject every unsafe proposal.
+If all 16 proposals fail in the numerical rollout, it can choose the least bad one.
+The hybrid controller can also fail when every available plan fails.
+Neither arrangement is a formal safety guard.</p>
+<p>Random checked and checked learned each score 16 candidates.
+The hybrid scores 45 candidates, while the teacher performs a larger, repeated search.
+Comparing their success rates without latency and candidate counts would hide this difference in computation.
+The experiment therefore records decisions, rollout costs, elapsed time, outcomes, and impulse use together.</p>
+<p>Two additional controls were introduced after inspecting the first three nominal test missions.
+Those early runs showed that the original random controller consumed its full fuel budget.
+The added <code>random_with_coast</code> control scores 15 random plans and one explicit coast plan, for 16 candidates total.
+The added <code>fixed_checked</code> control scores only the existing 29 fixed plans.
+These controls test whether missing coast support and a simple fixed library explain an apparent learned advantage.
+They are post hoc diagnostics, not part of the original seven-controller experiment.
+The original controllers, models, dataset, and result files remain preserved, and no model was tuned from these observations.</p>
+<h2 id="checks-before-training">Checks before training</h2>
+<p>An independent reference constructs Christoffel symbols from metric derivatives and integrates the full coordinate equations.
+It does not call the reduced engine's derivative.
+Exterior burns agreed to a maximum state error of <code>9.38×10⁻¹³</code>; a safety-ending burn agreed to <code>3.22×10⁻¹¹</code>.
+These are errors on tested trajectories, not bounds over every control sequence.</p>
+<p>A broader refinement check examined 464 candidate plans at four and eight RK4 substeps.
+It found no outcome disagreements between those resolutions.
+Another 65 comparisons used DOP853 references and included 12 escapes, 44 safety cutoffs, and nine unresolved trajectories.
+The worst state discrepancy near a cutoff fell from about <code>0.00123</code> to <code>9.78×10⁻⁵</code> under refinement.
+Maximum score discrepancy fell from about <code>5.94×10⁻⁷</code> to <code>3.71×10⁻⁸</code>.
+The saved evidence is <a href="../results/pilot/physics-validation.json">physics-validation.json</a>.
+Agreement on these cases does not establish that rankings remain stable arbitrarily close to a decision boundary.</p>
+<p>The earlier AWS GYOTO run supplied a separate engine check for 24 unpowered trajectories at two tolerances.
+All 24 outcomes agreed with the independent Schwarzschild calculation and local numerical integration.
+That result checks the unpowered sector; GYOTO did not validate the new powered thrust implementation.
+The details and conservation errors remain in <a href="gyoto-adapter.md">the GYOTO report</a>.</p>
+<h2 id="a-fixed-experiment-and-saved-checkpoints">A fixed experiment and saved checkpoints</h2>
+<p>The initial benchmark fixes 64 training launches, 16 validation launches, 32 nominal test launches, and 32 stress launches.
+Training and validation contain classical teacher decisions from their respective launches.
+Test and stress launches are excluded from training.
+Train-derived normalization and validation-selected checkpoints are exported with the model.</p>
+<p>The main model uses fit seed 1729 and receives the full seven-controller, 64-mission comparison: 448 flights.
+Two additional fits, seeds 1730 and 1731, provide a bounded sensitivity check.
+Their raw and checked controllers use the first eight nominal and first eight stress missions fixed before evaluation.
+This small secondary check does not estimate performance across all training seeds.
+Mission uncertainty and training-seed uncertainty must remain separate in the report.</p>
+<p>The main benchmark fixes the physics equations, source files, weights, missions, and controller settings before its full evaluation.
+The later controls have their own source seal and explicit post hoc declaration.
+Their results must remain distinguishable from the original 448 flights.
+Local evaluation uses an Apple M2 with eight logical CPUs, two worker processes, and one BLAS thread per worker.
+The computer is shared with other work, so its timings are not an isolated hardware performance benchmark.</p>
+<p>Source hashes, dataset hashes, model hashes, mission definitions, and controller settings seal each evaluation.
+Per-flight files let interrupted evaluation resume without silently accepting a changed experiment.
+The exported NumPy decoder and denoiser matched PyTorch fixtures before held-out inference used those weights.
+First-proposal parity also checks that requesting more candidates does not change the raw controller's first proposal.</p>
+<p>These checkpoints make a long-running experiment inspectable.
+They do not turn empirical results into a Lean proof.
+The exact unpowered checker, powered numerical reference, training validation, and held-out evaluation answer different questions.</p>
+<h2 id="what-happened-in-448-flights">What happened in 448 flights</h2>
+<p>The main comparison uses the same 32 nominal and 32 closer launches for every controller.
+Nominal launch radius is uniform on <code>[8,12]</code>; closer launch radius is uniform on <code>[6,8]</code>.
+Both use energy in <code>[0.995,1.04]</code> and angular momentum in <code>[2.8,4.2]</code>.
+The closer set changes launch radius, rather than changing the physical equations.</p>
+<table>
+<thead>
+<tr>
+<th>Controller</th>
+<th>Nominal escapes</th>
+<th>Closer escapes</th>
+<th>Nominal fuel used</th>
+<th>Closer fuel used</th>
+<th>Nominal / closer decision time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coast</td>
+<td>0/32</td>
+<td>0/32</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>&lt;0.1 / &lt;0.1 ms</td>
+</tr>
+<tr>
+<td>Full outward burn</td>
+<td>14/32</td>
+<td>9/32</td>
+<td>100.0%</td>
+<td>95.7%</td>
+<td>&lt;0.1 / &lt;0.1 ms</td>
+</tr>
+<tr>
+<td>Raw diffusion</td>
+<td>30/32</td>
+<td>14/32</td>
+<td>32.7%</td>
+<td>33.7%</td>
+<td>9.0 / 9.8 ms</td>
+</tr>
+<tr>
+<td>Checked diffusion</td>
+<td>32/32</td>
+<td>23/32</td>
+<td>25.1%</td>
+<td>35.4%</td>
+<td>35.5 / 34.2 ms</td>
+</tr>
+<tr>
+<td>Learned plus fixed fallback</td>
+<td>32/32</td>
+<td>28/32</td>
+<td>23.7%</td>
+<td>37.0%</td>
+<td>105.7 / 97.0 ms</td>
+</tr>
+<tr>
+<td>Checked random</td>
+<td>30/32</td>
+<td>21/32</td>
+<td>97.2%</td>
+<td>82.1%</td>
+<td>57.2 / 57.7 ms</td>
+</tr>
+<tr>
+<td>Classical teacher</td>
+<td>32/32</td>
+<td>28/32</td>
+<td>24.4%</td>
+<td>31.2%</td>
+<td>337.3 / 310.2 ms</td>
+</tr>
+</tbody>
+</table>
+<p>Fuel is mean propellant consumed across all launches, including failed flights.
+A controller that crashes early can use little fuel; read these columns together with success counts.
+Decision time covers planning, including candidate integration where used, but excludes the executed DOP853 flight step and rendering.
+These are observations on the shared Mac, with two evaluation workers and one BLAS thread each.
+Raw diffusion still generates 16 plans and takes the first, so its implementation is not optimized for minimum one-proposal latency.</p>
+<p>Checking rescued two nominal flights and nine closer flights relative to raw diffusion.
+It lost none of the raw controller's successful flights on this sample.
+Nine closer launches still reached the safety cutoff with checking.
+The fallback library recovered five additional closer launches, reaching the same escape count as classical search.
+Matching escape counts does not establish equal fuel efficiency or optimality.</p>
+<p>The 32/32 nominal checked result has a 95% Wilson interval of about 89.3% to 100%.
+For closer launches, checked diffusion reached 71.9%, with an interval of about 54.6% to 84.4%.
+The raw controller reached 43.8%, with an interval of about 28.2% to 60.7%.
+The paired rescue counts carry information that separate intervals omit, because every controller receives the same launch.
+These small fixed samples cannot establish a general mission-risk estimate.</p>
+<p>All learned, checked, hybrid, classical, and random failures reached the safety cutoff.
+Coasting also left two nominal flights unresolved at the deadline.
+The outward-burn controller left eight nominal and 11 closer flights unresolved.
+Unresolved flights count as failures to establish the specified return condition, without claiming eventual capture.
+The exact counts, intervals, and paired outcomes are in <a href="../results/pilot/summary.json">summary.json</a>.
+Per-flight metrics are in <a href="../results/pilot/trials.csv">trials.csv</a>.</p>
+<h2 id="one-launch-two-decisions">One launch, two decisions</h2>
+<p>The cockpit selects the first held-out launch where checking changes failure into escape, searching nominal missions before closer missions.
+This makes it an explanatory example selected by outcome, not a representative random flight.
+The selected launch is nominal mission 8, with initial radius <code>8.19516M</code> and inward radial velocity <code>−0.43020</code>.
+Both controllers receive the same initial state and proposal seed.
+Their subsequent states diverge as they execute different burns.</p>
+<p>The raw controller reaches <code>r=2.1</code> after <code>17.71M</code> of proper time, with 52.0% of its propellant still aboard.
+The checked controller turns around at a sampled minimum radius of <code>3.91201M</code>.
+It reaches the outward escape surface at <code>49.87M</code>, with 46.7% of propellant remaining.
+The checked pilot selects a proposal other than the first on 23 of its 25 decisions.
+Those changes include small coast corrections as well as active burns; the count alone does not measure useful intervention.</p>
+<p><img alt="Radius, remaining propellant, and commanded thrust for the recorded paired launch." src="../results/pilot/paired-flight.svg" /></p>
+<p><em>Both traces use the same relativistic engine.
+The raw flight fails before exhausting its fuel.
+Its failure is therefore a control failure under this policy, not evidence that the launch lacked enough propellant for every possible maneuver.</em></p>
+<h2 id="supplemental-controls-and-fit-sensitivity">Supplemental controls and fit sensitivity</h2>
+<p>The two post hoc controls add 128 flights on the same 64 missions.
+They use the same physical scoring and feedback loop, with no learned weights.</p>
+<table>
+<thead>
+<tr>
+<th>Post hoc controller</th>
+<th>Nominal escapes</th>
+<th>Closer escapes</th>
+<th>Nominal fuel used</th>
+<th>Closer fuel used</th>
+<th>Nominal / closer decision time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15 random plans plus exact coast</td>
+<td>29/32</td>
+<td>21/32</td>
+<td>28.7%</td>
+<td>23.5%</td>
+<td>86.2 / 88.2 ms</td>
+</tr>
+<tr>
+<td>29 fixed burn/coast plans</td>
+<td>32/32</td>
+<td>28/32</td>
+<td>24.4%</td>
+<td>31.6%</td>
+<td>87.1 / 81.3 ms</td>
+</tr>
+</tbody>
+</table>
+<p>Adding exact coast to random proposals reduced nominal mean fuel use from 97.2% to 28.7%, while escape count changed from 30 to 29.
+On closer launches, the count stayed at 21 and mean fuel use fell from 82.1% to 23.5%.
+The original random baseline therefore exaggerated the learned model's apparent fuel advantage.
+Its continuous proposal generator lacked an exact coast action.
+The added coast replaces one random plan to retain 16 candidates; it does not preserve all original candidates.
+The very low fuel use on some failed coast launches also lowers these averages.
+Fuel conditional on successful flight is included in <a href="pilot-controls-report.md">the supplemental report</a>.</p>
+<p>The fixed library matched the classical teacher's escape outcome on every tested launch.
+It also recovered the same five closer launches that the hybrid recovered relative to checked diffusion.
+Adding 16 learned candidates to that fixed library produced no extra escapes.
+It reduced nominal mean fuel use slightly, from 24.4% to 23.7%, but increased closer-launch fuel use from 31.6% to 37.0%.
+Its observed decision time also increased.</p>
+<p>Checked diffusion used fewer candidates and had lower observed decision latency than the fixed library.
+It also had five fewer escapes on the closer set.
+Those tradeoffs do not establish that the learned proposals are useless, or that they are necessary.
+The fixed library has 29 candidates against the learned controller's 16, and these supplemental comparisons were added after early test inspection.
+They do refute an unqualified claim that diffusion produced the best controller in this experiment.
+The original seven-controller results remain unchanged in their own artifacts.
+The separate evidence is <a href="../results/pilot/controls-summary.json">controls-summary.json</a>.</p>
+<p>The predeclared fit check uses the first eight nominal and first eight closer missions for each of three training seeds.
+It reuses 32 main-run results and computes 64 additional flights.
+Those 32 reused results must not be counted again as independent observations.</p>
+<table>
+<thead>
+<tr>
+<th>Fit seed</th>
+<th>Nominal raw / checked escapes</th>
+<th>Closer raw / checked escapes</th>
+<th>Closer raw / checked mean fuel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1729</td>
+<td>8/8 / 8/8</td>
+<td>3/8 / 5/8</td>
+<td>31.8% / 34.8%</td>
+</tr>
+<tr>
+<td>1730</td>
+<td>8/8 / 8/8</td>
+<td>3/8 / 5/8</td>
+<td>36.1% / 35.7%</td>
+</tr>
+<tr>
+<td>1731</td>
+<td>8/8 / 8/8</td>
+<td>3/8 / 5/8</td>
+<td>34.8% / 36.5%</td>
+</tr>
+</tbody>
+</table>
+<p>All three fits have the same success counts on this subset, despite different validation losses and fuel use.
+Checking rescues two closer launches per fit, with no reverse loss.
+The subset is too small to establish broad stability across training seeds.
+It does show that the main pattern is not confined to one fit on these selected launches.
+The complete paired rows are in <a href="../results/pilot/seed-check.json">seed-check.json</a>.</p>
+<h2 id="what-this-experiment-establishes">What this experiment establishes</h2>
+<p>The controlled comparison separates proposal generation from numerical selection.
+The same learned generator performs better when its candidate plans are evaluated before execution.
+That arrangement remains fallible because a scorer can only choose from the plans it receives and the horizon it evaluates.
+It does not guarantee a feasible escape plan exists in the candidate set.</p>
+<p>The simple controls are the main restraint on the AI claim.
+A compact fixed library reaches the best observed success count without training.
+This small, smooth, two-control problem gives that library a strong advantage.
+The result should not be extrapolated to visually observed flight, unknown dynamics, high-dimensional controls, or rotating black holes.
+It provides a concrete test case for studying when learned proposals add value to classical search.</p>
+<p>Low validation loss also misses a decisive part of the problem.
+Most teacher decisions are coasts, while a few early burns determine whether the ship returns.
+Separate active-burn losses reveal this imbalance, and closed-loop evaluation exposes errors that average loss does not describe.
+The experiment does not isolate whether compression, denoising, or the limited demonstrations caused each failed burn.
+That would require additional component ablations on fresh evaluation missions.</p>
+<p>The earlier unpowered study tests learned world models; this powered study tests a learned action generator.
+Their common design principle is to keep physical judgment outside the learned component when the governing equations are available.
+Here that judgment uses numerical integration, while the unpowered turning-point calculation has an exact rational checker.
+Neither the neural weights nor the rendered cockpit supplies a physical proof.</p>
+<h2 id="a-temporary-aws-training-job">A temporary AWS training job</h2>
+<p>Training used one temporary <code>c7i.xlarge</code> CPU EC2 instance.
+The server used Ubuntu 24.04, CPU-only PyTorch, and project-generated data without pretrained weights.
+The Mac received the project's own model artifacts and scientific JSON; PyTorch remained on the server.</p>
+<p>CloudFormation creates the instance, encrypted root volume, temporary role, security group, and private artifact bucket together.
+The instance has no inbound ports and uses SSM for command execution.
+Its role can read the source prefix and write the artifact prefix in that bucket.
+Artifacts have explicit size limits and SHA-256 verification.
+Raw account metadata and command logs remain outside the public results directory.</p>
+<p>Installation has a 20-minute timeout, and all three model fits share a 75-minute training allowance.
+An operating-system backstop terminates the instance within 120 minutes of startup.
+The local runner downloads verified artifacts, terminates compute, empties the bucket, deletes the stack, and checks resource deletion.
+Failures still enter the cleanup path.
+These measures reduce orphan risk; the final deletion checks supply evidence of what actually happened.</p>
+<p>The remote sequence took 73.87 seconds for all three fits, export checks, and artifact assembly.
+The full local runner took 381.39 seconds through provisioning, installation, transport, and cleanup.
+Its verified compressed return archive contained 17 files and 323,378 bytes.
+The elapsed-time estimate for compute, IPv4, and the 20 GiB root disk was <code>$0.01967</code>.
+That estimate excludes S3, data transfer, and taxes; it is not a measured AWS bill.
+The working allowance was <code>$5</code> within the approved credit budget.
+CloudFormation deletion completed, and subsequent checks confirmed termination of the instance and deletion of its captured root volume.
+The private bucket, role, instance profile, and security group were also absent.
+No attached root volume remained.
+The sanitized evidence is <a href="../results/pilot/model/cloud-run.json">cloud-run.json</a>.
+Verified pricing sources and the installation manifest are in <a href="pilot-cloud-plan.md">the cloud plan</a>.</p>
+<h2 id="reproduce-the-saved-experiment">Reproduce the saved experiment</h2>
+<p>The returned models run with NumPy, without a local PyTorch installation.
+Start the local server and open the powered cockpit:</p>
+<pre><code class="language-sh">OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 serve.py --port 8008
+</code></pre>
+<p>The benchmark scripts preserve completed per-flight checkpoints and reject changed inputs.
+Run the evaluations in sequence to keep the two-worker budget:</p>
+<pre><code class="language-sh">python3 -m unittest discover -v
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 run_pilot_experiment.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 run_pilot_controls.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 run_pilot_seed_check.py
+python3 plot_pilot_results.py
+python3 build_article.py --pilot
+</code></pre>
+<p>With existing checkpoints, these commands rebuild summaries rather than repeat each flight.
+The cockpit's custom launch form runs a new trajectory through the same feedback controller.
+Preserve the original result directory before starting a changed experiment.
+The full record contains 448 main flights, 128 supplemental flights, and 64 additional fit-check flights: 640 distinct evaluation runs.
+The 80 teacher flights are separate.</p>
+<p>One agent-generated physics error was caught before teacher generation: a missing radius factor in the centrifugal term broke coast-energy conservation.
+The correction was checked against the full coordinate reference before the frozen dataset was built.
+Source seals, per-flight checkpoints, independent numerical checks, and the cloud termination backstop address different failure modes of autonomous work.
+They made this run recoverable and inspectable; they did not remove the need to test it.</p>
+<h2 id="what-the-cockpit-shows">What the cockpit shows</h2>
+<p>The powered cockpit is a three-dimensional cabin connected to the numerical flight state.
+You can look around and move between the seats, consoles, and windshield while the saved flight plays.
+Instrument screens show the current radius, fuel, and burn command.
+The field screen plots recorded radius against proper time, and the control screen identifies the selected pilot.
+This plot is a replay of the computed flight, not a forecast from the learned model.
+Time is shown in geometric units, with G=c=M=1, rather than seconds.
+The cabin uses local Three.js modules, procedural geometry, metal materials, shadows, and sparse illuminated dust.
+No spacecraft model or texture pack was downloaded.
+Select Walk cabin and use WASD to walk at standing height, with collision against cabin furniture.
+Camera movement changes your view inside the cabin; the numerical controller determines the ship's trajectory.</p>
+<p>The exterior traces Schwarzschild light paths, with an approximate camera frame and artistic disk emission.
+Fine sheared bands supply the disk texture; this is not a fluid simulation.
+An artistic camera tilt brings the upper lensed arc into view at launch.
+It does not calculate the full optical view of an accelerating observer.
+The cabin is a cinematic visualization, not a validated spacecraft design or a claim of film-quality photorealism.
+The experiment omits black-hole spin, orbital inclination, self-gravity, radiation forces, and vehicle attitude dynamics.
+Its visual trace helps inspect control decisions, but the saved numerical outcomes determine the research result.</p></article></div><footer>Measured results, executable checks, explicit limits. Local experiment.</footer></body></html>

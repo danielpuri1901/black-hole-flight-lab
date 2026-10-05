@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080914">
+  <title>The escape problem | Black Hole Flight Lab</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/cockpit.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#observatory"><span class="mark" aria-hidden="true"></span>Black Hole Flight Lab</a>
+    <nav aria-label="Main"><a href="#experiment">The experiment</a><a href="/article">Read the field notes</a></nav>
+  </header>
+  <main>
+    <section class="observatory" id="observatory" aria-labelledby="page-title">
+      <div class="space-view cockpit" tabindex="0" aria-describedby="look-instructions">
+        <img id="lensed-image" class="lensed-image" src="/black-hole.png" alt="Light bends around a black hole, forming a bright copper accretion disk and a lensed rear arc.">
+        <canvas id="space" aria-label="Black hole coordinate map. Warm white shows the calculated orbit. Blue shows the learned model orbit."></canvas>
+        <canvas id="cockpit" aria-label="First-person cinematic view following the selected calculated particle trajectory"></canvas>
+        <img id="cockpit-shell" class="cockpit-shell" src="/cockpit-frame.png" alt="" aria-hidden="true">
+        <div class="shell-light" aria-hidden="true"></div>
+        <div class="cockpit-frame" aria-hidden="true"><span class="window-strut left"></span><span class="window-strut right"></span><span class="window-edge"></span><span class="window-ledge"></span><span class="window-rim"></span></div>
+        <div class="cockpit-glass" aria-hidden="true"></div>
+        <div class="cockpit-dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="view-switch" role="group" aria-label="Observatory view"><button id="cockpit-view" type="button" aria-pressed="true">Cockpit</button><button id="lensed-view" type="button" aria-pressed="false">Lensed view</button><button id="map-view" type="button" aria-pressed="false">Flight map</button></div>
+        <div class="cinema-tools"><button id="center-view" type="button" title="Reset camera rotation without changing the flight">Center view</button><button id="effects" type="button" aria-pressed="true" title="Toggle artistic window reflections and floating dust. The calculated orbit does not change.">Effects on</button><button id="leave-immersive" type="button" aria-label="Exit immersive view" title="Exit immersive view (Escape)" hidden>Exit</button></div>
+        <div class="cockpit-context">
+          <p class="cockpit-mission">Unpowered flyby</p>
+          <h2 id="cockpit-world-title">Following relativity</h2>
+          <div class="world-switch" role="group" aria-label="Trajectory followed by the cockpit camera"><button id="follow-true" type="button" aria-pressed="true">Relativity</button><button id="follow-model" type="button" aria-pressed="false">Learned model</button></div>
+          <p id="cockpit-outcomes">Model pending. Physics pending.</p>
+          <p class="look-instructions" id="look-instructions">Drag to look. Arrow keys also work.<br>The calculated flight path stays fixed.</p>
+        </div>
+        <div class="cockpit-alert" id="cockpit-alert" role="status" aria-live="polite" hidden><strong id="cockpit-event-title"></strong><span id="cockpit-event-detail"></span></div>
+        <div class="cockpit-console">
+          <div class="cockpit-readouts"><div><span>Radius</span><output id="cockpit-radius">30.000 M</output></div><div><span>Above the horizon</span><output id="cockpit-clearance">28.000 M</output></div><div><span>Proper time</span><output id="cockpit-time">τ 0.0</output></div></div>
+          <div class="cockpit-toolbar"><button id="cockpit-play" class="cockpit-primary" type="button" disabled>Begin flyby</button><button id="cockpit-case" type="button" disabled>Load recorded flight</button><button id="immersive-view" type="button" aria-pressed="false">Immersive view</button></div>
+          <label for="cockpit-scrub" class="sr-only">Cockpit replay position</label><input id="cockpit-scrub" type="range" min="0" max="1000" value="0" disabled>
+          <p id="cockpit-caption">Loading the moving camera…</p>
+        </div>
+        <div class="scene-heading">
+          <p class="live-label"><span aria-hidden="true"></span>Schwarzschild observatory</p>
+          <h1 id="page-title">The escape<br>problem.</h1>
+          <p>A model sees a way out.<br>Does gravity agree?</p>
+        </div>
+        <div class="scene-tools" aria-label="Map zoom">
+          <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+          <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+          <button id="fit-view" type="button">Full orbit</button>
+        </div>
+        <div class="map-label"><span class="hairline"></span>Event horizon <span>r = 2</span></div>
+        <div class="scene-bottom">
+          <div class="legend"><span><i class="true-line"></i>Relativity</span><span><i class="model-line"></i>Learned model</span></div>
+          <p id="scene-description">Calculated paths on a Schwarzschild coordinate map.<br>The light and lensing are an illustration.</p>
+        </div>
+      </div>
+      <aside class="flight-desk" aria-labelledby="flight-title">
+        <div class="desk-heading"><span class="section-dot" aria-hidden="true"></span><h2 id="flight-title">Set your flyby</h2></div>
+        <p class="desk-intro">Release a particle near a black hole. Compare the same launch in two worlds.</p>
+        <form id="flight-form">
+          <label class="slider-label" for="energy"><span title="Launch energy per unit particle mass. Higher energy increases the launch speed.">Energy</span><output id="energy-value" for="energy">1.0400</output></label>
+          <input id="energy" name="energy" type="range" min="1.002" max="1.2" step="0.0001" value="1.04">
+          <div class="range-ends"><span>1.002</span><span>1.200</span></div>
+          <label class="slider-label" for="angular-momentum"><span title="Sideways launch motion. Higher angular momentum gives gravity more to bend into an orbit.">Angular momentum</span><output id="momentum-value" for="angular-momentum">4.3000</output></label>
+          <input id="angular-momentum" name="angular_momentum" type="range" min="3.5" max="6.3" step="0.0001" value="4.3">
+          <div class="range-ends"><span>3.5</span><span>6.3</span></div>
+          <label class="model-label" for="model">World model</label>
+          <select id="model" name="model" disabled><option>Loading models…</option></select>
+          <button class="launch-button" id="launch" type="submit" disabled>Launch flyby <span aria-hidden="true">↗</span></button>
+        </form>
+        <button class="case-button" id="load-case" type="button" disabled><span class="case-icon" aria-hidden="true">◎</span><span id="case-button-text">Load recorded flight</span></button>
+        <div class="flight-status" id="status" role="status" aria-live="polite">Loading the experiment…</div>
+        <div class="outcomes" aria-live="polite">
+          <div><span class="outcome-label"><i class="model-line"></i>Model predicts</span><strong id="prediction">Pending</strong></div>
+          <div><span class="outcome-label"><i class="true-line"></i>Physics says</span><strong id="actual">Pending</strong></div>
+        </div>
+        <p class="validation-check" id="validation-check" title="The validation-error rule flags launches near the learned barrier. This is a heuristic, not a safety guarantee.">Validation check: pending.</p>
+        <p class="validation-check" id="kernel-outcome">Exact kernel: pending.</p>
+        <p class="outcome-note" id="outcome-note">Outcomes are shown before replay. The model learns the effective potential from observations.</p>
+        <div class="replay">
+          <div class="replay-heading"><h3>Flight replay</h3><output id="replay-time" for="scrub">τ 0.0</output></div>
+          <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Replay position" disabled>
+          <div class="replay-buttons"><button id="play" type="button" disabled>Play</button><button id="reset" type="button" disabled>Reset</button><label for="speed" class="sr-only">Replay speed</label><select id="speed" aria-label="Replay speed"><option value="1">1× speed</option><option value="2">2× speed</option><option value="0.5">½× speed</option></select></div>
+        </div>
+        <details class="physics-note"><summary>What this flight means</summary><p>These are unpowered particle orbits around a non-rotating black hole. Energy and angular momentum set the launch. Units: G = c = M = 1. Launch radius: 30.</p><p>Capture stops at r = 2.001, just above the horizon. This does not model radiation, tides, or a powered spacecraft.</p><p>The validation check flags launches near the learned barrier using potential error on separate validation observations. Abstain means the heuristic rejects a raw prediction. Outside the band does not certify safety.</p><p id="trace-note"></p></details>
+        <details class="physics-note certificate-note"><summary>Inspect exact certificate</summary><p>The kernel counts turning roots with exact rational arithmetic and a Sturm sequence. It checks this unpowered Schwarzschild launch. This is an exact check under these assumptions, not a Lean proof.</p><p id="certificate-summary">Loading the certificate…</p><pre id="certificate-data"></pre><button id="download-certificate" type="button" disabled>Download certificate</button></details>
+      </aside>
+    </section>
+    <section class="barrier-section" aria-labelledby="barrier-title">
+      <div class="barrier-heading"><div><p class="section-label">Inside this flight</p><h2 id="barrier-title">The barrier behind the orbit.</h2></div><button id="barrier-zoom" type="button" aria-pressed="false">Show whole barrier</button></div>
+      <p class="barrier-intro">The launch energy is the horizontal line. A potential peak above it can turn the particle back. A small error in the peak can put the same launch on the wrong side.</p>
+      <div class="barrier-legend legend"><span><i class="true-line"></i>Relativity</span><span><i class="model-line"></i>Learned model</span><span><i class="energy-line"></i>Launch radial energy</span></div>
+      <canvas id="barrier-chart" role="img" aria-label="Potential barrier comparison for the loaded flight" aria-describedby="barrier-summary barrier-definition"></canvas>
+      <p id="barrier-summary" class="barrier-summary" aria-live="polite">Launch a flight to inspect its potential barrier.</p>
+      <p id="barrier-definition" class="barrier-definition">Both curves subtract their own potential at the launch radius, r = 30. The same initial radial speed therefore gives the same energy line in both worlds. The graph shows sampled potentials from r = 2.001 to 10. The independent physics check determines the outcome.</p>
+    </section>
+    <section class="experiment" id="experiment" aria-labelledby="experiment-title">
+      <div class="experiment-intro"><div><p class="section-label">From the actual run</p><h2 id="experiment-title">A beautiful orbit.<br>A testable claim.</h2></div><p>The neural model learns a potential from observations. A small exact kernel checks its escape calls for a radial turning point. Fixed test flights reveal the missed captures and the cost of rejecting uncertain predictions.</p></div>
+      <div class="result-strip" id="result-strip"><div><span>Training observations</span><strong id="training-count">Pending</strong></div><div><span>Held-out flights per model</span><strong id="test-count">Pending</strong></div><div><span>Model runs</span><strong id="model-count">Pending</strong></div></div>
+      <div class="table-heading"><h3>Measured model performance</h3><p>Potential and acceleration errors use a separate validation set.</p></div>
+      <div class="table-scroll"><table><caption class="sr-only">Measured world model performance for each saved run</caption><thead><tr><th scope="col">Model / seed</th><th scope="col">Parameters</th><th scope="col">Potential RMSE</th><th scope="col">Acceleration RMSE</th><th scope="col">Fit time</th></tr></thead><tbody id="metrics"><tr><td colspan="5">Loading measured results…</td></tr></tbody></table></div>
+      <div id="classification-results" class="classification-results"></div>
+      <p class="stress-note">Boundary flights deliberately stress the escape threshold. Their error rate is not the frequency of ordinary missions. The verification gate has access to the correct physics.</p>
+      <div class="data-links"><a href="/article">Read the experiment</a><a href="/results/summary.json">Summary JSON</a><a href="/results/trials.csv">Every test flight (CSV)</a></div>
+    </section>
+  </main>
+  <footer><span>Black Hole Flight Lab</span><span>Black hole physics, open to inspection.</span></footer>
+</body>
+</html>

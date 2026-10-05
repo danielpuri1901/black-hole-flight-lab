@@ -1,0 +1,27 @@
+{
+  "sha256": {
+    "pilot_physics.py": "fda5353bc2ea5335acc908d2f4e84316180396b34395d80b900eff92c2892d5f",
+    "pilot_control.py": "b8be07868c9a88704530a962d80530aa7df77ebf4015f286a20c204da1add6c3",
+    "run_pilot_controls.py": "0be83ff476e578f9488b97defe403aa942719cb49a7e8a52aa264edf0db1032b",
+    "run_pilot_experiment.py": "6086fd65cffa7c131777da8e97a28b188fe7239fe1a1096093c8dc7155f2e161",
+    "missions": "861955be5a146cec2a55af5723a0319894165f9a5bcc95a3dad7b58f52e7fc00"
+  },
+  "python": "3.14.0",
+  "numpy": "2.4.2",
+  "workers": 2,
+  "machine": "arm64",
+  "post_hoc": true,
+  "declaration": "These post hoc controls were introduced after inspecting the first three held-out test cases, where random_checked spent all fuel. They test proposal support and fixed-library search. No model weights or parameters were tuned, and the original benchmark results are preserved.",
+  "controller_seed": "91000 + mission index",
+  "test_splits": [
+    "test",
+    "stress"
+  ],
+  "candidate_counts": {
+    "random_with_coast": 16,
+    "fixed_checked": 29
+  },
+  "learned_weights_used": false,
+  "blas_thread_limit": "1",
+  "timing_note": "Observed wall time on a shared computer, not an isolated latency benchmark."
+}

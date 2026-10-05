@@ -1,0 +1,163 @@
+{
+  "format_version": 1,
+  "weights_file": "weights.npz",
+  "seed": 1729,
+  "context_features": [
+    "r/10",
+    "ur",
+    "L/5",
+    "q/0.7",
+    "E",
+    "1/r"
+  ],
+  "context_mean": [
+    1.003048300743103,
+    0.13405968248844147,
+    0.9239187836647034,
+    0.1324189007282257,
+    1.050598382949829,
+    0.11947118490934372
+  ],
+  "context_std": [
+    0.4404519200325012,
+    0.28302139043807983,
+    0.06435856223106384,
+    0.07640091329813004,
+    0.02617325633764267,
+    0.04859092831611633
+  ],
+  "latent_mean": [
+    0.1842033714056015,
+    0.03885158523917198,
+    -0.14114181697368622,
+    -0.0003488219517748803,
+    -0.05109795928001404,
+    -0.2667055130004883,
+    -0.06086032837629318,
+    -0.033606261014938354
+  ],
+  "latent_std": [
+    0.09115909785032272,
+    0.11441165208816528,
+    0.18750233948230743,
+    0.12902067601680756,
+    0.12762168049812317,
+    0.15432429313659668,
+    0.14673608541488647,
+    0.16006357967853546
+  ],
+  "architecture": {
+    "plan_shape": [
+      12,
+      2
+    ],
+    "latent_size": 8,
+    "ae_hidden": 64,
+    "token_count": 4,
+    "token_features": 2,
+    "width": 32,
+    "blocks": 2,
+    "heads": 2,
+    "mlp_hidden": 64,
+    "layer_norm_epsilon": 1e-05,
+    "activation": "GELU tanh approximation"
+  },
+  "diffusion_schedule": {
+    "kind": "cosine",
+    "offset": 0.008,
+    "steps": 32,
+    "beta_max": 0.999,
+    "terminal_alpha_bar": 2.369939466007054e-06
+  },
+  "sampling": "deterministic DDIM, eta=0",
+  "sampling_steps": 16,
+  "clean_latent_clipping": {
+    "space": "standardized encoded latent",
+    "lower": [
+      -12.990511894226074,
+      -9.07994556427002,
+      -4.580519676208496,
+      -7.747992038726807,
+      -7.435272693634033,
+      -4.751646518707275,
+      -6.400195598602295,
+      -6.037561416625977
+    ],
+    "upper": [
+      8.949151992797852,
+      8.40079116821289,
+      6.086013317108154,
+      7.75339937210083,
+      8.236045837402344,
+      8.208075523376465,
+      7.2297163009643555,
+      6.457473278045654
+    ],
+    "reason": "The tanh encoder has exact range [-1,1] before affine scaling."
+  },
+  "balanced_burn_sampling": {
+    "requested": true,
+    "applied": true,
+    "first_burn_norm_threshold": 0.05,
+    "burn_probability": 0.5,
+    "training_burn_count": 94,
+    "training_coast_count": 2154,
+    "validation_burn_count": 28,
+    "validation_coast_count": 518
+  },
+  "training_observations": 2248,
+  "validation_observations": 546,
+  "best_ae_epoch": 66,
+  "best_diffusion_step": 3100,
+  "autoencoder_validation_mse": 7.647947495570406e-05,
+  "reconstruction_validation_max_burn_norm": 1.0,
+  "teacher_validation_mean_burn_norm": 0.009462759830057621,
+  "reconstruction_validation_mean_burn_norm": 0.009986975230276585,
+  "diffusion_validation_noise_mse": 0.02272823452949524,
+  "autoencoder_validation_groups": {
+    "validation_burn_mse": 0.0014886398566886783,
+    "validation_coast_mse": 1.4649400270627666e-07
+  },
+  "diffusion_validation_groups": {
+    "validation_burn_mse": 0.29409176111221313,
+    "validation_coast_mse": 0.008059939369559288
+  },
+  "train_seconds": 22.06868069699999,
+  "parameters": {
+    "autoencoder": 4256,
+    "diffusion": 20098
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "torch": "2.13.0+cpu",
+    "platform": "Linux-7.0.0-1013-aws-x86_64-with-glibc2.39",
+    "threads": 2,
+    "device": "cpu",
+    "deterministic_algorithms": true
+  },
+  "training_arguments": {
+    "data": "/opt/pilot-work/input/teacher.npz",
+    "output": "/opt/pilot-work/output",
+    "seed": 1729,
+    "ae_epochs": 200,
+    "diffusion_steps": 4000,
+    "sample_steps": 16,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "threads": 2,
+    "patience": 20,
+    "validation_every": 100,
+    "balanced_burns": true
+  },
+  "source_sha256": {
+    "train_pilot.py": "391bddc260a12ca9bfa8a7fc08b034de90a8c582a13f00eb7b7025a2ca9beb0c",
+    "pilot_model.py": "0aeddd034dbba7979f3a3b5f723fa454176819187fa23c2d8e130758b638d4de",
+    "data": "c1bb1bef16c2f0c459d3bcb020131ed32329e928237cc54dc2a33bd310aaba14"
+  },
+  "limitations": [
+    "The model imitates classical teacher plans; it does not learn flight dynamics.",
+    "Loss and action bounds do not certify mission success.",
+    "Conditional diffusion is evaluated through separate closed-loop flights."
+  ]
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+*.pem
+*.key
+cloud/*.state.json
+cloud/*.command.json
+cloud/pilot-training-*/

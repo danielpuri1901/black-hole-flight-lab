@@ -1,0 +1,4 @@
+# Preserve the bytes used by artifact and dependency integrity checks.
+results/** -text -whitespace linguist-generated=true
+dashboard/vendor/** -text -whitespace linguist-vendored=true
+docs/*.html linguist-generated=true

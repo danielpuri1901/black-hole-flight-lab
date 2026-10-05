@@ -1,0 +1,58 @@
+name: Check experiments and cockpit
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14.0'
+          cache: pip
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+      - name: Install local runtime dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check physics, learned models, certificates, and HTTP API
+        run: python -m unittest discover -v
+      - name: Check cockpit geometry, walking, and JavaScript syntax
+        run: |
+          node check_cabin.mjs
+          node check_cabin_walk.mjs
+          for file in dashboard/*.js; do node --check "$file"; done
+      - name: Verify vendored rendering modules
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          root = Path('dashboard/vendor')
+          manifest = json.loads((root / 'manifest.json').read_text())
+          for entry in manifest['files']:
+              data = (root / entry['path']).read_bytes()
+              assert len(data) == entry['bytes'], entry['path']
+              assert hashlib.sha256(data).hexdigest() == entry['sha256'], entry['path']
+          print(f"Verified {len(manifest['files'])} vendored files")
+          PY
+      - name: Verify article builds are current
+        run: |
+          python build_article.py
+          python build_article.py --pilot
+          git diff --exit-code -- docs/article.html docs/pilot-article.html

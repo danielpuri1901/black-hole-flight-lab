@@ -1,0 +1,980 @@
+{
+  "manifest": {
+    "weights_sha256": {
+      "1729": "f0e554b39b0536862d2238e5bf004754d9f2e20ded28d95daecafae0dd9d99ff",
+      "1730": "70f4c75828be49ba439aea472beb9e3b46f032a68ce7c6189f043946027b1ca3",
+      "1731": "371f62313ccc1b6b47dc92e429cce38da9c1bfa98d6826308937b5c4fb62fb49"
+    },
+    "source_sha256": {
+      "pilot_physics.py": "fda5353bc2ea5335acc908d2f4e84316180396b34395d80b900eff92c2892d5f",
+      "pilot_control.py": "b8be07868c9a88704530a962d80530aa7df77ebf4015f286a20c204da1add6c3",
+      "pilot_model.py": "0aeddd034dbba7979f3a3b5f723fa454176819187fa23c2d8e130758b638d4de"
+    },
+    "missions_sha256": "861955be5a146cec2a55af5723a0319894165f9a5bcc95a3dad7b58f52e7fc00",
+    "mission_selection": "First eight missions in each frozen split; declared before training."
+  },
+  "groups": [
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "controller": "learned",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.3106372839332326
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "controller": "checked",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.2258536980546581
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "controller": "learned",
+      "escaped": 3,
+      "flights": 8,
+      "mean_fuel_used": 0.3176675978358829
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "controller": "checked",
+      "escaped": 5,
+      "flights": 8,
+      "mean_fuel_used": 0.3480980074311456
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "controller": "learned",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.3097716060476186
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "controller": "checked",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.22530067601735493
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "controller": "learned",
+      "escaped": 3,
+      "flights": 8,
+      "mean_fuel_used": 0.3605744358812362
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "controller": "checked",
+      "escaped": 5,
+      "flights": 8,
+      "mean_fuel_used": 0.3566656272747635
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "controller": "learned",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.33959308716363584
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "controller": "checked",
+      "escaped": 8,
+      "flights": 8,
+      "mean_fuel_used": 0.23469231119151426
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "controller": "learned",
+      "escaped": 3,
+      "flights": 8,
+      "mean_fuel_used": 0.34802493705510024
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "controller": "checked",
+      "escaped": 5,
+      "flights": 8,
+      "mean_fuel_used": 0.3650042752663833
+    }
+  ],
+  "trials": [
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.42263739945487666,
+      "decision_seconds": 0.2565391670214012
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4165292558436706,
+      "decision_seconds": 0.9555651659611613
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.2947425982405063,
+      "decision_seconds": 0.26401020790217444
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.1585837766035556,
+      "decision_seconds": 1.3079833348747343
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.31701162797789817,
+      "decision_seconds": 0.24014545802492648
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16029272349546664,
+      "decision_seconds": 1.3124567539198324
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.16573765266428997,
+      "decision_seconds": 0.36960608180379495
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15542880562242123,
+      "decision_seconds": 1.522898794093635
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.16862940784399783,
+      "decision_seconds": 0.2815394557546824
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.04273180808646093,
+      "decision_seconds": 2.1422850458766334
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.29496315665497985,
+      "decision_seconds": 0.2520231681410223
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15966191991493517,
+      "decision_seconds": 1.1832834191736765
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4161057993772802,
+      "decision_seconds": 0.2417796651716344
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.2962085842293235,
+      "decision_seconds": 1.1322459158836864
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4052706292520316,
+      "decision_seconds": 0.23104270896874368
+    },
+    {
+      "fit_seed": 1729,
+      "split": "test",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.41739271064143124,
+      "decision_seconds": 0.7092110819648951
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.28914395169092166,
+      "decision_seconds": 0.09449579200008884
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.3772669329713674,
+      "decision_seconds": 0.788631247880403
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.2930640640359903,
+      "decision_seconds": 0.06116229301551357
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.2930640640359903,
+      "decision_seconds": 0.1359288320527412
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.43520544660811067,
+      "decision_seconds": 0.22346574877155945
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4283238982409192,
+      "decision_seconds": 0.7217028328450397
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.24499091345830604,
+      "decision_seconds": 0.08230054099112749
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.5196483340536011,
+      "decision_seconds": 0.7088200378930196
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.18069424293363134,
+      "decision_seconds": 0.28956308285705745
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15768679016284026,
+      "decision_seconds": 0.967409040837083
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4251223066085288,
+      "decision_seconds": 0.06803491595201194
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4251223066085288,
+      "decision_seconds": 0.17052745702676475
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.424612390942383,
+      "decision_seconds": 0.05756741703953594
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.424612390942383,
+      "decision_seconds": 0.11392462492221966
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.2485074664091912,
+      "decision_seconds": 0.3583930011373013
+    },
+    {
+      "fit_seed": 1729,
+      "split": "stress",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.1590593424335347,
+      "decision_seconds": 1.2556953300954774
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4249860752283412,
+      "decision_seconds": 0.2680497102555819
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4170751936981132,
+      "decision_seconds": 0.9957119569880888
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.2635196544003381,
+      "decision_seconds": 0.2997574221226387
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15800709105204125,
+      "decision_seconds": 1.5076820038957521
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.277390562025427,
+      "decision_seconds": 0.2616167511441745
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.1595245652676609,
+      "decision_seconds": 1.4044892920646816
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.19799386892091408,
+      "decision_seconds": 0.3532792529440485
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.14157709589629586,
+      "decision_seconds": 1.487232249986846
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.17329985570732553,
+      "decision_seconds": 0.300375122227706
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15728490103625448,
+      "decision_seconds": 0.9844959219917655
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.3127043054530366,
+      "decision_seconds": 0.24380154412938282
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16708350770767244,
+      "decision_seconds": 1.2130200408864766
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.41966620351590533,
+      "decision_seconds": 0.23663299978943542
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.30466284411998656,
+      "decision_seconds": 1.0892875420395285
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4086123231296611,
+      "decision_seconds": 0.222288292075973
+    },
+    {
+      "fit_seed": 1730,
+      "split": "test",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.29719020936081486,
+      "decision_seconds": 1.1299747079610825
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.3233676870138851,
+      "decision_seconds": 0.08492670801933855
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4131610634500731,
+      "decision_seconds": 0.6259555398137309
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4078353805994981,
+      "decision_seconds": 0.05096004100050777
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4078353805994981,
+      "decision_seconds": 0.11699658294674009
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.41594553053826,
+      "decision_seconds": 0.19634846004191786
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.41159127890714564,
+      "decision_seconds": 0.5864705841522664
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.28695528590624997,
+      "decision_seconds": 0.06701841700123623
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4164001034901875,
+      "decision_seconds": 0.72523937409278
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.1668407760504238,
+      "decision_seconds": 0.2619959160219878
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.054586989394303176,
+      "decision_seconds": 1.7788700418313965
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.41579440301066295,
+      "decision_seconds": 0.061438666947651654
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.41579440301066295,
+      "decision_seconds": 0.1308721670648083
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.5759293287838958,
+      "decision_seconds": 0.04368775000330061
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.5759293287838958,
+      "decision_seconds": 0.07492499996442348
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.2919270951470142,
+      "decision_seconds": 0.24372224905528128
+    },
+    {
+      "fit_seed": 1730,
+      "split": "stress",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.15802647056234176,
+      "decision_seconds": 1.1048235438065603
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.425000786523009,
+      "decision_seconds": 0.25510358315659687
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.4144864572835053,
+      "decision_seconds": 0.9278101670788601
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.20735674016273742,
+      "decision_seconds": 0.32979574729688466
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16304208633591732,
+      "decision_seconds": 1.3156785430037417
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.29290357431714087,
+      "decision_seconds": 0.25891233573202044
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16341378668455542,
+      "decision_seconds": 1.2257761239889078
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.31968279506279407,
+      "decision_seconds": 0.2949103710707277
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16668191344415806,
+      "decision_seconds": 1.3926762072951533
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.3188032769567335,
+      "decision_seconds": 0.24151291488669813
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.09238737834830679,
+      "decision_seconds": 1.3541691220598295
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.3057911799178449,
+      "decision_seconds": 0.23581621213816106
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16715838330835964,
+      "decision_seconds": 1.2061197080183774
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4245146219749827,
+      "decision_seconds": 0.23764012602623552
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.2948973220952261,
+      "decision_seconds": 1.199394914205186
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.42269172239384445,
+      "decision_seconds": 0.21891249797772616
+    },
+    {
+      "fit_seed": 1731,
+      "split": "test",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.41547116203208545,
+      "decision_seconds": 0.7350749170291238
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 0,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.2900372957664741,
+      "decision_seconds": 0.08764091687044129
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 0,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.41941090479772036,
+      "decision_seconds": 0.6446627479745075
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 1,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4449955932859473,
+      "decision_seconds": 0.06086095893988386
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 1,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4449955932859473,
+      "decision_seconds": 0.165291957964655
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 2,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.4214621525442336,
+      "decision_seconds": 0.2216406650841236
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 2,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.38985116130902353,
+      "decision_seconds": 0.8288770841318183
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 3,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.2582815343378754,
+      "decision_seconds": 0.06309437501477078
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 3,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.42075095564795373,
+      "decision_seconds": 0.7581631250795908
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 4,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.17393585745511997,
+      "decision_seconds": 0.28878208593232557
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 4,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.059420773068344146,
+      "decision_seconds": 2.1077155850362033
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 5,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4177631063657161,
+      "decision_seconds": 0.05309841607231647
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 5,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.4177631063657161,
+      "decision_seconds": 0.13634499988984317
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 6,
+      "controller": "learned",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.6061281027081835,
+      "decision_seconds": 0.04207291704369709
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 6,
+      "controller": "checked",
+      "outcome": "safety_cutoff",
+      "fuel_used": 0.6061281027081835,
+      "decision_seconds": 0.096446665993426
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 7,
+      "controller": "learned",
+      "outcome": "escaped",
+      "fuel_used": 0.17159585397725186,
+      "decision_seconds": 0.2858493330422789
+    },
+    {
+      "fit_seed": 1731,
+      "split": "stress",
+      "mission": 7,
+      "controller": "checked",
+      "outcome": "escaped",
+      "fuel_used": 0.16171360494817766,
+      "decision_seconds": 1.0521215419867076
+    }
+  ]
+}

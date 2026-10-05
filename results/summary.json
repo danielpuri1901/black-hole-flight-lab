@@ -1,0 +1,1429 @@
+{
+  "protocol": {
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "training_observations": 4096,
+    "validation_observations": 1024,
+    "test_seed": 20261004,
+    "test_sha256": "9c51999e3690d2e1d326b187bb6ae4d545235959ea652ad4c8c793d79db88178",
+    "nominal_trials": 2000,
+    "stress_trials": 2000,
+    "radius_range": [
+      2.02,
+      30
+    ],
+    "angular_momentum_range": [
+      3.5,
+      6.3
+    ],
+    "energy_range": [
+      1.002,
+      1.2
+    ],
+    "r0": 30.0,
+    "optimizer": {
+      "solver": "lbfgs",
+      "activation": "tanh",
+      "alpha": 1e-06,
+      "max_iter": 800,
+      "max_fun": 2000,
+      "tol": 1e-07
+    },
+    "sizes": {
+      "small": [
+        16,
+        16
+      ],
+      "large": [
+        64,
+        64
+      ]
+    },
+    "training_sampling": "NumPy default_rng(seed), log-uniform radius then uniform angular momentum.",
+    "validation_sampling": "Independent default_rng(seed+100000), same radius and angular momentum distributions.",
+    "compute_comparison": "Same data and optimizer settings; different sizes are not matched for total compute.",
+    "stress_sampling": "Balanced sides, relative boundary distance log-uniform 1e-5 to 1e-2.",
+    "confidence_intervals": "95% Wilson intervals per model and distribution; shared trials are not pooled; stress intervals are descriptive approximations for balanced stratified sampling.",
+    "uncertainty": "abs(margin) <= twice validation 95th-percentile absolute potential error; heuristic only.",
+    "gate": "Independent correct-physics polynomial oracle rejects proposed escapes unless it says escape.",
+    "selected_case_rule": "Order models small-11, small-22, small-33, small-44, small-55, large-11, large-22, large-33, large-44, large-55. Take the first model with a false escape, then its largest positive margin, breaking ties by trial order. Require learned numerical escape and exact numerical capture. If integration disagrees, record the discrepancy and try the next ranked witness. If no false escape exists, take the first disagreement, otherwise the first nominal trial."
+  },
+  "environment": {
+    "python": "3.14.0",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "blas_threads": 1,
+    "aws_spend_eur": 0.0,
+    "aws_resources_created": []
+  },
+  "model_metrics": [
+    {
+      "model_id": "small-11",
+      "seed": 11,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.447754041000735,
+      "iterations": 423,
+      "training_loss": 7.400310704650943e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.000986682974379774,
+      "acceleration_rmse": 0.006374697656343184,
+      "potential_absolute_error_95": 0.0018688838925615902,
+      "validation_count": 1024,
+      "prediction_seconds": 0.2555151669657789,
+      "observations_sha256": "0118578e2b69d4d65206036ac763f3b77090fdba253b25022f136b9b216d5579",
+      "gate_check_seconds": 0.00918691698461771,
+      "gate_checked_proposals": 2849,
+      "uncertainty_margin_threshold": 0.0037377677851231804,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 2,
+          "false_captures": 0,
+          "false_escape_rate": 0.001,
+          "false_escape_rate_interval_95": [
+            0.0002742789176520342,
+            0.003638934269038394
+          ],
+          "false_escape_given_proposal": 0.00176522506619594,
+          "false_escape_given_proposal_interval_95": [
+            0.0004842219333587865,
+            0.006413361507016872
+          ],
+          "accepted_flights": 1133,
+          "coverage": 0.5665,
+          "coverage_interval_95": [
+            0.5446745807384792,
+            0.5880704519731141
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 2,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 17
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 716,
+          "false_captures": 0,
+          "false_escape_rate": 0.358,
+          "false_escape_rate_interval_95": [
+            0.33727982725699385,
+            0.3792646141708819
+          ],
+          "false_escape_given_proposal": 0.4172494172494173,
+          "false_escape_given_proposal_interval_95": [
+            0.39412883873328053,
+            0.44073966118371743
+          ],
+          "accepted_flights": 1716,
+          "coverage": 0.858,
+          "coverage_interval_95": [
+            0.8420154493218232,
+            0.8726119448247996
+          ],
+          "gate_accepted": 1000,
+          "gate_rejected": 716,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5,
+          "gate_coverage_interval_95": [
+            0.4781079507511692,
+            0.5218920492488308
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1511
+        }
+      }
+    },
+    {
+      "model_id": "small-22",
+      "seed": 22,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.4942867079516873,
+      "iterations": 516,
+      "training_loss": 2.8953852132315135e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0005365632079531626,
+      "acceleration_rmse": 0.0035951879917009845,
+      "potential_absolute_error_95": 0.00102104984523083,
+      "validation_count": 1024,
+      "prediction_seconds": 0.24689108302118257,
+      "observations_sha256": "a722b1bdc178c2340411d746fa10ebb4ec7074adab9671312a6107d01a759bc9",
+      "gate_check_seconds": 0.009019332996103913,
+      "gate_checked_proposals": 2743,
+      "uncertainty_margin_threshold": 0.00204209969046166,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 7
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 612,
+          "false_captures": 0,
+          "false_escape_rate": 0.306,
+          "false_escape_rate_interval_95": [
+            0.28619146753956687,
+            0.32655234680555917
+          ],
+          "false_escape_given_proposal": 0.37965260545905705,
+          "false_escape_given_proposal_interval_95": [
+            0.35627455384186013,
+            0.4036028785126866
+          ],
+          "accepted_flights": 1612,
+          "coverage": 0.806,
+          "coverage_interval_95": [
+            0.7880899514249193,
+            0.8227368156389538
+          ],
+          "gate_accepted": 1000,
+          "gate_rejected": 612,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5,
+          "gate_coverage_interval_95": [
+            0.4781079507511692,
+            0.5218920492488308
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1376
+        }
+      }
+    },
+    {
+      "model_id": "small-33",
+      "seed": 33,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.6476561670424417,
+      "iterations": 662,
+      "training_loss": 5.3784895553539104e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.000802000343283349,
+      "acceleration_rmse": 0.002191205337820378,
+      "potential_absolute_error_95": 0.0016143231680150524,
+      "validation_count": 1024,
+      "prediction_seconds": 0.25919870799407363,
+      "observations_sha256": "73a96f27e6e9354d6769ed15fb9847383bc9e072a05200bb0805286ecf49ad15",
+      "gate_check_seconds": 0.00779062497895211,
+      "gate_checked_proposals": 2470,
+      "uncertainty_margin_threshold": 0.0032286463360301047,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 8
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 389,
+          "false_captures": 50,
+          "false_escape_rate": 0.1945,
+          "false_escape_rate_interval_95": [
+            0.1777453490221474,
+            0.21242596686669812
+          ],
+          "false_escape_given_proposal": 0.2905153099327857,
+          "false_escape_given_proposal_interval_95": [
+            0.2668247802092966,
+            0.315404382946956
+          ],
+          "accepted_flights": 1339,
+          "coverage": 0.6695,
+          "coverage_interval_95": [
+            0.6485767557412889,
+            0.6897733652303664
+          ],
+          "gate_accepted": 950,
+          "gate_rejected": 389,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.475,
+          "gate_coverage_interval_95": [
+            0.45318320659358524,
+            0.4969126457704772
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1528
+        }
+      }
+    },
+    {
+      "model_id": "small-44",
+      "seed": 44,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.551846917020157,
+      "iterations": 583,
+      "training_loss": 6.61240567496495e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0008640189011712611,
+      "acceleration_rmse": 0.003303127944481939,
+      "potential_absolute_error_95": 0.0015970893241133537,
+      "validation_count": 1024,
+      "prediction_seconds": 0.251014249981381,
+      "observations_sha256": "fbeb6f51c959db433e24f24fd242ccca46736dffd22a3a7a7ae0802619c39652",
+      "gate_check_seconds": 0.008791833010036498,
+      "gate_checked_proposals": 2803,
+      "uncertainty_margin_threshold": 0.0031941786482267073,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 11
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 672,
+          "false_captures": 0,
+          "false_escape_rate": 0.336,
+          "false_escape_rate_interval_95": [
+            0.3156310749055077,
+            0.35699771660274326
+          ],
+          "false_escape_given_proposal": 0.4019138755980861,
+          "false_escape_given_proposal_interval_95": [
+            0.37866402175694286,
+            0.42561340659190766
+          ],
+          "accepted_flights": 1672,
+          "coverage": 0.836,
+          "coverage_interval_95": [
+            0.8191308990416238,
+            0.851580845185374
+          ],
+          "gate_accepted": 1000,
+          "gate_rejected": 672,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5,
+          "gate_coverage_interval_95": [
+            0.4781079507511692,
+            0.5218920492488308
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1463
+        }
+      }
+    },
+    {
+      "model_id": "small-55",
+      "seed": 55,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.4400428750086576,
+      "iterations": 464,
+      "training_loss": 5.737487220551919e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0007716095097194072,
+      "acceleration_rmse": 0.0055654931433433315,
+      "potential_absolute_error_95": 0.001531539889374939,
+      "validation_count": 1024,
+      "prediction_seconds": 0.249917707988061,
+      "observations_sha256": "662d6338e3c79721a90530aa95c25cc807c780eaec99fe6259495b6ed268af8c",
+      "gate_check_seconds": 0.008129167021252215,
+      "gate_checked_proposals": 2572,
+      "uncertainty_margin_threshold": 0.003063079778749878,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 2,
+          "false_captures": 0,
+          "false_escape_rate": 0.001,
+          "false_escape_rate_interval_95": [
+            0.0002742789176520342,
+            0.003638934269038394
+          ],
+          "false_escape_given_proposal": 0.00176522506619594,
+          "false_escape_given_proposal_interval_95": [
+            0.0004842219333587865,
+            0.006413361507016872
+          ],
+          "accepted_flights": 1133,
+          "coverage": 0.5665,
+          "coverage_interval_95": [
+            0.5446745807384792,
+            0.5880704519731141
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 2,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 11
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 448,
+          "false_captures": 9,
+          "false_escape_rate": 0.224,
+          "false_escape_rate_interval_95": [
+            0.20626688232702026,
+            0.2427913277722313
+          ],
+          "false_escape_given_proposal": 0.3113273106323836,
+          "false_escape_given_proposal_interval_95": [
+            0.28793228509051605,
+            0.33572699037567366
+          ],
+          "accepted_flights": 1439,
+          "coverage": 0.7195,
+          "coverage_interval_95": [
+            0.6994049846594416,
+            0.7387534315840883
+          ],
+          "gate_accepted": 991,
+          "gate_rejected": 448,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.4955,
+          "gate_coverage_interval_95": [
+            0.4736174624101077,
+            0.5173997910154234
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1495
+        }
+      }
+    },
+    {
+      "model_id": "large-11",
+      "seed": 11,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 1.4182341669802554,
+      "iterations": 384,
+      "training_loss": 8.586134952142011e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0010769976430889546,
+      "acceleration_rmse": 0.005563102706086551,
+      "potential_absolute_error_95": 0.001977910461947234,
+      "validation_count": 1024,
+      "prediction_seconds": 0.7692089999909513,
+      "observations_sha256": "0118578e2b69d4d65206036ac763f3b77090fdba253b25022f136b9b216d5579",
+      "gate_check_seconds": 0.008902000030502677,
+      "gate_checked_proposals": 2791,
+      "uncertainty_margin_threshold": 0.003955820923894468,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 14
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 660,
+          "false_captures": 0,
+          "false_escape_rate": 0.33,
+          "false_escape_rate_interval_95": [
+            0.30973547882362323,
+            0.35091631725200273
+          ],
+          "false_escape_given_proposal": 0.39759036144578314,
+          "false_escape_given_proposal_interval_95": [
+            0.3743100185247615,
+            0.42134358885620443
+          ],
+          "accepted_flights": 1660,
+          "coverage": 0.83,
+          "coverage_interval_95": [
+            0.8129084684026154,
+            0.8458262803917574
+          ],
+          "gate_accepted": 1000,
+          "gate_rejected": 660,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5,
+          "gate_coverage_interval_95": [
+            0.4781079507511692,
+            0.5218920492488308
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1565
+        }
+      }
+    },
+    {
+      "model_id": "large-22",
+      "seed": 22,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 1.6321278749965131,
+      "iterations": 451,
+      "training_loss": 5.59638936118364e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0007848022736333966,
+      "acceleration_rmse": 0.0027747155731118424,
+      "potential_absolute_error_95": 0.001483283296292517,
+      "validation_count": 1024,
+      "prediction_seconds": 0.7457147499662824,
+      "observations_sha256": "a722b1bdc178c2340411d746fa10ebb4ec7074adab9671312a6107d01a759bc9",
+      "gate_check_seconds": 0.008681416977196932,
+      "gate_checked_proposals": 2722,
+      "uncertainty_margin_threshold": 0.002966566592585034,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 9
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 600,
+          "false_captures": 9,
+          "false_escape_rate": 0.3,
+          "false_escape_rate_interval_95": [
+            0.28031535195498103,
+            0.32045146695752
+          ],
+          "false_escape_given_proposal": 0.3771213073538655,
+          "false_escape_given_proposal_interval_95": [
+            0.3536288830197407,
+            0.4012056819851564
+          ],
+          "accepted_flights": 1591,
+          "coverage": 0.7955,
+          "coverage_interval_95": [
+            0.7772647355331391,
+            0.8126022895236403
+          ],
+          "gate_accepted": 991,
+          "gate_rejected": 600,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.4955,
+          "gate_coverage_interval_95": [
+            0.4736174624101077,
+            0.5173997910154234
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1479
+        }
+      }
+    },
+    {
+      "model_id": "large-33",
+      "seed": 33,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 1.401101249968633,
+      "iterations": 397,
+      "training_loss": 4.075950594370959e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0006197219541183279,
+      "acceleration_rmse": 0.003330739686624348,
+      "potential_absolute_error_95": 0.0010657469618061465,
+      "validation_count": 1024,
+      "prediction_seconds": 0.7867396250367165,
+      "observations_sha256": "73a96f27e6e9354d6769ed15fb9847383bc9e072a05200bb0805286ecf49ad15",
+      "gate_check_seconds": 0.006984249979723245,
+      "gate_checked_proposals": 2147,
+      "uncertainty_margin_threshold": 0.002131493923612293,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 3
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 265,
+          "false_captures": 249,
+          "false_escape_rate": 0.1325,
+          "false_escape_rate_interval_95": [
+            0.11834352753837758,
+            0.14806550221334328
+          ],
+          "false_escape_given_proposal": 0.2608267716535433,
+          "false_escape_given_proposal_interval_95": [
+            0.2347643418270339,
+            0.288690999396305
+          ],
+          "accepted_flights": 1016,
+          "coverage": 0.508,
+          "coverage_interval_95": [
+            0.48609541136198264,
+            0.5298739158815173
+          ],
+          "gate_accepted": 751,
+          "gate_rejected": 265,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.3755,
+          "gate_coverage_interval_95": [
+            0.3545348031004616,
+            0.39694254167257026
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1390
+        }
+      }
+    },
+    {
+      "model_id": "large-44",
+      "seed": 44,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 1.7822698749951087,
+      "iterations": 487,
+      "training_loss": 4.638077929107547e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0007387712174494243,
+      "acceleration_rmse": 0.0043394841947799155,
+      "potential_absolute_error_95": 0.0012272898485202516,
+      "validation_count": 1024,
+      "prediction_seconds": 0.7576007079915144,
+      "observations_sha256": "fbeb6f51c959db433e24f24fd242ccca46736dffd22a3a7a7ae0802619c39652",
+      "gate_check_seconds": 0.00793791702017188,
+      "gate_checked_proposals": 2467,
+      "uncertainty_margin_threshold": 0.002454579697040503,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 7
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 392,
+          "false_captures": 56,
+          "false_escape_rate": 0.196,
+          "false_escape_rate_interval_95": [
+            0.17919210630660154,
+            0.21397345844040022
+          ],
+          "false_escape_given_proposal": 0.2934131736526946,
+          "false_escape_given_proposal_interval_95": [
+            0.2696177091780607,
+            0.3183932481139601
+          ],
+          "accepted_flights": 1336,
+          "coverage": 0.668,
+          "coverage_interval_95": [
+            0.6470561319884656,
+            0.6882997401250335
+          ],
+          "gate_accepted": 944,
+          "gate_rejected": 392,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.472,
+          "gate_coverage_interval_95": [
+            0.450195915853408,
+            0.49391143879434196
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1445
+        }
+      }
+    },
+    {
+      "model_id": "large-55",
+      "seed": 55,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 2.261318290955387,
+      "iterations": 631,
+      "training_loss": 3.1327371229250365e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0005668177208501541,
+      "acceleration_rmse": 0.0021804344124222263,
+      "potential_absolute_error_95": 0.001134125223821971,
+      "validation_count": 1024,
+      "prediction_seconds": 0.7607310839812271,
+      "observations_sha256": "662d6338e3c79721a90530aa95c25cc807c780eaec99fe6259495b6ed268af8c",
+      "gate_check_seconds": 0.008462583995424211,
+      "gate_checked_proposals": 2659,
+      "uncertainty_margin_threshold": 0.002268250447643942,
+      "distributions": {
+        "nominal": {
+          "trials": 2000,
+          "actual_escape": 1131,
+          "actual_capture": 869,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 0,
+          "false_captures": 0,
+          "false_escape_rate": 0.0,
+          "false_escape_rate_interval_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "false_escape_given_proposal": 0.0,
+          "false_escape_given_proposal_interval_95": [
+            0.0,
+            0.0033850180488524777
+          ],
+          "accepted_flights": 1131,
+          "coverage": 0.5655,
+          "coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_accepted": 1131,
+          "gate_rejected": 0,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5655,
+          "gate_coverage_interval_95": [
+            0.5436706785393429,
+            0.5870781882668129
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 6
+        },
+        "stress": {
+          "trials": 2000,
+          "actual_escape": 1000,
+          "actual_capture": 1000,
+          "actual_unresolved": 0,
+          "predicted_unresolved": 0,
+          "false_escapes": 528,
+          "false_captures": 0,
+          "false_escape_rate": 0.264,
+          "false_escape_rate_interval_95": [
+            0.24514712228916352,
+            0.28375772402758787
+          ],
+          "false_escape_given_proposal": 0.34554973821989526,
+          "false_escape_given_proposal_interval_95": [
+            0.32211977589711455,
+            0.3697543424836643
+          ],
+          "accepted_flights": 1528,
+          "coverage": 0.764,
+          "coverage_interval_95": [
+            0.7448953127247383,
+            0.7820924863107602
+          ],
+          "gate_accepted": 1000,
+          "gate_rejected": 528,
+          "gate_false_escapes": 0,
+          "gate_coverage": 0.5,
+          "gate_coverage_interval_95": [
+            0.4781079507511692,
+            0.5218920492488308
+          ],
+          "gate_rejected_unresolved": 0,
+          "uncertain_predictions": 1418
+        }
+      }
+    }
+  ],
+  "aggregate_metrics": [
+    {
+      "size": "small",
+      "distribution": "nominal",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "trials_per_seed": 2000,
+      "false_escapes_mean": 0.8,
+      "false_escapes_std": 1.0954451150103324,
+      "false_escapes_min": 0.0,
+      "false_escapes_max": 2.0,
+      "false_captures_mean": 0.0,
+      "false_captures_std": 0.0,
+      "false_captures_min": 0.0,
+      "false_captures_max": 0.0,
+      "false_escape_rate_mean": 0.0004,
+      "false_escape_rate_std": 0.0005477225575051661,
+      "false_escape_rate_min": 0.0,
+      "false_escape_rate_max": 0.001,
+      "coverage_mean": 0.5659000000000001,
+      "coverage_std": 0.0005477225575051665,
+      "coverage_min": 0.5655,
+      "coverage_max": 0.5665,
+      "gate_coverage_mean": 0.5655,
+      "gate_coverage_std": 0.0,
+      "gate_coverage_min": 0.5655,
+      "gate_coverage_max": 0.5655
+    },
+    {
+      "size": "small",
+      "distribution": "stress",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "trials_per_seed": 2000,
+      "false_escapes_mean": 567.4,
+      "false_escapes_std": 142.38609482670702,
+      "false_escapes_min": 389.0,
+      "false_escapes_max": 716.0,
+      "false_captures_mean": 11.8,
+      "false_captures_std": 21.70714168194422,
+      "false_captures_min": 0.0,
+      "false_captures_max": 50.0,
+      "false_escape_rate_mean": 0.28369999999999995,
+      "false_escape_rate_std": 0.0711930474133535,
+      "false_escape_rate_min": 0.1945,
+      "false_escape_rate_max": 0.358,
+      "coverage_mean": 0.7777999999999999,
+      "coverage_std": 0.08022203562612955,
+      "coverage_min": 0.6695,
+      "coverage_max": 0.858,
+      "gate_coverage_mean": 0.4941,
+      "gate_coverage_std": 0.010853570840972118,
+      "gate_coverage_min": 0.475,
+      "gate_coverage_max": 0.5
+    },
+    {
+      "size": "large",
+      "distribution": "nominal",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "trials_per_seed": 2000,
+      "false_escapes_mean": 0.0,
+      "false_escapes_std": 0.0,
+      "false_escapes_min": 0.0,
+      "false_escapes_max": 0.0,
+      "false_captures_mean": 0.0,
+      "false_captures_std": 0.0,
+      "false_captures_min": 0.0,
+      "false_captures_max": 0.0,
+      "false_escape_rate_mean": 0.0,
+      "false_escape_rate_std": 0.0,
+      "false_escape_rate_min": 0.0,
+      "false_escape_rate_max": 0.0,
+      "coverage_mean": 0.5655,
+      "coverage_std": 0.0,
+      "coverage_min": 0.5655,
+      "coverage_max": 0.5655,
+      "gate_coverage_mean": 0.5655,
+      "gate_coverage_std": 0.0,
+      "gate_coverage_min": 0.5655,
+      "gate_coverage_max": 0.5655
+    },
+    {
+      "size": "large",
+      "distribution": "stress",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "trials_per_seed": 2000,
+      "false_escapes_mean": 489.0,
+      "false_escapes_std": 160.2092381855678,
+      "false_escapes_min": 265.0,
+      "false_escapes_max": 660.0,
+      "false_captures_mean": 62.8,
+      "false_captures_std": 106.65223860754165,
+      "false_captures_min": 0.0,
+      "false_captures_max": 249.0,
+      "false_escape_rate_mean": 0.2445,
+      "false_escape_rate_std": 0.08010461909278391,
+      "false_escape_rate_min": 0.1325,
+      "false_escape_rate_max": 0.33,
+      "coverage_mean": 0.7131000000000001,
+      "coverage_std": 0.12956291907795223,
+      "coverage_min": 0.508,
+      "coverage_max": 0.83,
+      "gate_coverage_mean": 0.4686,
+      "gate_coverage_std": 0.053326119303770826,
+      "gate_coverage_min": 0.3755,
+      "gate_coverage_max": 0.5
+    }
+  ],
+  "baseline": {
+    "model_id": "analytic",
+    "parameters": 0,
+    "potential_rmse": 0.0,
+    "acceleration_rmse": 0.0,
+    "fit_seconds": 0.0,
+    "prediction_seconds": 0.0001962080132216215,
+    "oracle_seconds": 0.012352999998256564,
+    "oracle_agreement": true,
+    "distributions": {
+      "nominal": {
+        "trials": 2000,
+        "actual_escape": 1131,
+        "actual_capture": 869,
+        "actual_unresolved": 0,
+        "predicted_unresolved": 0,
+        "false_escapes": 0,
+        "false_captures": 0,
+        "false_escape_rate": 0.0,
+        "false_escape_rate_interval_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "false_escape_given_proposal": 0.0,
+        "false_escape_given_proposal_interval_95": [
+          0.0,
+          0.0033850180488524777
+        ],
+        "accepted_flights": 1131,
+        "coverage": 0.5655,
+        "coverage_interval_95": [
+          0.5436706785393429,
+          0.5870781882668129
+        ],
+        "gate_accepted": 1131,
+        "gate_rejected": 0,
+        "gate_false_escapes": 0,
+        "gate_coverage": 0.5655,
+        "gate_coverage_interval_95": [
+          0.5436706785393429,
+          0.5870781882668129
+        ],
+        "gate_rejected_unresolved": 0
+      },
+      "stress": {
+        "trials": 2000,
+        "actual_escape": 1000,
+        "actual_capture": 1000,
+        "actual_unresolved": 0,
+        "predicted_unresolved": 0,
+        "false_escapes": 0,
+        "false_captures": 0,
+        "false_escape_rate": 0.0,
+        "false_escape_rate_interval_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "false_escape_given_proposal": 0.0,
+        "false_escape_given_proposal_interval_95": [
+          2.168404344971009e-19,
+          0.0038267584855551234
+        ],
+        "accepted_flights": 1000,
+        "coverage": 0.5,
+        "coverage_interval_95": [
+          0.4781079507511692,
+          0.5218920492488308
+        ],
+        "gate_accepted": 1000,
+        "gate_rejected": 0,
+        "gate_false_escapes": 0,
+        "gate_coverage": 0.5,
+        "gate_coverage_interval_95": [
+          0.4781079507511692,
+          0.5218920492488308
+        ],
+        "gate_rejected_unresolved": 0
+      }
+    }
+  },
+  "model_files": {
+    "small-11": "models/small-11.json",
+    "small-22": "models/small-22.json",
+    "small-33": "models/small-33.json",
+    "small-44": "models/small-44.json",
+    "small-55": "models/small-55.json",
+    "large-11": "models/large-11.json",
+    "large-22": "models/large-22.json",
+    "large-33": "models/large-33.json",
+    "large-44": "models/large-44.json",
+    "large-55": "models/large-55.json"
+  },
+  "selected_case": {
+    "model_id": "small-11",
+    "trial_id": 3569,
+    "kind": "false_escape",
+    "energy": 1.0027667008383363,
+    "angular_momentum": 4.0219717740634575,
+    "margin": 0.0027257575165550163,
+    "prediction": "escape",
+    "actual": "capture",
+    "trace_discrepancies": [],
+    "exact_tighter_tolerance_terminal_time_difference": 2.07206198865606e-08,
+    "true_energy_drift": 3.1624081131553794e-10,
+    "model_energy_drift": 3.779421220428958e-12
+  },
+  "numerical_crosschecks": [
+    {
+      "trial_id": 0,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 3.552713678800501e-15
+    },
+    {
+      "trial_id": 1,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 4.970126532555241e-10
+    },
+    {
+      "trial_id": 2,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 7.218063924341322e-10
+    },
+    {
+      "trial_id": 3,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 3.2251423753848485e-10
+    },
+    {
+      "trial_id": 4,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 2.6645352591003757e-15
+    },
+    {
+      "trial_id": 5,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 4.19993595457413e-10
+    },
+    {
+      "trial_id": 6,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 3.517186542012496e-13
+    },
+    {
+      "trial_id": 7,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 5.621005882971986e-10
+    },
+    {
+      "trial_id": 8,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 3.0001645612287575e-10
+    },
+    {
+      "trial_id": 9,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 7.828364623208017e-10
+    },
+    {
+      "trial_id": 2000,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 8.992584454858843e-11
+    },
+    {
+      "trial_id": 2001,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 3.6573588602095697e-10
+    },
+    {
+      "trial_id": 2002,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 1.6923795698176036e-11
+    },
+    {
+      "trial_id": 2003,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 5.610141240453004e-10
+    },
+    {
+      "trial_id": 2004,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 7.479952213174101e-10
+    },
+    {
+      "trial_id": 2005,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 1.5695755806177658e-10
+    },
+    {
+      "trial_id": 2006,
+      "oracle": "escape",
+      "numerical": "escape",
+      "energy_drift": 5.387121859712352e-10
+    },
+    {
+      "trial_id": 2007,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 3.7642311490060365e-10
+    },
+    {
+      "trial_id": 2008,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 4.026232680587327e-10
+    },
+    {
+      "trial_id": 2009,
+      "oracle": "capture",
+      "numerical": "capture",
+      "energy_drift": 3.492839351082466e-10
+    }
+  ],
+  "training_fit_seconds_total": 11.076638165919576,
+  "execution_seconds_this_run": 5.701260166009888
+}

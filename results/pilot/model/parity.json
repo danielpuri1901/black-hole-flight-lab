@@ -1,0 +1,9 @@
+{
+  "decoder_max_absolute_error": 1.242735362394498e-07,
+  "denoiser_max_absolute_error": 3.332781400633422e-06,
+  "absolute_tolerance": 1e-05,
+  "first_candidate_identical_across_counts": true,
+  "sample_max_burn_norm": 1.0,
+  "finite_samples": true,
+  "weights_sha256": "f0e554b39b0536862d2238e5bf004754d9f2e20ded28d95daecafae0dd9d99ff"
+}

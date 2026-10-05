@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "protocol_status": "posthoc after frozen neural experiment",
+  "launch_radius": 30.0,
+  "capture_radius": 2.001,
+  "numerical_resolution_rule": "Both rtol=1e-11 and 1e-13 give physical capture and perturbed escape; all measured invariant drifts < epsilon/200; opposite analytic margins. Diagnostic only, not a rigorous numerical error certificate.",
+  "perturbation": [
+    {
+      "epsilon": 0.001,
+      "energy": 1.05,
+      "angular_momentum": 4.375378635328177,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.7246810231940897,
+      "width": 0.5,
+      "potential_sup_error": 0.001,
+      "acceleration_sup_error": 0.0017173002067198385,
+      "physical_margin": -0.0004999999999999449,
+      "perturbed_margin": 0.0004999999999999449,
+      "target_physical_margin": -0.0005,
+      "target_perturbed_margin": 0.0005,
+      "root_margin_residual": 5.5077470362263625e-17,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 6.922684647747701e-12,
+            "diagnostics": {
+              "exact_energy_drift": 6.922684647747701e-12,
+              "turning_radius": null,
+              "steps": 79,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 93.75718434998771,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3864113012269961,
+              "evaluations": 1343,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 1.3263390385986895e-11,
+            "diagnostics": {
+              "exact_energy_drift": 0.0009150352595705957,
+              "turning_radius": 3.810068148559887,
+              "steps": 116,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 161.97535852304682,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3864113012269961,
+              "evaluations": 1982,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.674216321134736e-13,
+            "diagnostics": {
+              "exact_energy_drift": 1.674216321134736e-13,
+              "turning_radius": null,
+              "steps": 119,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 93.75718434862414,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3864113012269961,
+              "evaluations": 1895,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 1.1612932837579137e-13,
+            "diagnostics": {
+              "exact_energy_drift": 0.0009150352521649641,
+              "turning_radius": 3.8100681477726828,
+              "steps": 162,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 161.97535858679393,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3864113012269961,
+              "evaluations": 2840,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 0.0001,
+      "energy": 1.05,
+      "angular_momentum": 4.3769189449299795,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.7238466483634447,
+      "width": 0.5,
+      "potential_sup_error": 0.0001,
+      "acceleration_sup_error": 0.00017173002067198386,
+      "physical_margin": -5.0000000000105516e-05,
+      "perturbed_margin": 4.999999999988347e-05,
+      "target_physical_margin": -5e-05,
+      "target_perturbed_margin": 5e-05,
+      "root_margin_residual": -1.0551320017357368e-16,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.475841671094713e-11,
+            "diagnostics": {
+              "exact_energy_drift": 1.475841671094713e-11,
+              "turning_radius": null,
+              "steps": 87,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 103.11519208405078,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386393210554298,
+              "evaluations": 1463,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 3.4074965071795305e-12,
+            "diagnostics": {
+              "exact_energy_drift": 9.901576316795335e-05,
+              "turning_radius": 3.752532934385756,
+              "steps": 114,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 172.3167846954746,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386393210554298,
+              "evaluations": 1988,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.4033219031261979e-13,
+            "diagnostics": {
+              "exact_energy_drift": 1.4033219031261979e-13,
+              "turning_radius": null,
+              "steps": 133,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 103.11519207141066,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386393210554298,
+              "evaluations": 2105,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 1.4011014570769476e-13,
+            "diagnostics": {
+              "exact_energy_drift": 9.90157632090316e-05,
+              "turning_radius": 3.752532934397924,
+              "steps": 159,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 172.31678469358508,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386393210554298,
+              "evaluations": 2855,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "energy": 1.05,
+      "angular_momentum": 4.377072930147042,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.723763331690998,
+      "width": 0.5,
+      "potential_sup_error": 1e-05,
+      "acceleration_sup_error": 1.717300206719839e-05,
+      "physical_margin": -5.000000000254801e-06,
+      "perturbed_margin": 4.999999999810711e-06,
+      "target_physical_margin": -5e-06,
+      "target_perturbed_margin": 5e-06,
+      "root_margin_residual": -2.5480021602830236e-16,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 6.368017224644973e-12,
+            "diagnostics": {
+              "exact_energy_drift": 6.368017224644973e-12,
+              "turning_radius": null,
+              "steps": 94,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 112.4485670583686,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386391401627593,
+              "evaluations": 1556,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 6.59605703390298e-12,
+            "diagnostics": {
+              "exact_energy_drift": 9.990103643664483e-06,
+              "turning_radius": 3.7328465614762716,
+              "steps": 116,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 181.84321490899484,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386391401627593,
+              "evaluations": 2018,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 2.0339285811132868e-13,
+            "diagnostics": {
+              "exact_energy_drift": 2.0339285811132868e-13,
+              "turning_radius": null,
+              "steps": 146,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 112.44856693326135,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386391401627593,
+              "evaluations": 2300,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 2.042810365310288e-13,
+            "diagnostics": {
+              "exact_energy_drift": 9.990102652235322e-06,
+              "turning_radius": 3.732846560570768,
+              "steps": 158,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 181.84321571161607,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.386391401627593,
+              "evaluations": 2732,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 1e-06,
+      "energy": 1.05,
+      "angular_momentum": 4.377088328211689,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.723755001229911,
+      "width": 0.5,
+      "potential_sup_error": 1e-06,
+      "acceleration_sup_error": 1.7173002067198386e-06,
+      "physical_margin": -5.00000000069889e-07,
+      "perturbed_margin": 4.999999998478444e-07,
+      "target_physical_margin": -5e-07,
+      "target_perturbed_margin": 5e-07,
+      "root_margin_residual": -6.988900611530754e-17,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 7.853495631593432e-12,
+            "diagnostics": {
+              "exact_energy_drift": 7.853495631593432e-12,
+              "turning_radius": null,
+              "steps": 101,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 121.77881432696672,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639122073632615,
+              "evaluations": 1673,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 3.356947830823742e-09,
+            "diagnostics": {
+              "exact_energy_drift": 9.998854004766855e-07,
+              "turning_radius": 3.7266229698955864,
+              "steps": 116,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 191.2011555913185,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639122073632615,
+              "evaluations": 1922,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.9229062786507711e-13,
+            "diagnostics": {
+              "exact_energy_drift": 1.9229062786507711e-13,
+              "turning_radius": null,
+              "steps": 158,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 121.77881307843568,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639122073632615,
+              "evaluations": 2480,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 1.6364687382974807e-13,
+            "diagnostics": {
+              "exact_energy_drift": 9.999012891004355e-07,
+              "turning_radius": 3.7266230155250675,
+              "steps": 167,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 191.201026320501,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639122073632615,
+              "evaluations": 2867,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 1e-07,
+      "energy": 1.05,
+      "angular_momentum": 4.37708986801358,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.723754168195864,
+      "width": 0.5,
+      "potential_sup_error": 1e-07,
+      "acceleration_sup_error": 1.7173002067198383e-07,
+      "physical_margin": -5.000000102839408e-08,
+      "perturbed_margin": 4.9999999029992637e-08,
+      "target_physical_margin": -5e-08,
+      "target_perturbed_margin": 5e-08,
+      "root_margin_residual": -1.0283940832666748e-15,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.361355472795367e-11,
+            "diagnostics": {
+              "exact_energy_drift": 1.361355472795367e-11,
+              "turning_radius": null,
+              "steps": 106,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 131.10869162283205,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3863912026472136,
+              "evaluations": 1736,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 2.9061864026402873e-11,
+            "diagnostics": {
+              "exact_energy_drift": 1.0000145023170148e-07,
+              "turning_radius": 3.724660528513206,
+              "steps": 121,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 200.53424898353617,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3863912026472136,
+              "evaluations": 1973,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.2234657731369225e-13,
+            "diagnostics": {
+              "exact_energy_drift": 1.2234657731369225e-13,
+              "turning_radius": null,
+              "steps": 167,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 131.10867926188843,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3863912026472136,
+              "evaluations": 2627,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 2.4982238500115272e-12,
+            "diagnostics": {
+              "exact_energy_drift": 9.999751915401589e-08,
+              "turning_radius": 3.724660492873395,
+              "steps": 172,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 200.53456753355096,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.3863912026472136,
+              "evaluations": 2846,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 1e-08,
+      "energy": 1.05,
+      "angular_momentum": 4.377090021993727,
+      "critical_angular_momentum": 4.377090039102631,
+      "center": 3.723754084892578,
+      "width": 0.5,
+      "potential_sup_error": 1e-08,
+      "acceleration_sup_error": 1.7173002067198388e-08,
+      "physical_margin": -4.999999969612645e-09,
+      "perturbed_margin": 4.999999969612645e-09,
+      "target_physical_margin": -5e-09,
+      "target_perturbed_margin": 5e-09,
+      "root_margin_residual": 3.038735495922355e-17,
+      "physical_oracle": "capture",
+      "analytic_perturbed_outcome": "escape",
+      "numerical_status": "confirmed",
+      "traces": [
+        {
+          "rtol": 1e-11,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 6.945333197450054e-12,
+            "diagnostics": {
+              "exact_energy_drift": 6.945333197450054e-12,
+              "turning_radius": null,
+              "steps": 111,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 140.43861977986364,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639120083830236,
+              "evaluations": 1811,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 3.183231456205249e-12,
+            "diagnostics": {
+              "exact_energy_drift": 1.0000364980555787e-08,
+              "turning_radius": 3.7240406388170113,
+              "steps": 126,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 209.86439937973637,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639120083830236,
+              "evaluations": 2036,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        },
+        {
+          "rtol": 1e-13,
+          "physical": {
+            "outcome": "capture",
+            "energy_drift": 1.3677947663381929e-13,
+            "diagnostics": {
+              "exact_energy_drift": 1.3677947663381929e-13,
+              "turning_radius": null,
+              "steps": 176,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 140.4384959501286,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639120083830236,
+              "evaluations": 2762,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          },
+          "perturbed": {
+            "outcome": "escape",
+            "energy_drift": 3.077538224260934e-13,
+            "diagnostics": {
+              "exact_energy_drift": 9.999903127777543e-09,
+              "turning_radius": 3.7240406255781955,
+              "steps": 180,
+              "cutoff": 2.001,
+              "escape_radius": 30.0,
+              "terminal_time": 209.86477375334934,
+              "conserved_energy": 1.1025,
+              "initial_radial_velocity": -0.38639120083830236,
+              "evaluations": 2930,
+              "integration_success": true,
+              "message": "A termination event occurred."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gauge": [
+    {
+      "energy": 1.05,
+      "angular_momentum": 4.333319138711605,
+      "constant": -0.1,
+      "potential_sup_error": 0.1,
+      "acceleration_sup_error": 0.0,
+      "physical_margin": -0.012693189849075193,
+      "shifted_margin": -0.012693189849075193,
+      "physical": {
+        "outcome": "capture",
+        "energy_drift": 8.810729923425242e-13,
+        "diagnostics": {
+          "exact_energy_drift": 8.810729923425242e-13,
+          "turning_radius": null,
+          "steps": 79,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 80.15715896588281,
+          "conserved_energy": 1.1025,
+          "initial_radial_velocity": -0.38690249833001145,
+          "evaluations": 1259,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "shifted": {
+        "outcome": "capture",
+        "energy_drift": 8.810729923425242e-13,
+        "diagnostics": {
+          "exact_energy_drift": 8.810729923425242e-13,
+          "turning_radius": null,
+          "steps": 79,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 80.15715896588281,
+          "conserved_energy": 1.0025,
+          "initial_radial_velocity": -0.38690249833001145,
+          "evaluations": 1259,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "max_point_difference": 0.0
+    },
+    {
+      "energy": 1.05,
+      "angular_momentum": 4.333319138711605,
+      "constant": 0.1,
+      "potential_sup_error": 0.1,
+      "acceleration_sup_error": 0.0,
+      "physical_margin": -0.012693189849075193,
+      "shifted_margin": -0.012693189849075193,
+      "physical": {
+        "outcome": "capture",
+        "energy_drift": 8.810729923425242e-13,
+        "diagnostics": {
+          "exact_energy_drift": 8.810729923425242e-13,
+          "turning_radius": null,
+          "steps": 79,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 80.15715896588281,
+          "conserved_energy": 1.1025,
+          "initial_radial_velocity": -0.38690249833001145,
+          "evaluations": 1259,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "shifted": {
+        "outcome": "capture",
+        "energy_drift": 8.808509477375992e-13,
+        "diagnostics": {
+          "exact_energy_drift": 8.810729923425242e-13,
+          "turning_radius": null,
+          "steps": 79,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 80.15715896588281,
+          "conserved_energy": 1.2025000000000001,
+          "initial_radial_velocity": -0.38690249833001145,
+          "evaluations": 1259,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "max_point_difference": 0.0
+    },
+    {
+      "energy": 1.05,
+      "angular_momentum": 4.420860939493657,
+      "constant": -0.1,
+      "potential_sup_error": 0.1,
+      "acceleration_sup_error": 0.0,
+      "physical_margin": 0.012889440680019515,
+      "shifted_margin": 0.012889440680019404,
+      "physical": {
+        "outcome": "escape",
+        "energy_drift": 3.2573943542502093e-13,
+        "diagnostics": {
+          "exact_energy_drift": 3.2573943542502093e-13,
+          "turning_radius": 4.243491861672619,
+          "steps": 93,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 150.65220806011038,
+          "conserved_energy": 1.1025,
+          "initial_radial_velocity": -0.38587407653862354,
+          "evaluations": 1505,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "shifted": {
+        "outcome": "escape",
+        "energy_drift": 3.2596148002994596e-13,
+        "diagnostics": {
+          "exact_energy_drift": 3.2573943542502093e-13,
+          "turning_radius": 4.243491861672619,
+          "steps": 93,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 150.65220806011038,
+          "conserved_energy": 1.0025,
+          "initial_radial_velocity": -0.38587407653862354,
+          "evaluations": 1505,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "max_point_difference": 0.0
+    },
+    {
+      "energy": 1.05,
+      "angular_momentum": 4.420860939493657,
+      "constant": 0.1,
+      "potential_sup_error": 0.1,
+      "acceleration_sup_error": 0.0,
+      "physical_margin": 0.012889440680019515,
+      "shifted_margin": 0.012889440680019515,
+      "physical": {
+        "outcome": "escape",
+        "energy_drift": 3.2573943542502093e-13,
+        "diagnostics": {
+          "exact_energy_drift": 3.2573943542502093e-13,
+          "turning_radius": 4.243491861672619,
+          "steps": 93,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 150.65220806011038,
+          "conserved_energy": 1.1025,
+          "initial_radial_velocity": -0.38587407653862354,
+          "evaluations": 1505,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "shifted": {
+        "outcome": "escape",
+        "energy_drift": 3.2573943542502093e-13,
+        "diagnostics": {
+          "exact_energy_drift": 3.2573943542502093e-13,
+          "turning_radius": 4.243491861672619,
+          "steps": 93,
+          "cutoff": 2.001,
+          "escape_radius": 30.0,
+          "terminal_time": 150.65220806011038,
+          "conserved_energy": 1.2025000000000001,
+          "initial_radial_velocity": -0.38587407653862354,
+          "evaluations": 1505,
+          "integration_success": true,
+          "message": "A termination event occurred."
+        }
+      },
+      "max_point_difference": 0.0
+    }
+  ],
+  "basis": {
+    "status": "posthoc privileged known-physics basis; not discovered",
+    "columns": [
+      "1",
+      "1/r",
+      "L^2/r^2",
+      "L^2/r^3"
+    ],
+    "expected_coefficients": [
+      1.0,
+      -2.0,
+      1.0,
+      -2.0
+    ],
+    "coefficients": [
+      0.9999999999999989,
+      -1.9999999999999882,
+      1.0000000000000007,
+      -2.000000000000005
+    ],
+    "rank": 4,
+    "design_condition_number": 42.82378915949292,
+    "training_count": 4096,
+    "validation_count": 1024,
+    "training_rmse": 1.3578416248090863e-15,
+    "training_max_error": 1.3766765505351941e-14,
+    "validation_rmse": 1.5559414350313207e-15,
+    "validation_max_error": 1.226796442210798e-14,
+    "observations_sha256": "0118578e2b69d4d65206036ac763f3b77090fdba253b25022f136b9b216d5579",
+    "frozen_inputs_sha256": "9c51999e3690d2e1d326b187bb6ae4d545235959ea652ad4c8c793d79db88178",
+    "distributions": {
+      "nominal": {
+        "count": 2000,
+        "agreements": 2000,
+        "false_escapes": 0,
+        "false_captures": 0,
+        "unresolved": 0,
+        "max_margin_error": 2.55351295663786e-15
+      },
+      "stress": {
+        "count": 2000,
+        "agreements": 2000,
+        "false_escapes": 0,
+        "false_captures": 0,
+        "unresolved": 0,
+        "max_margin_error": 2.7755575615628914e-15
+      }
+    }
+  },
+  "selective_policy": {
+    "status": "posthoc policy analysis using the predeclared saved uncertainty flag",
+    "rule": "Accept only prediction=escape and uncertain=False; otherwise abstain.",
+    "threshold": "Existing twice validation 95th-percentile absolute potential residual; no retuning.",
+    "certificate": false,
+    "trials_sha256": "80d068ab322d0a962bdfdb72ea00342530965b1d176f2479070970bfea1a9421",
+    "models": {
+      "small-11": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 3,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 348,
+          "accepted_true_escapes": 348,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1368,
+          "true_escapes": 1000,
+          "missed_true_escapes": 652,
+          "coverage": 0.174,
+          "true_escape_recall": 0.348
+        }
+      },
+      "small-22": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 390,
+          "accepted_true_escapes": 390,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1222,
+          "true_escapes": 1000,
+          "missed_true_escapes": 610,
+          "coverage": 0.195,
+          "true_escape_recall": 0.39
+        }
+      },
+      "small-33": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 271,
+          "accepted_true_escapes": 271,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1068,
+          "true_escapes": 1000,
+          "missed_true_escapes": 729,
+          "coverage": 0.1355,
+          "true_escape_recall": 0.271
+        }
+      },
+      "small-44": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 364,
+          "accepted_true_escapes": 364,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1308,
+          "true_escapes": 1000,
+          "missed_true_escapes": 636,
+          "coverage": 0.182,
+          "true_escape_recall": 0.364
+        }
+      },
+      "small-55": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 3,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 303,
+          "accepted_true_escapes": 303,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1136,
+          "true_escapes": 1000,
+          "missed_true_escapes": 697,
+          "coverage": 0.1515,
+          "true_escape_recall": 0.303
+        }
+      },
+      "large-11": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 284,
+          "accepted_true_escapes": 284,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1376,
+          "true_escapes": 1000,
+          "missed_true_escapes": 716,
+          "coverage": 0.142,
+          "true_escape_recall": 0.284
+        }
+      },
+      "large-22": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 317,
+          "accepted_true_escapes": 317,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1274,
+          "true_escapes": 1000,
+          "missed_true_escapes": 683,
+          "coverage": 0.1585,
+          "true_escape_recall": 0.317
+        }
+      },
+      "large-33": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1131,
+          "accepted_true_escapes": 1131,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 0,
+          "true_escapes": 1131,
+          "missed_true_escapes": 0,
+          "coverage": 0.5655,
+          "true_escape_recall": 1.0
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 329,
+          "accepted_true_escapes": 329,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 687,
+          "true_escapes": 1000,
+          "missed_true_escapes": 671,
+          "coverage": 0.1645,
+          "true_escape_recall": 0.329
+        }
+      },
+      "large-44": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 308,
+          "accepted_true_escapes": 308,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1028,
+          "true_escapes": 1000,
+          "missed_true_escapes": 692,
+          "coverage": 0.154,
+          "true_escape_recall": 0.308
+        }
+      },
+      "large-55": {
+        "nominal": {
+          "count": 2000,
+          "accepted": 1130,
+          "accepted_true_escapes": 1130,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1,
+          "true_escapes": 1131,
+          "missed_true_escapes": 1,
+          "coverage": 0.565,
+          "true_escape_recall": 0.9991158267020336
+        },
+        "stress": {
+          "count": 2000,
+          "accepted": 338,
+          "accepted_true_escapes": 338,
+          "false_escapes": 0,
+          "accepted_unresolved_truth": 0,
+          "rejected_uncertain_escapes": 1190,
+          "true_escapes": 1000,
+          "missed_true_escapes": 662,
+          "coverage": 0.169,
+          "true_escape_recall": 0.338
+        }
+      }
+    },
+    "mean_coverage_by_architecture": {
+      "small": {
+        "nominal": 0.565,
+        "stress": 0.16759999999999997
+      },
+      "large": {
+        "nominal": 0.5650999999999999,
+        "stress": 0.15760000000000002
+      }
+    },
+    "showcase": {
+      "model_id": "small-11",
+      "trial_id": 3569,
+      "flagged_uncertain": true,
+      "accepted_by_selective_policy": false
+    }
+  }
+}

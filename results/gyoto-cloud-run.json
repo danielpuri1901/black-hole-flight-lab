@@ -1,0 +1,1026 @@
+{
+  "result": {
+    "engine": "GYOTO",
+    "packages": [
+      "gyoto=2.0.2-1.1build3",
+      "python3-gyoto=2.0.2-1.1build3"
+    ],
+    "metric": "zero-spin KerrBL",
+    "units": "G=c=M=1",
+    "time_parameter": "proper time",
+    "integrator": "runge_kutta_fehlberg78",
+    "tolerances": [
+      1e-09,
+      1e-11
+    ],
+    "capture_radius": 2.001,
+    "escape_radius": 30.0,
+    "proper_time_limit": 1000.0,
+    "trajectory_count": 24,
+    "classification_agreement_count": 24,
+    "conserved_quantities_ok_count": 24,
+    "passed": true,
+    "photon_checks": {
+      "performed": false,
+      "reason": "This bounded run checks timelike launches only."
+    },
+    "limitations": [
+      "Sampled crossings are not exact event times.",
+      "Path differences include linear interpolation error.",
+      "Independent numerical agreement is not a formal proof."
+    ],
+    "runtime_seconds": 1.6795665950000114,
+    "flights": [
+      {
+        "energy": 1.0,
+        "momentum_factor": 0.99,
+        "angular_momentum": 3.96,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 117.80777854557965,
+          "observed_terminal_radius": 2.0009987285011976,
+          "minimum_radius": 2.0009987285011976,
+          "energy_drift": 8.705822729382362e-10,
+          "angular_momentum_drift": 2.638333995719222e-12,
+          "norm_error": 3.662000923831954e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 736
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 117.8077927152794,
+          "observed_terminal_radius": 2.000984576050975,
+          "minimum_radius": 2.000984576050975,
+          "energy_drift": 1.1809664357542715e-11,
+          "angular_momentum_drift": 1.3145040611561853e-13,
+          "norm_error": 4.070181303106324e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 765
+        },
+        "tolerance_comparison": {
+          "radius_difference": 9.436664782924709e-10,
+          "azimuth_difference": 7.415641434249665e-10,
+          "shared_proper_time": 117.80777854557965
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00010720665984420563,
+          "azimuth_difference": 8.249709156160634e-05,
+          "shared_proper_time": 117.80777727257866
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.0,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 3.99996,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 158.03308614570986,
+          "observed_terminal_radius": 2.0008710846934705,
+          "minimum_radius": 2.0008710846934705,
+          "energy_drift": 9.355851648962243e-10,
+          "angular_momentum_drift": 3.531841485937548e-12,
+          "norm_error": 4.2057062201728e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 1227
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 158.03304607836165,
+          "observed_terminal_radius": 2.0009111074110675,
+          "minimum_radius": 2.0009111074110675,
+          "energy_drift": 1.4385381774673078e-11,
+          "angular_momentum_drift": 1.2922996006636822e-13,
+          "norm_error": 5.074088260670351e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 1257
+        },
+        "tolerance_comparison": {
+          "radius_difference": 3.7074139314086096e-09,
+          "azimuth_difference": 2.9866207285067503e-09,
+          "shared_proper_time": 158.03304607836165
+        },
+        "local_path_comparison": {
+          "radius_difference": 5.744719566180834e-05,
+          "azimuth_difference": 4.201536890846569e-05,
+          "shared_proper_time": 158.0329571075445
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.0,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 4.00004,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 262.9896375117942,
+          "observed_terminal_radius": 30.04464583371582,
+          "minimum_radius": 4.017968768433915,
+          "energy_drift": 5.10702591327572e-15,
+          "angular_momentum_drift": 3.6415315207705135e-14,
+          "norm_error": 1.1546319456101628e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4611
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 262.9896375117942,
+          "observed_terminal_radius": 30.04464583371582,
+          "minimum_radius": 4.017968768433915,
+          "energy_drift": 5.10702591327572e-15,
+          "angular_momentum_drift": 3.6415315207705135e-14,
+          "norm_error": 1.1546319456101628e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4611
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 262.9896375117942
+        },
+        "local_path_comparison": {
+          "radius_difference": 1.6025474217862268e-05,
+          "azimuth_difference": 1.2601739520334831e-05,
+          "shared_proper_time": 262.79007093546306
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.0,
+        "momentum_factor": 1.01,
+        "angular_momentum": 4.04,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 225.30526484688443,
+          "observed_terminal_radius": 30.007705663672517,
+          "minimum_radius": 4.653169153839911,
+          "energy_drift": 4.6629367034256575e-15,
+          "angular_momentum_drift": 3.4638958368304884e-14,
+          "norm_error": 1.4876988529977098e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4274
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 225.30526484688443,
+          "observed_terminal_radius": 30.007705663672517,
+          "minimum_radius": 4.653169153839911,
+          "energy_drift": 4.6629367034256575e-15,
+          "angular_momentum_drift": 3.4638958368304884e-14,
+          "norm_error": 1.4876988529977098e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4274
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 225.30526484688443
+        },
+        "local_path_comparison": {
+          "radius_difference": 1.72422142892259e-05,
+          "azimuth_difference": 1.2373545073440795e-05,
+          "shared_proper_time": 225.27071280033147
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.002,
+        "momentum_factor": 0.99,
+        "angular_momentum": 3.975793102855156,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 115.07827097348668,
+          "observed_terminal_radius": 2.000837519170055,
+          "minimum_radius": 2.000837519170055,
+          "energy_drift": 8.999412326460288e-10,
+          "angular_momentum_drift": 2.6623148130511254e-12,
+          "norm_error": 4.390075587057396e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 723
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 115.07811078053713,
+          "observed_terminal_radius": 2.000997850974109,
+          "minimum_radius": 2.000997850974109,
+          "energy_drift": 1.4221068767028555e-11,
+          "angular_momentum_drift": 1.247890679678676e-13,
+          "norm_error": 4.797461361505384e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 753
+        },
+        "tolerance_comparison": {
+          "radius_difference": 2.127533260676273e-09,
+          "azimuth_difference": 1.7292034470983708e-09,
+          "shared_proper_time": 115.07811078053713
+        },
+        "local_path_comparison": {
+          "radius_difference": 4.310445744337699e-05,
+          "azimuth_difference": 3.3139803844228766e-05,
+          "shared_proper_time": 115.0781086332586
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.002,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 4.015912469620331,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 154.5578768953002,
+          "observed_terminal_radius": 2.0009109758413075,
+          "minimum_radius": 2.0009109758413075,
+          "energy_drift": 9.071574602614874e-10,
+          "angular_momentum_drift": 3.127276215764141e-12,
+          "norm_error": 4.036345135460806e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 1208
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 154.55785270389686,
+          "observed_terminal_radius": 2.000935187583969,
+          "minimum_radius": 2.000935187583969,
+          "energy_drift": 1.3810286247917247e-11,
+          "angular_momentum_drift": 8.171241461241152e-14,
+          "norm_error": 4.7280346748834745e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 1237
+        },
+        "tolerance_comparison": {
+          "radius_difference": 2.6108231132582205e-09,
+          "azimuth_difference": 2.106830265802273e-09,
+          "shared_proper_time": 154.55785270389686
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.000100324524811235,
+          "azimuth_difference": 7.520354953172159e-05,
+          "shared_proper_time": 154.55778797393864
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.002,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 4.015992788672914,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 256.79050836419185,
+          "observed_terminal_radius": 30.023453301241798,
+          "minimum_radius": 4.002055160251642,
+          "energy_drift": 1.3766765505351941e-14,
+          "angular_momentum_drift": 5.5067062021407764e-14,
+          "norm_error": 1.9317880628477724e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4604
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 256.79050836419185,
+          "observed_terminal_radius": 30.023453301241798,
+          "minimum_radius": 4.002055160251642,
+          "energy_drift": 1.3766765505351941e-14,
+          "angular_momentum_drift": 5.5067062021407764e-14,
+          "norm_error": 1.9317880628477724e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4604
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 256.79050836419185
+        },
+        "local_path_comparison": {
+          "radius_difference": 1.649667289616019e-05,
+          "azimuth_difference": 1.3197072100012974e-05,
+          "shared_proper_time": 256.68951749453277
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.002,
+        "momentum_factor": 1.01,
+        "angular_momentum": 4.056112155438089,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 219.8477478097568,
+          "observed_terminal_radius": 30.020217718660817,
+          "minimum_radius": 4.628999801417244,
+          "energy_drift": 8.881784197001252e-15,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 2.3092638912203256e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4272
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 219.8477478097568,
+          "observed_terminal_radius": 30.020217718660817,
+          "minimum_radius": 4.628999801417244,
+          "energy_drift": 8.881784197001252e-15,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 2.3092638912203256e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4272
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 219.8477478097568
+        },
+        "local_path_comparison": {
+          "radius_difference": 1.7786283084575416e-05,
+          "azimuth_difference": 1.2163679898868907e-05,
+          "shared_proper_time": 219.76041886438762
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.02,
+        "momentum_factor": 0.99,
+        "angular_momentum": 4.114190123291386,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 97.16535852323933,
+          "observed_terminal_radius": 2.0008353459256956,
+          "minimum_radius": 2.0008353459256956,
+          "energy_drift": 9.190708194495301e-10,
+          "angular_momentum_drift": 2.9336533202695136e-12,
+          "norm_error": 4.560048878055056e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 636
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 97.16529886649658,
+          "observed_terminal_radius": 2.000896129593163,
+          "minimum_radius": 2.000896129593163,
+          "energy_drift": 1.5251577778485625e-11,
+          "angular_momentum_drift": 1.438849039914203e-13,
+          "norm_error": 5.708316397345925e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 666
+        },
+        "tolerance_comparison": {
+          "radius_difference": 4.592225266719652e-09,
+          "azimuth_difference": 3.701080331097728e-09,
+          "shared_proper_time": 97.16529886649658
+        },
+        "local_path_comparison": {
+          "radius_difference": 9.303668776938778e-05,
+          "azimuth_difference": 7.156285048637301e-05,
+          "shared_proper_time": 97.16519691142472
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.02,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 4.155706041808235,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 131.32104294466433,
+          "observed_terminal_radius": 2.00095264356419,
+          "minimum_radius": 2.00095264356419,
+          "energy_drift": 9.103442444313714e-10,
+          "angular_momentum_drift": 3.3013591860253655e-12,
+          "norm_error": 3.997777609399122e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 1070
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 131.32102724670312,
+          "observed_terminal_radius": 2.0009686358182885,
+          "minimum_radius": 2.0009686358182885,
+          "energy_drift": 1.4285461702456814e-11,
+          "angular_momentum_drift": 1.580957587066223e-13,
+          "norm_error": 4.823685628707608e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 1099
+        },
+        "tolerance_comparison": {
+          "radius_difference": 1.927209947183428e-09,
+          "azimuth_difference": 1.5548025089628936e-09,
+          "shared_proper_time": 131.32102724670312
+        },
+        "local_path_comparison": {
+          "radius_difference": 7.08944051766025e-05,
+          "azimuth_difference": 5.179280297262778e-05,
+          "shared_proper_time": 131.32099647342426
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.02,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 4.155789156760221,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 216.56711359156262,
+          "observed_terminal_radius": 30.030576948949847,
+          "minimum_radius": 3.881166772006881,
+          "energy_drift": 7.993605777301127e-15,
+          "angular_momentum_drift": 7.016609515630989e-14,
+          "norm_error": 1.7319479184152442e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4557
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 216.56711359156262,
+          "observed_terminal_radius": 30.030576948949847,
+          "minimum_radius": 3.881166772006881,
+          "energy_drift": 7.993605777301127e-15,
+          "angular_momentum_drift": 7.016609515630989e-14,
+          "norm_error": 1.7319479184152442e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4557
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 216.56711359156262
+        },
+        "local_path_comparison": {
+          "radius_difference": 2.1101319571670274e-05,
+          "azimuth_difference": 1.6012978064416927e-05,
+          "shared_proper_time": 216.46469996525326
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.02,
+        "momentum_factor": 1.01,
+        "angular_momentum": 4.197305075277071,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 184.053349759327,
+          "observed_terminal_radius": 30.01954841874935,
+          "minimum_radius": 4.449018199506155,
+          "energy_drift": 1.021405182655144e-14,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 1.687538997430238e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4255
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 184.053349759327,
+          "observed_terminal_radius": 30.01954841874935,
+          "minimum_radius": 4.449018199506155,
+          "energy_drift": 1.021405182655144e-14,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 1.687538997430238e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4255
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 184.053349759327
+        },
+        "local_path_comparison": {
+          "radius_difference": 2.271564995570685e-05,
+          "azimuth_difference": 1.5356909378150263e-05,
+          "shared_proper_time": 183.98774459741213
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.1,
+        "momentum_factor": 0.99,
+        "angular_momentum": 4.6773103534891876,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 64.6508432512747,
+          "observed_terminal_radius": 2.000905215351647,
+          "minimum_radius": 2.000905215351647,
+          "energy_drift": 9.90365345288069e-10,
+          "angular_momentum_drift": 4.158451361035986e-12,
+          "norm_error": 4.889936879415302e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 465
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 64.65077743898334,
+          "observed_terminal_radius": 2.000977517814682,
+          "minimum_radius": 2.000977517814682,
+          "energy_drift": 1.5556889110257544e-11,
+          "angular_momentum_drift": 1.234568003383174e-13,
+          "norm_error": 5.6378231860776395e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 494
+        },
+        "tolerance_comparison": {
+          "radius_difference": 3.714358837303422e-05,
+          "azimuth_difference": 2.858813901607249e-05,
+          "shared_proper_time": 64.65077743898334
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.0001346528329100316,
+          "azimuth_difference": 0.00010198684610873698,
+          "shared_proper_time": 64.65075697371978
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.1,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 4.724508667056215,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 87.58643469730939,
+          "observed_terminal_radius": 2.000878618664801,
+          "minimum_radius": 2.000878618664801,
+          "energy_drift": 9.985974269710596e-10,
+          "angular_momentum_drift": 4.459543845314329e-12,
+          "norm_error": 5.034566289197073e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 782
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 87.58635938924924,
+          "observed_terminal_radius": 2.0009613539561575,
+          "minimum_radius": 2.0009613539561575,
+          "energy_drift": 1.6165513372357054e-11,
+          "angular_momentum_drift": 1.5543122344752192e-13,
+          "norm_error": 6.003864960746341e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 811
+        },
+        "tolerance_comparison": {
+          "radius_difference": 6.062555346630916e-09,
+          "azimuth_difference": 4.8063277802157245e-09,
+          "shared_proper_time": 87.58635938924924
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00014953932630845657,
+          "azimuth_difference": 0.00011196467570684376,
+          "shared_proper_time": 87.58632428286494
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.1,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 4.724603158174467,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 143.24771301231812,
+          "observed_terminal_radius": 30.09730656236155,
+          "minimum_radius": 3.58432491159281,
+          "energy_drift": 7.105427357601002e-15,
+          "angular_momentum_drift": 6.039613253960852e-14,
+          "norm_error": 2.731148640577885e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4438
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 143.24771301231812,
+          "observed_terminal_radius": 30.09730656236155,
+          "minimum_radius": 3.58432491159281,
+          "energy_drift": 7.105427357601002e-15,
+          "angular_momentum_drift": 6.039613253960852e-14,
+          "norm_error": 2.731148640577885e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4438
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 143.24771301231812
+        },
+        "local_path_comparison": {
+          "radius_difference": 4.219727093168757e-05,
+          "azimuth_difference": 2.785786158732151e-05,
+          "shared_proper_time": 143.05444123519473
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.1,
+        "momentum_factor": 1.01,
+        "angular_momentum": 4.771801471741495,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 120.8211110474107,
+          "observed_terminal_radius": 30.01863984522255,
+          "minimum_radius": 4.0291182080653405,
+          "energy_drift": 2.886579864025407e-15,
+          "angular_momentum_drift": 4.1744385725905886e-14,
+          "norm_error": 1.7319479184152442e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4209
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 120.8211110474107,
+          "observed_terminal_radius": 30.01863984522255,
+          "minimum_radius": 4.0291182080653405,
+          "energy_drift": 2.886579864025407e-15,
+          "angular_momentum_drift": 4.1744385725905886e-14,
+          "norm_error": 1.7319479184152442e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4209
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 120.8211110474107
+        },
+        "local_path_comparison": {
+          "radius_difference": 4.437956069924809e-05,
+          "azimuth_difference": 2.784106320707913e-05,
+          "shared_proper_time": 120.78405645999977
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.2,
+        "momentum_factor": 0.99,
+        "angular_momentum": 5.31907107197393,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 49.10327584672353,
+          "observed_terminal_radius": 2.0009995676958434,
+          "minimum_radius": 2.0009995676958434,
+          "energy_drift": 1.0759229063239673e-09,
+          "angular_momentum_drift": 6.104450278598961e-12,
+          "norm_error": 5.259613974573085e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 374
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 49.10330322746181,
+          "observed_terminal_radius": 2.0009667560288453,
+          "minimum_radius": 2.0009667560288453,
+          "energy_drift": 1.6741052988322735e-11,
+          "angular_momentum_drift": 2.8954616482224083e-13,
+          "norm_error": 6.439313349204667e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 404
+        },
+        "tolerance_comparison": {
+          "radius_difference": 1.9599045143259275e-05,
+          "azimuth_difference": 1.5047926504863085e-05,
+          "shared_proper_time": 49.10327584672353
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00011385310209721666,
+          "azimuth_difference": 8.605500388103593e-05,
+          "shared_proper_time": 49.10327548590933
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.2,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 5.372745334609304,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 66.30126024074299,
+          "observed_terminal_radius": 2.00082441072144,
+          "minimum_radius": 2.00082441072144,
+          "energy_drift": 1.1113405751217442e-09,
+          "angular_momentum_drift": 6.1595173406203685e-12,
+          "norm_error": 6.3871821573968646e-06,
+          "equatorial_error": 0.0,
+          "stored_steps": 624
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 66.30113858265804,
+          "observed_terminal_radius": 2.0009702136390306,
+          "minimum_radius": 2.0009702136390306,
+          "energy_drift": 1.6794343693504743e-11,
+          "angular_momentum_drift": 1.865174681370263e-13,
+          "norm_error": 6.433927524085448e-08,
+          "equatorial_error": 0.0,
+          "stored_steps": 654
+        },
+        "tolerance_comparison": {
+          "radius_difference": 3.501095443336766e-06,
+          "azimuth_difference": 2.532338461591621e-06,
+          "shared_proper_time": 66.30113858265804
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00014274402430780597,
+          "azimuth_difference": 0.0001044138289891805,
+          "shared_proper_time": 66.3011136750299
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.2,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 5.372852790590556,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 108.3206509109476,
+          "observed_terminal_radius": 30.147979436644956,
+          "minimum_radius": 3.411803027588656,
+          "energy_drift": 7.105427357601002e-15,
+          "angular_momentum_drift": 3.730349362740526e-14,
+          "norm_error": 2.4868995751603507e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4360
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 108.3206509109476,
+          "observed_terminal_radius": 30.147979436644956,
+          "minimum_radius": 3.411803027588656,
+          "energy_drift": 7.105427357601002e-15,
+          "angular_momentum_drift": 3.730349362740526e-14,
+          "norm_error": 2.4868995751603507e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4360
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 108.3206509109476
+        },
+        "local_path_comparison": {
+          "radius_difference": 7.024527613896936e-05,
+          "azimuth_difference": 4.382379874656728e-05,
+          "shared_proper_time": 108.1063247700058
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 1.2,
+        "momentum_factor": 1.01,
+        "angular_momentum": 5.426527053225929,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 91.46515270521438,
+          "observed_terminal_radius": 30.1174941691925,
+          "minimum_radius": 3.7960874537348657,
+          "energy_drift": 2.4424906541753444e-15,
+          "angular_momentum_drift": 2.220446049250313e-14,
+          "norm_error": 1.1102230246251565e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4177
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 91.46515270521438,
+          "observed_terminal_radius": 30.1174941691925,
+          "minimum_radius": 3.7960874537348657,
+          "energy_drift": 2.4424906541753444e-15,
+          "angular_momentum_drift": 2.220446049250313e-14,
+          "norm_error": 1.1102230246251565e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4177
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 91.46515270521438
+        },
+        "local_path_comparison": {
+          "radius_difference": 7.245365859720465e-05,
+          "azimuth_difference": 4.3161709281092087e-05,
+          "shared_proper_time": 91.29487371845772
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 2.0,
+        "momentum_factor": 0.99,
+        "angular_momentum": 9.836470372353535,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 20.679206205258744,
+          "observed_terminal_radius": 2.000849554953919,
+          "minimum_radius": 2.000849554953919,
+          "energy_drift": 1.9720949318013936e-09,
+          "angular_momentum_drift": 3.4015457117675396e-11,
+          "norm_error": 1.7161054298497902e-05,
+          "equatorial_error": 0.0,
+          "stored_steps": 190
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 20.67917500801372,
+          "observed_terminal_radius": 2.0009118629445677,
+          "minimum_radius": 2.0009118629445677,
+          "energy_drift": 3.288747052465624e-11,
+          "angular_momentum_drift": 1.270095140171179e-12,
+          "norm_error": 2.1328114030438883e-07,
+          "equatorial_error": 0.0,
+          "stored_steps": 223
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0002731456556270828,
+          "azimuth_difference": 0.00020604581425587298,
+          "shared_proper_time": 20.67917500801372
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.0003596961342822169,
+          "azimuth_difference": 0.00020799563672069254,
+          "shared_proper_time": 20.679130873032566
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 2.0,
+        "momentum_factor": 0.99999,
+        "angular_momentum": 9.935729300656376,
+        "oracle": "capture",
+        "local_integrator": "capture",
+        "coarse": {
+          "outcome": "capture",
+          "observed_terminal_tau": 27.622521626372578,
+          "observed_terminal_radius": 2.0008698829080833,
+          "minimum_radius": 2.0008698829080833,
+          "energy_drift": 1.959150175423474e-09,
+          "angular_momentum_drift": 3.427302885938843e-11,
+          "norm_error": 1.6758702731323183e-05,
+          "equatorial_error": 0.0,
+          "stored_steps": 301
+        },
+        "tight": {
+          "outcome": "capture",
+          "observed_terminal_tau": 27.62249591529435,
+          "observed_terminal_radius": 2.0009212311570193,
+          "minimum_radius": 2.0009212311570193,
+          "energy_drift": 2.786526565046188e-11,
+          "angular_momentum_drift": 1.2470025012589758e-12,
+          "norm_error": 1.8222006303858507e-07,
+          "equatorial_error": 0.0,
+          "stored_steps": 334
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.00024481898729611373,
+          "azimuth_difference": 0.00018210114246208775,
+          "shared_proper_time": 27.62249591529435
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00035458228313167695,
+          "azimuth_difference": 0.00023532641791135234,
+          "shared_proper_time": 27.622456390456712
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 2.0,
+        "momentum_factor": 1.00001,
+        "angular_momentum": 9.935928017229555,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 45.17747416527727,
+          "observed_terminal_radius": 30.135827339170422,
+          "minimum_radius": 3.105712675856485,
+          "energy_drift": 6.439293542825908e-15,
+          "angular_momentum_drift": 5.1514348342607263e-14,
+          "norm_error": 7.638334409421077e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4174
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 45.17747416527727,
+          "observed_terminal_radius": 30.135827339170422,
+          "minimum_radius": 3.105712675856485,
+          "energy_drift": 6.439293542825908e-15,
+          "angular_momentum_drift": 5.1514348342607263e-14,
+          "norm_error": 7.638334409421077e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4174
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 45.17747416527727
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.00035088076909950416,
+          "azimuth_difference": 0.00019610802634772995,
+          "shared_proper_time": 45.098587243345015
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      },
+      {
+        "energy": 2.0,
+        "momentum_factor": 1.01,
+        "angular_momentum": 10.035186945532395,
+        "oracle": "escape",
+        "local_integrator": "escape",
+        "coarse": {
+          "outcome": "escape",
+          "observed_terminal_tau": 38.495755269981416,
+          "observed_terminal_radius": 30.406646244662507,
+          "minimum_radius": 3.397391513394421,
+          "energy_drift": 4.6629367034256575e-15,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 5.440092820663267e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4090
+        },
+        "tight": {
+          "outcome": "escape",
+          "observed_terminal_tau": 38.495755269981416,
+          "observed_terminal_radius": 30.406646244662507,
+          "minimum_radius": 3.397391513394421,
+          "energy_drift": 4.6629367034256575e-15,
+          "angular_momentum_drift": 5.3290705182007514e-14,
+          "norm_error": 5.440092820663267e-14,
+          "equatorial_error": 0.0,
+          "stored_steps": 4090
+        },
+        "tolerance_comparison": {
+          "radius_difference": 0.0,
+          "azimuth_difference": 0.0,
+          "shared_proper_time": 38.495755269981416
+        },
+        "local_path_comparison": {
+          "radius_difference": 0.0003619458293444566,
+          "azimuth_difference": 0.00019959033271099713,
+          "shared_proper_time": 38.25952186765326
+        },
+        "classification_agreement": true,
+        "conserved_quantities_ok": true
+      }
+    ]
+  },
+  "region": "us-east-1",
+  "instance_type": "t3.small",
+  "cleanup": "DELETE_COMPLETE",
+  "elapsed_seconds": 367.15185141697293,
+  "estimated_infrastructure_usd": 0.002765877280674529,
+  "cost_note": "Estimate from elapsed wall time, not a final bill; excludes tax and transfer."
+}

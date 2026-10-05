@@ -1,0 +1,14 @@
+{
+  "weights_sha256": {
+    "1729": "f0e554b39b0536862d2238e5bf004754d9f2e20ded28d95daecafae0dd9d99ff",
+    "1730": "70f4c75828be49ba439aea472beb9e3b46f032a68ce7c6189f043946027b1ca3",
+    "1731": "371f62313ccc1b6b47dc92e429cce38da9c1bfa98d6826308937b5c4fb62fb49"
+  },
+  "source_sha256": {
+    "pilot_physics.py": "fda5353bc2ea5335acc908d2f4e84316180396b34395d80b900eff92c2892d5f",
+    "pilot_control.py": "b8be07868c9a88704530a962d80530aa7df77ebf4015f286a20c204da1add6c3",
+    "pilot_model.py": "0aeddd034dbba7979f3a3b5f723fa454176819187fa23c2d8e130758b638d4de"
+  },
+  "missions_sha256": "861955be5a146cec2a55af5723a0319894165f9a5bcc95a3dad7b58f52e7fc00",
+  "mission_selection": "First eight missions in each frozen split; declared before training."
+}

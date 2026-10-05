@@ -1,0 +1,90 @@
+{
+  "seed": 97,
+  "optimizer": {
+    "solver": "lbfgs",
+    "activation": "tanh",
+    "alpha": 1e-06,
+    "max_iter": 800,
+    "max_fun": 2000,
+    "tol": 1e-07
+  },
+  "metrics": [
+    {
+      "model_id": "small-97",
+      "seed": 97,
+      "size": "small",
+      "parameters": 337,
+      "fit_seconds": 0.6242850829730742,
+      "iterations": 576,
+      "training_loss": 9.014721924455253e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.001019049782644995,
+      "acceleration_rmse": 0.007151388916729194,
+      "potential_absolute_error_95": 0.0018704801478317374,
+      "validation_count": 1024,
+      "barrier_resolution_check": {
+        "momentum_count": 129,
+        "grid_points": [
+          256,
+          1024
+        ],
+        "max_absolute_difference": 4.440892098500626e-16
+      },
+      "observations_sha256": "a5f4676802a8bc4dd3471aec3c1d66e802658ca6d724b48f49d8bb65f89d2709"
+    },
+    {
+      "model_id": "large-97",
+      "seed": 97,
+      "size": "large",
+      "parameters": 4417,
+      "fit_seconds": 1.477957791998051,
+      "iterations": 391,
+      "training_loss": 6.955404170041565e-06,
+      "optimizer": {
+        "solver": "lbfgs",
+        "activation": "tanh",
+        "alpha": 1e-06,
+        "max_iter": 800,
+        "max_fun": 2000,
+        "tol": 1e-07
+      },
+      "converged": true,
+      "warnings": [],
+      "potential_rmse": 0.0009494831394454756,
+      "acceleration_rmse": 0.006093538410008856,
+      "potential_absolute_error_95": 0.002029435814077015,
+      "validation_count": 1024,
+      "barrier_resolution_check": {
+        "momentum_count": 129,
+        "grid_points": [
+          256,
+          1024
+        ],
+        "max_absolute_difference": 6.661338147750939e-16
+      },
+      "observations_sha256": "a5f4676802a8bc4dd3471aec3c1d66e802658ca6d724b48f49d8bb65f89d2709"
+    }
+  ],
+  "environment": {
+    "python": "3.14.0",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "blas_threads": 1,
+    "aws_spend_eur": 0.0,
+    "aws_resources_created": []
+  },
+  "final_test_sha256": "9c51999e3690d2e1d326b187bb6ae4d545235959ea652ad4c8c793d79db88178",
+  "decision": "Use this fixed optimizer budget. Record iteration-limit warnings instead of tuning on test labels."
+}

@@ -1,0 +1,93 @@
+{
+  "method": "bounded exact rational Sturm certificate, not an imported formal prover",
+  "input_semantics": "JSON decimal text converted to Fraction; reference receives float",
+  "dataset_sha256": "9c51999e3690d2e1d326b187bb6ae4d545235959ea652ad4c8c793d79db88178",
+  "kernel_sha256": "41d91d39a299a81db302c56d5ed9de88c470ff0a30eed9bdfee62faca90c05a7",
+  "kernel_module_physical_lines": 204,
+  "checker_function_physical_lines": 102,
+  "groups": {
+    "nominal": {
+      "flights": 2000,
+      "checked": 2000,
+      "exact_outcomes": {
+        "escape": 1131,
+        "capture": 869
+      },
+      "reference_outcomes": {
+        "escape": 1131,
+        "capture": 869
+      }
+    },
+    "stress": {
+      "flights": 2000,
+      "checked": 2000,
+      "exact_outcomes": {
+        "escape": 1000,
+        "capture": 1000
+      },
+      "reference_outcomes": {
+        "escape": 1000,
+        "capture": 1000
+      }
+    }
+  },
+  "total_checked": 4000,
+  "disagreements": [],
+  "rejected_inputs": [],
+  "showcase": {
+    "certificate": {
+      "version": "schwarzschild-sturm-v1",
+      "semantics": "exact rational values of supplied decimal text; inward launch; G=c=M=1",
+      "inputs": {
+        "E": "10027667008383363/10000000000000000",
+        "L": "1608788709625383/400000000000000",
+        "r0": "30",
+        "horizon": "2"
+      },
+      "chain": [
+        [
+          "2588201112218104899792197896689/80000000000000000000000000000",
+          "-2588201112218104899792197896689/160000000000000000000000000000",
+          "2",
+          "554105631020145078522775189769/100000000000000000000000000000000"
+        ],
+        [
+          "-2588201112218104899792197896689/160000000000000000000000000000",
+          "4",
+          "1662316893060435235568325569307/100000000000000000000000000000000"
+        ],
+        [
+          "-30191926946249375448564114240340383819685650830849194631774841/44328450481611606281822015181520000000000000000000000000000",
+          "68302410431477963019285746164721151459056952492547583895324523/398956054334504456536398136633680000000000000000000000000000"
+        ],
+        [
+          "-6418058389195883735323301374243867932098650124410428179582061147826289335182896867923865316636551912991056117963935901675342374324702871884936529048001/233260963537503482919470922733477059290352107962990708363348748703079019839696809552862164633949677979477070508090974258876450000000000000000000000000000000"
+        ]
+      ],
+      "signs": {
+        "lower": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "upper": [
+          1,
+          1,
+          1,
+          -1
+        ]
+      },
+      "variations": {
+        "lower": 1,
+        "upper": 1
+      },
+      "square_free": true,
+      "root_count": 0,
+      "outcome": "capture"
+    },
+    "checked_outcome": "capture",
+    "reference_outcome": "capture",
+    "learned_outcome": "escape"
+  }
+}

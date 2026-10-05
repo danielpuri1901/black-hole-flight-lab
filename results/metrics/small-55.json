@@ -1,0 +1,100 @@
+{
+  "model_id": "small-55",
+  "seed": 55,
+  "size": "small",
+  "parameters": 337,
+  "fit_seconds": 0.4400428750086576,
+  "iterations": 464,
+  "training_loss": 5.737487220551919e-06,
+  "optimizer": {
+    "solver": "lbfgs",
+    "activation": "tanh",
+    "alpha": 1e-06,
+    "max_iter": 800,
+    "max_fun": 2000,
+    "tol": 1e-07
+  },
+  "converged": true,
+  "warnings": [],
+  "potential_rmse": 0.0007716095097194072,
+  "acceleration_rmse": 0.0055654931433433315,
+  "potential_absolute_error_95": 0.001531539889374939,
+  "validation_count": 1024,
+  "prediction_seconds": 0.249917707988061,
+  "observations_sha256": "662d6338e3c79721a90530aa95c25cc807c780eaec99fe6259495b6ed268af8c",
+  "gate_check_seconds": 0.008129167021252215,
+  "gate_checked_proposals": 2572,
+  "uncertainty_margin_threshold": 0.003063079778749878,
+  "distributions": {
+    "nominal": {
+      "trials": 2000,
+      "actual_escape": 1131,
+      "actual_capture": 869,
+      "actual_unresolved": 0,
+      "predicted_unresolved": 0,
+      "false_escapes": 2,
+      "false_captures": 0,
+      "false_escape_rate": 0.001,
+      "false_escape_rate_interval_95": [
+        0.0002742789176520342,
+        0.003638934269038394
+      ],
+      "false_escape_given_proposal": 0.00176522506619594,
+      "false_escape_given_proposal_interval_95": [
+        0.0004842219333587865,
+        0.006413361507016872
+      ],
+      "accepted_flights": 1133,
+      "coverage": 0.5665,
+      "coverage_interval_95": [
+        0.5446745807384792,
+        0.5880704519731141
+      ],
+      "gate_accepted": 1131,
+      "gate_rejected": 2,
+      "gate_false_escapes": 0,
+      "gate_coverage": 0.5655,
+      "gate_coverage_interval_95": [
+        0.5436706785393429,
+        0.5870781882668129
+      ],
+      "gate_rejected_unresolved": 0,
+      "uncertain_predictions": 11
+    },
+    "stress": {
+      "trials": 2000,
+      "actual_escape": 1000,
+      "actual_capture": 1000,
+      "actual_unresolved": 0,
+      "predicted_unresolved": 0,
+      "false_escapes": 448,
+      "false_captures": 9,
+      "false_escape_rate": 0.224,
+      "false_escape_rate_interval_95": [
+        0.20626688232702026,
+        0.2427913277722313
+      ],
+      "false_escape_given_proposal": 0.3113273106323836,
+      "false_escape_given_proposal_interval_95": [
+        0.28793228509051605,
+        0.33572699037567366
+      ],
+      "accepted_flights": 1439,
+      "coverage": 0.7195,
+      "coverage_interval_95": [
+        0.6994049846594416,
+        0.7387534315840883
+      ],
+      "gate_accepted": 991,
+      "gate_rejected": 448,
+      "gate_false_escapes": 0,
+      "gate_coverage": 0.4955,
+      "gate_coverage_interval_95": [
+        0.4736174624101077,
+        0.5173997910154234
+      ],
+      "gate_rejected_unresolved": 0,
+      "uncertain_predictions": 1495
+    }
+  }
+}

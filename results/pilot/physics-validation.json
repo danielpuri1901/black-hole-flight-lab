@@ -1,0 +1,6026 @@
+{
+  "seed": 40217,
+  "launches": [
+    [
+      10.354859171819793,
+      -0.36539756806241896,
+      3.724420870450779,
+      0.0,
+      0.0
+    ],
+    [
+      11.878275281241839,
+      -0.377730643584048,
+      3.667510476692328,
+      0.0,
+      0.0
+    ],
+    [
+      8.242761074537489,
+      -0.4739235064125448,
+      2.9350848034853048,
+      0.0,
+      0.0
+    ],
+    [
+      8.627392357814262,
+      -0.3821657064164213,
+      3.052099100913704,
+      0.0,
+      0.0
+    ],
+    [
+      8.890082270597162,
+      -0.33641608120503913,
+      3.9949813147384674,
+      0.0,
+      0.0
+    ],
+    [
+      8.213689173037718,
+      -0.3727519857175898,
+      3.042482364130406,
+      0.0,
+      0.0
+    ],
+    [
+      10.197993064559022,
+      -0.27766061486776483,
+      3.8396546788160846,
+      0.0,
+      0.0
+    ],
+    [
+      11.398956928090403,
+      -0.4134721574195265,
+      3.2193148847041058,
+      0.0,
+      0.0
+    ],
+    [
+      11.887432737009629,
+      -0.37224878016329865,
+      3.763206799006495,
+      0.0,
+      0.0
+    ],
+    [
+      10.190951228585993,
+      -0.42830975857193737,
+      3.3037810251625235,
+      0.0,
+      0.0
+    ],
+    [
+      11.8067930054171,
+      -0.3938922496903099,
+      3.6550944172761657,
+      0.0,
+      0.0
+    ],
+    [
+      11.641624340318687,
+      -0.4223169328663119,
+      3.2406588850528175,
+      0.0,
+      0.0
+    ],
+    [
+      11.491020924472465,
+      -0.3582516310817678,
+      3.709908994536564,
+      0.0,
+      0.0
+    ],
+    [
+      8.564916782538988,
+      -0.2874189252637248,
+      3.8058350471102074,
+      0.0,
+      0.0
+    ],
+    [
+      8.807720218271797,
+      -0.3390883301951768,
+      3.5288240496988896,
+      0.0,
+      0.0
+    ],
+    [
+      10.855252849225952,
+      -0.3677357326182876,
+      3.4502045981077134,
+      0.0,
+      0.0
+    ]
+  ],
+  "source_sha256": {
+    "pilot_physics.py": "fda5353bc2ea5335acc908d2f4e84316180396b34395d80b900eff92c2892d5f",
+    "pilot_control.py": "b8be07868c9a88704530a962d80530aa7df77ebf4015f286a20c204da1add6c3",
+    "verify_pilot_rollouts.py": "9509f39cf8062c6017b571647e8d9392659640ffbb5e4d097a66c4ff9636bff6"
+  },
+  "versions": {
+    "python": "3.14.0",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1"
+  },
+  "method": "All 29 fixed plans on 16 launches; 64 diverse plans plus disagreements and closest surviving candidate use scalar DOP853. Scores and minimum radius use planner interval endpoints.",
+  "summary": {
+    "fixed_candidates": 464,
+    "refinement_classification_disagreements": 0,
+    "adaptive_reference_cases": 65,
+    "adaptive_outcomes": {
+      "escaped": 12,
+      "safety_cutoff": 44,
+      "flying": 9
+    },
+    "closest_surviving_candidate": [
+      3.8386651803575167,
+      2,
+      22
+    ],
+    "substeps_4": {
+      "adaptive_classification_disagreements": 0,
+      "max_terminal_state_error": 0.0012317083314604682,
+      "max_score_error": 5.939196690007975e-07,
+      "max_minimum_radius_error": 1.5184143218327506e-06
+    },
+    "substeps_8": {
+      "adaptive_classification_disagreements": 0,
+      "max_terminal_state_error": 9.779889716377e-05,
+      "max_score_error": 3.71042290225887e-08,
+      "max_minimum_radius_error": 9.699142600183563e-08
+    }
+  },
+  "fixed_comparisons": [
+    {
+      "launch": 0,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0004137732146188844
+    },
+    {
+      "launch": 0,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00029094876194590835
+    },
+    {
+      "launch": 0,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.952372051616802e-05
+    },
+    {
+      "launch": 0,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7262059550993136e-05
+    },
+    {
+      "launch": 0,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7262059550993136e-05
+    },
+    {
+      "launch": 0,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0003697873031808241
+    },
+    {
+      "launch": 0,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.5637927223295414e-05
+    },
+    {
+      "launch": 0,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.6366752858941744e-05
+    },
+    {
+      "launch": 0,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.0379800004910464e-05
+    },
+    {
+      "launch": 0,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00010303759717567029
+    },
+    {
+      "launch": 0,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.888666021940491e-05
+    },
+    {
+      "launch": 0,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.635696624899488e-05
+    },
+    {
+      "launch": 0,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.121879725947018e-05
+    },
+    {
+      "launch": 0,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00043039703317448996
+    },
+    {
+      "launch": 0,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 6.410782354329683,
+      "score_difference": 1.1709850866736815e-09,
+      "terminal_state_difference": 3.074239351974484e-08
+    },
+    {
+      "launch": 0,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.263353116698813,
+      "score_difference": 1.0045697962368649e-07,
+      "terminal_state_difference": 8.497562120624025e-08
+    },
+    {
+      "launch": 0,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.263353116698813,
+      "score_difference": 1.072091215803539e-07,
+      "terminal_state_difference": 8.997465528182147e-08
+    },
+    {
+      "launch": 0,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.00296485811803,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.4133285652917493e-08
+    },
+    {
+      "launch": 0,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.262115348461958,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2700383855701602e-08
+    },
+    {
+      "launch": 0,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.273726204564733,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.286449867800911e-08
+    },
+    {
+      "launch": 0,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.273726204564733,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.773768852965986e-08
+    },
+    {
+      "launch": 0,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.443646022572354,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.5991508945111264e-08
+    },
+    {
+      "launch": 0,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.838937280937826,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.1563126657327985e-08
+    },
+    {
+      "launch": 0,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.875959853716895,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.2518257541671574e-07
+    },
+    {
+      "launch": 0,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.875959853716895,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3786299035700722e-07
+    },
+    {
+      "launch": 0,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.024157832771917,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.728277401890637e-08
+    },
+    {
+      "launch": 0,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.9882632233594775,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.381082057605454e-07
+    },
+    {
+      "launch": 0,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.996569453191639,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.2243609204840595e-07
+    },
+    {
+      "launch": 0,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.996569453191639,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.6103599398984443e-07
+    },
+    {
+      "launch": 1,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00018622060569251087
+    },
+    {
+      "launch": 1,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002581175127281954
+    },
+    {
+      "launch": 1,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5090173918097527e-05
+    },
+    {
+      "launch": 1,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.73467904544378e-05
+    },
+    {
+      "launch": 1,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.40585719806175e-05
+    },
+    {
+      "launch": 1,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.636889758948605e-05
+    },
+    {
+      "launch": 1,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.711090430020164e-06
+    },
+    {
+      "launch": 1,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.7520144930237578e-05
+    },
+    {
+      "launch": 1,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00010133997934080874
+    },
+    {
+      "launch": 1,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.458108721187685e-05
+    },
+    {
+      "launch": 1,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.650945027794844e-05
+    },
+    {
+      "launch": 1,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.6849389545042825e-06
+    },
+    {
+      "launch": 1,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.1617763502376235e-06
+    },
+    {
+      "launch": 1,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00030399470703046383
+    },
+    {
+      "launch": 1,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00013567905088440746
+    },
+    {
+      "launch": 1,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.627129023648388,
+      "score_difference": 8.233606152430184e-08,
+      "terminal_state_difference": 6.97409987537867e-08
+    },
+    {
+      "launch": 1,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.627129023648388,
+      "score_difference": 8.927674599590318e-08,
+      "terminal_state_difference": 7.514264410701799e-08
+    },
+    {
+      "launch": 1,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.212376082389982,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0580804676862954e-08
+    },
+    {
+      "launch": 1,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.494162302404428,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.228476484044677e-09
+    },
+    {
+      "launch": 1,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.58334029749845,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3109618219052663e-08
+    },
+    {
+      "launch": 1,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.58334029749845,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.7372095701139187e-08
+    },
+    {
+      "launch": 1,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.898862863435324,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2824688866430733e-08
+    },
+    {
+      "launch": 1,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.95722653307405,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.086696764853514e-08
+    },
+    {
+      "launch": 1,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.022774303185486,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 9.092914687869325e-08
+    },
+    {
+      "launch": 1,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.022774303185486,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1064365601498594e-07
+    },
+    {
+      "launch": 1,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.479681047617857,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.4423219830159724e-08
+    },
+    {
+      "launch": 1,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.886443488809753,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.292933584286288e-08
+    },
+    {
+      "launch": 1,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.951779629179184,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.430120051855056e-07
+    },
+    {
+      "launch": 1,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.951779629179184,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.242460557828508e-07
+    },
+    {
+      "launch": 2,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001173655113914096
+    },
+    {
+      "launch": 2,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.473292993949055e-05
+    },
+    {
+      "launch": 2,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.9336833128335016e-05
+    },
+    {
+      "launch": 2,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.7690008810865585e-05
+    },
+    {
+      "launch": 2,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.7690008810865585e-05
+    },
+    {
+      "launch": 2,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.789581896824107e-05
+    },
+    {
+      "launch": 2,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8593258571231175e-05
+    },
+    {
+      "launch": 2,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1725112569305196e-05
+    },
+    {
+      "launch": 2,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1725112569305196e-05
+    },
+    {
+      "launch": 2,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.89173299952095e-05
+    },
+    {
+      "launch": 2,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.4494013076313834e-05
+    },
+    {
+      "launch": 2,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.7340279060660286e-05
+    },
+    {
+      "launch": 2,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.7340279060660286e-05
+    },
+    {
+      "launch": 2,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00020161647100169766
+    },
+    {
+      "launch": 2,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002220032386703874
+    },
+    {
+      "launch": 2,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001912911662281802
+    },
+    {
+      "launch": 2,
+      "plan": 16,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00018738790278360895
+    },
+    {
+      "launch": 2,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00017206823646609415
+    },
+    {
+      "launch": 2,
+      "plan": 18,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0010954564089536989
+    },
+    {
+      "launch": 2,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.194238540982111,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.773212717383956e-06
+    },
+    {
+      "launch": 2,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.194238540982111,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.895248278595886e-06
+    },
+    {
+      "launch": 2,
+      "plan": 21,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00025974055924993245
+    },
+    {
+      "launch": 2,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 3.8386651803575167,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.4959225070221294e-05
+    },
+    {
+      "launch": 2,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.07370752792495,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 8.613738047280606e-06
+    },
+    {
+      "launch": 2,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.07370752792495,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.635478058849344e-06
+    },
+    {
+      "launch": 2,
+      "plan": 25,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0008395837311232501
+    },
+    {
+      "launch": 2,
+      "plan": 26,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.003615338452181538
+    },
+    {
+      "launch": 2,
+      "plan": 27,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0020800853142899367
+    },
+    {
+      "launch": 2,
+      "plan": 28,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0020800853142899367
+    },
+    {
+      "launch": 3,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001822407825761152
+    },
+    {
+      "launch": 3,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.768782160311183e-05
+    },
+    {
+      "launch": 3,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.6307195863671815e-05
+    },
+    {
+      "launch": 3,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.4581264929435243e-05
+    },
+    {
+      "launch": 3,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.4581264929435243e-05
+    },
+    {
+      "launch": 3,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001066898928505644
+    },
+    {
+      "launch": 3,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.3556880980011314e-05
+    },
+    {
+      "launch": 3,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.277589467000965e-06
+    },
+    {
+      "launch": 3,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.277589467000965e-06
+    },
+    {
+      "launch": 3,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.912221650996365e-05
+    },
+    {
+      "launch": 3,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.781783764695184e-05
+    },
+    {
+      "launch": 3,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.9481732940261907e-05
+    },
+    {
+      "launch": 3,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2300936189535427e-05
+    },
+    {
+      "launch": 3,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011425804401488104
+    },
+    {
+      "launch": 3,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001749432338823409
+    },
+    {
+      "launch": 3,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00023639521036644684
+    },
+    {
+      "launch": 3,
+      "plan": 16,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011170297710050292
+    },
+    {
+      "launch": 3,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0006581336475078858
+    },
+    {
+      "launch": 3,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.875598676572212,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.683664034388357e-08
+    },
+    {
+      "launch": 3,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.041881376222621,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.163594700592796e-07
+    },
+    {
+      "launch": 3,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.041881376222621,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2069377852697016e-07
+    },
+    {
+      "launch": 3,
+      "plan": 21,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002728083031635631
+    },
+    {
+      "launch": 3,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.655524781299375,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7130778218188425e-07
+    },
+    {
+      "launch": 3,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.691008849990198,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.0323882798933823e-07
+    },
+    {
+      "launch": 3,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.691008849990198,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.110900481078204e-07
+    },
+    {
+      "launch": 3,
+      "plan": 25,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0011510546685998824
+    },
+    {
+      "launch": 3,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.869779437113767,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.545494696894252e-07
+    },
+    {
+      "launch": 3,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.87916895800514,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.0520179971607035e-06
+    },
+    {
+      "launch": 3,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.87916895800514,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0863036266073323e-06
+    },
+    {
+      "launch": 4,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0003149965656413789
+    },
+    {
+      "launch": 4,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00030715810442849545
+    },
+    {
+      "launch": 4,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.928047301044902e-05
+    },
+    {
+      "launch": 4,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8971896041830583e-05
+    },
+    {
+      "launch": 4,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8971896041830583e-05
+    },
+    {
+      "launch": 4,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002268871928505778
+    },
+    {
+      "launch": 4,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.131175979357973e-05
+    },
+    {
+      "launch": 4,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5166923732601312e-05
+    },
+    {
+      "launch": 4,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1466710773011535e-05
+    },
+    {
+      "launch": 4,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00018713072704124034
+    },
+    {
+      "launch": 4,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00023398854710343642
+    },
+    {
+      "launch": 4,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8263608512713034e-05
+    },
+    {
+      "launch": 4,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.967899406389421e-05
+    },
+    {
+      "launch": 4,
+      "plan": 13,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 4.9042686893174965,
+      "score_difference": 1.4613775078942126e-07,
+      "terminal_state_difference": 1.4714876428456591e-07
+    },
+    {
+      "launch": 4,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 7.253399208905376,
+      "score_difference": 1.8123568423789038e-08,
+      "terminal_state_difference": 2.5838696515734227e-08
+    },
+    {
+      "launch": 4,
+      "plan": 15,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.253399208905376,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 4.0877371265679585e-08
+    },
+    {
+      "launch": 4,
+      "plan": 16,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.253399208905376,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.300612777008439e-08
+    },
+    {
+      "launch": 4,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.323732459548828,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.476067179595475e-08
+    },
+    {
+      "launch": 4,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.2938885740167825,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.857477010564935e-08
+    },
+    {
+      "launch": 4,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.2938885740167825,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.696901267919884e-08
+    },
+    {
+      "launch": 4,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.2938885740167825,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.062775620956472e-08
+    },
+    {
+      "launch": 4,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.384361710098549,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.7354391963239095e-08
+    },
+    {
+      "launch": 4,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.019797417425496,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.286390868443959e-08
+    },
+    {
+      "launch": 4,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.019797417425496,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.4438334794419916e-07
+    },
+    {
+      "launch": 4,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.019797417425496,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.363999526660109e-07
+    },
+    {
+      "launch": 4,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.986290055401073,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0647982939815392e-07
+    },
+    {
+      "launch": 4,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.410077358016784,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.6678017544791146e-07
+    },
+    {
+      "launch": 4,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.410077358016784,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.2597297128234004e-07
+    },
+    {
+      "launch": 4,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.410077358016784,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.95938491490233e-07
+    },
+    {
+      "launch": 5,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001403873371644826
+    },
+    {
+      "launch": 5,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001308305408702637
+    },
+    {
+      "launch": 5,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5219762833473816e-05
+    },
+    {
+      "launch": 5,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1609034334836288e-05
+    },
+    {
+      "launch": 5,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1609034334836288e-05
+    },
+    {
+      "launch": 5,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.92072463220439e-05
+    },
+    {
+      "launch": 5,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8726019564985208e-05
+    },
+    {
+      "launch": 5,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.2946601856199678e-05
+    },
+    {
+      "launch": 5,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.2946601856199678e-05
+    },
+    {
+      "launch": 5,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00019161365789022167
+    },
+    {
+      "launch": 5,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011429597251533252
+    },
+    {
+      "launch": 5,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8042970922737e-05
+    },
+    {
+      "launch": 5,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.9804785535093572e-05
+    },
+    {
+      "launch": 5,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00015790991583697345
+    },
+    {
+      "launch": 5,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00046427224704637116
+    },
+    {
+      "launch": 5,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001719242128401799
+    },
+    {
+      "launch": 5,
+      "plan": 16,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00021890707444172097
+    },
+    {
+      "launch": 5,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00013005555892986465
+    },
+    {
+      "launch": 5,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.57721429327887,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.174445387254536e-08
+    },
+    {
+      "launch": 5,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.714800519796079,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7901285609411843e-07
+    },
+    {
+      "launch": 5,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.714800519796079,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.842193508849732e-07
+    },
+    {
+      "launch": 5,
+      "plan": 21,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0005629406871846543
+    },
+    {
+      "launch": 5,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.3662551455965835,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3685536865158952e-07
+    },
+    {
+      "launch": 5,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.401984891530106,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.347567094635906e-07
+    },
+    {
+      "launch": 5,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.401984891530106,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.4652378477773027e-07
+    },
+    {
+      "launch": 5,
+      "plan": 25,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0010449123122503456
+    },
+    {
+      "launch": 5,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.598371413547365,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5586746568985177e-06
+    },
+    {
+      "launch": 5,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.608459316322853,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.966451977253314e-06
+    },
+    {
+      "launch": 5,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.608459316322853,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.0075963753640735e-06
+    },
+    {
+      "launch": 6,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001650202336607176
+    },
+    {
+      "launch": 6,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.610962226594186e-05
+    },
+    {
+      "launch": 6,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1451981934085254e-05
+    },
+    {
+      "launch": 6,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.6260252951316723e-05
+    },
+    {
+      "launch": 6,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.9387207032761644e-05
+    },
+    {
+      "launch": 6,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00012784433850632215
+    },
+    {
+      "launch": 6,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7194506005235866e-05
+    },
+    {
+      "launch": 6,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.420048940958818e-05
+    },
+    {
+      "launch": 6,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.172270677235915e-05
+    },
+    {
+      "launch": 6,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00023198406187152631
+    },
+    {
+      "launch": 6,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00012472092703164073
+    },
+    {
+      "launch": 6,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5085165611328222e-05
+    },
+    {
+      "launch": 6,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.381268196910874e-06
+    },
+    {
+      "launch": 6,
+      "plan": 13,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 5.529353503424074,
+      "score_difference": 2.5142442794390263e-08,
+      "terminal_state_difference": 2.7275548930560944e-08
+    },
+    {
+      "launch": 6,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.008699178059707,
+      "score_difference": 7.256256040477638e-09,
+      "terminal_state_difference": 1.155848705636231e-08
+    },
+    {
+      "launch": 6,
+      "plan": 15,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.008699178059707,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.6531690461007997e-08
+    },
+    {
+      "launch": 6,
+      "plan": 16,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.008699178059707,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.77196735062779e-08
+    },
+    {
+      "launch": 6,
+      "plan": 17,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 7.703471814020164,
+      "score_difference": 3.2980068453980493e-08,
+      "terminal_state_difference": 1.982824215929213e-08
+    },
+    {
+      "launch": 6,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.960010013790255,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.188153575526485e-08
+    },
+    {
+      "launch": 6,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.960010013790255,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.372568985720136e-08
+    },
+    {
+      "launch": 6,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.960010013790255,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.655296249542971e-08
+    },
+    {
+      "launch": 6,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.765328162050891,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.536636462518004e-08
+    },
+    {
+      "launch": 6,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.620790407818093,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.578139917692624e-08
+    },
+    {
+      "launch": 6,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.620790407818093,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 7.531667911564455e-08
+    },
+    {
+      "launch": 6,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.620790407818093,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.201222989612234e-08
+    },
+    {
+      "launch": 6,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.237783459866043,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.113879287752752e-08
+    },
+    {
+      "launch": 6,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.876859728986822,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.486245839378626e-08
+    },
+    {
+      "launch": 6,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.88571499050562,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.861672256353586e-07
+    },
+    {
+      "launch": 6,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.88571499050562,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.1853139209326855e-07
+    },
+    {
+      "launch": 7,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0008008920189945812
+    },
+    {
+      "launch": 7,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.209467283711188e-05
+    },
+    {
+      "launch": 7,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.307733744243983e-06
+    },
+    {
+      "launch": 7,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.957726737258138e-05
+    },
+    {
+      "launch": 7,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.957726737258138e-05
+    },
+    {
+      "launch": 7,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.284909077298618e-05
+    },
+    {
+      "launch": 7,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.872342246611041e-06
+    },
+    {
+      "launch": 7,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.4697476567081544e-05
+    },
+    {
+      "launch": 7,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00012410499807447017
+    },
+    {
+      "launch": 7,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00020436578499627434
+    },
+    {
+      "launch": 7,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.3170043314287874e-05
+    },
+    {
+      "launch": 7,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.9665639012829175e-06
+    },
+    {
+      "launch": 7,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.367925439621498e-05
+    },
+    {
+      "launch": 7,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0004978624270841614
+    },
+    {
+      "launch": 7,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0005061908675587645
+    },
+    {
+      "launch": 7,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.540540924024565e-05
+    },
+    {
+      "launch": 7,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.514373949955946,
+      "score_difference": 4.61737769796855e-07,
+      "terminal_state_difference": 3.702063864352567e-07
+    },
+    {
+      "launch": 7,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00017145738463053561
+    },
+    {
+      "launch": 7,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.168860619945686,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.244651018505465e-09
+    },
+    {
+      "launch": 7,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.541453175795011,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3017981298778523e-08
+    },
+    {
+      "launch": 7,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.541453175795011,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8047616673632092e-08
+    },
+    {
+      "launch": 7,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.087195159810912,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.4121308566927837e-07
+    },
+    {
+      "launch": 7,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.805856681188048,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.024111710521083e-08
+    },
+    {
+      "launch": 7,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.971338463073929,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.1337666272481783e-07
+    },
+    {
+      "launch": 7,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.971338463073929,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3997345682525975e-07
+    },
+    {
+      "launch": 7,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.858205214252451,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.6819627702300295e-07
+    },
+    {
+      "launch": 7,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.755789171124073,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3721895797402794e-07
+    },
+    {
+      "launch": 7,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.823894627265267,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.3243239982994055e-07
+    },
+    {
+      "launch": 7,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.823894627265267,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.321161313214361e-07
+    },
+    {
+      "launch": 8,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0011339094342966982
+    },
+    {
+      "launch": 8,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.249886725362419e-05
+    },
+    {
+      "launch": 8,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.554191741920846e-06
+    },
+    {
+      "launch": 8,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011298792656955214
+    },
+    {
+      "launch": 8,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.139809219824933e-05
+    },
+    {
+      "launch": 8,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.860398859942496e-05
+    },
+    {
+      "launch": 8,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3063907613686254e-05
+    },
+    {
+      "launch": 8,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.3608584753319626e-05
+    },
+    {
+      "launch": 8,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.019487150021874e-05
+    },
+    {
+      "launch": 8,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00020189708313378407
+    },
+    {
+      "launch": 8,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011143589846884794
+    },
+    {
+      "launch": 8,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.613740760120219e-05
+    },
+    {
+      "launch": 8,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.842896152970397e-05
+    },
+    {
+      "launch": 8,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0008870304723048728
+    },
+    {
+      "launch": 8,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 6.371150098881837,
+      "score_difference": 2.599978898842892e-09,
+      "terminal_state_difference": 1.7661411000347016e-08
+    },
+    {
+      "launch": 8,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.727348033450053,
+      "score_difference": 5.546941395095928e-08,
+      "terminal_state_difference": 4.702868849904007e-08
+    },
+    {
+      "launch": 8,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.727348033450053,
+      "score_difference": 5.9575413047241454e-08,
+      "terminal_state_difference": 5.011249371023041e-08
+    },
+    {
+      "launch": 8,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.59351448087683,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.029268722646975e-09
+    },
+    {
+      "launch": 8,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.624542982729748,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.60719576220481e-09
+    },
+    {
+      "launch": 8,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.689895950929555,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.379949393116476e-08
+    },
+    {
+      "launch": 8,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.689895950929555,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8044797595327964e-08
+    },
+    {
+      "launch": 8,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.1735380540467535,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1323159743170663e-08
+    },
+    {
+      "launch": 8,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.096024668949937,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.052921826451893e-08
+    },
+    {
+      "launch": 8,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.135860097551193,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 9.021988844892803e-08
+    },
+    {
+      "launch": 8,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.135860097551193,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0890347645897691e-07
+    },
+    {
+      "launch": 8,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.71970467618598,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.9504923393375293e-08
+    },
+    {
+      "launch": 8,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.031422068281678,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.015435914998648e-08
+    },
+    {
+      "launch": 8,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.097849678341824,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.364160067713783e-07
+    },
+    {
+      "launch": 8,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.097849678341824,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.132105987901923e-07
+    },
+    {
+      "launch": 9,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0005529558297148185
+    },
+    {
+      "launch": 9,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.100859196283114e-05
+    },
+    {
+      "launch": 9,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.333400190475011e-05
+    },
+    {
+      "launch": 9,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.6726723924896945e-05
+    },
+    {
+      "launch": 9,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.6726723924896945e-05
+    },
+    {
+      "launch": 9,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001803532961665022
+    },
+    {
+      "launch": 9,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.6154829079749753e-05
+    },
+    {
+      "launch": 9,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.051476047847949e-06
+    },
+    {
+      "launch": 9,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.5703538525131435e-06
+    },
+    {
+      "launch": 9,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.86335612512168e-05
+    },
+    {
+      "launch": 9,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.507763055469852e-05
+    },
+    {
+      "launch": 9,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.346443910929203e-06
+    },
+    {
+      "launch": 9,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.4668069863675868e-05
+    },
+    {
+      "launch": 9,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0005541211375817978
+    },
+    {
+      "launch": 9,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.000291724616403255
+    },
+    {
+      "launch": 9,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00014379966588484727
+    },
+    {
+      "launch": 9,
+      "plan": 16,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0004937333842122138
+    },
+    {
+      "launch": 9,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00016131400370156257
+    },
+    {
+      "launch": 9,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.988845355690921,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1391555254647301e-08
+    },
+    {
+      "launch": 9,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.227676889575297,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.379755320054301e-08
+    },
+    {
+      "launch": 9,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.227676889575297,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.006116149923855e-08
+    },
+    {
+      "launch": 9,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.457585151808847,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.218833634250245e-07
+    },
+    {
+      "launch": 9,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.707825004923861,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.065067413909333e-08
+    },
+    {
+      "launch": 9,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.77585028902218,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.6523762269571307e-07
+    },
+    {
+      "launch": 9,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.77585028902218,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8344120888968973e-07
+    },
+    {
+      "launch": 9,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.206739929999899,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8186639706717642e-06
+    },
+    {
+      "launch": 9,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.837465785893888,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.1273811540444285e-07
+    },
+    {
+      "launch": 9,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.893021051821497,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 4.4348358052559433e-07
+    },
+    {
+      "launch": 9,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.893021051821497,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.777445550274706e-07
+    },
+    {
+      "launch": 10,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0004442975871683519
+    },
+    {
+      "launch": 10,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.132374233880356e-05
+    },
+    {
+      "launch": 10,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3711601535691962e-05
+    },
+    {
+      "launch": 10,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00010010984003705481
+    },
+    {
+      "launch": 10,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00011403899068829215
+    },
+    {
+      "launch": 10,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.38002072067545e-05
+    },
+    {
+      "launch": 10,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.518589386026122e-06
+    },
+    {
+      "launch": 10,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.855972113502414e-05
+    },
+    {
+      "launch": 10,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.21007742563706e-05
+    },
+    {
+      "launch": 10,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00030878350890040096
+    },
+    {
+      "launch": 10,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.204164319066006e-05
+    },
+    {
+      "launch": 10,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.5090453763466627e-05
+    },
+    {
+      "launch": 10,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.648064191565716e-06
+    },
+    {
+      "launch": 10,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0006561874722351702
+    },
+    {
+      "launch": 10,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00015006366169423302
+    },
+    {
+      "launch": 10,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.365946351962045,
+      "score_difference": 9.310489090808005e-08,
+      "terminal_state_difference": 7.889905262459251e-08
+    },
+    {
+      "launch": 10,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.365946351962045,
+      "score_difference": 1.0220147927952894e-07,
+      "terminal_state_difference": 8.605281109907992e-08
+    },
+    {
+      "launch": 10,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.867418158608147,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.9027501352297804e-08
+    },
+    {
+      "launch": 10,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.208605923248172,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.598210949311124e-09
+    },
+    {
+      "launch": 10,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.326563209302313,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.5249476287569905e-08
+    },
+    {
+      "launch": 10,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.326563209302313,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.0035590903310094e-08
+    },
+    {
+      "launch": 10,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.608423463580285,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7307185018466953e-08
+    },
+    {
+      "launch": 10,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.690789987478398,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.371641055238683e-08
+    },
+    {
+      "launch": 10,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.772439897710209,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.0271863537525405e-07
+    },
+    {
+      "launch": 10,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.772439897710209,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.243531553285493e-07
+    },
+    {
+      "launch": 10,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.221040978830165,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.59611690928341e-08
+    },
+    {
+      "launch": 10,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.638602391016622,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.418979507458403e-08
+    },
+    {
+      "launch": 10,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.706647655022628,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.7869722529771934e-07
+    },
+    {
+      "launch": 10,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.706647655022628,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.633816749726293e-07
+    },
+    {
+      "launch": 11,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00024646704732800284
+    },
+    {
+      "launch": 11,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00012762575905778117
+    },
+    {
+      "launch": 11,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.6106032631579836e-05
+    },
+    {
+      "launch": 11,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.39376348365861e-05
+    },
+    {
+      "launch": 11,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.39376348365861e-05
+    },
+    {
+      "launch": 11,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.599388995023105e-05
+    },
+    {
+      "launch": 11,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.03890568294851e-05
+    },
+    {
+      "launch": 11,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.784420414349899e-05
+    },
+    {
+      "launch": 11,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.048164822034739e-05
+    },
+    {
+      "launch": 11,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.678895072298463e-05
+    },
+    {
+      "launch": 11,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.186842407110202e-05
+    },
+    {
+      "launch": 11,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.626177314255187e-06
+    },
+    {
+      "launch": 11,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.946111005103674e-06
+    },
+    {
+      "launch": 11,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00010818629745823483
+    },
+    {
+      "launch": 11,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.783596218304602e-05
+    },
+    {
+      "launch": 11,
+      "plan": 15,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.54083556466978e-05
+    },
+    {
+      "launch": 11,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.620109461152708,
+      "score_difference": 4.1476317136357466e-07,
+      "terminal_state_difference": 3.3374267083274844e-07
+    },
+    {
+      "launch": 11,
+      "plan": 17,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00016488115999346853
+    },
+    {
+      "launch": 11,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.252655640156249,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.225418403005278e-09
+    },
+    {
+      "launch": 11,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.688682674022536,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.311694391465835e-08
+    },
+    {
+      "launch": 11,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.688682674022536,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.829079104316179e-08
+    },
+    {
+      "launch": 11,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.133940225080066,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3089059347493048e-07
+    },
+    {
+      "launch": 11,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.902225778545689,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.779457413699561e-08
+    },
+    {
+      "launch": 11,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.083588038326187,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.134384994827542e-07
+    },
+    {
+      "launch": 11,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.083588038326187,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.4146296045680629e-07
+    },
+    {
+      "launch": 11,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 4.911969105495311,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.3346305805537213e-07
+    },
+    {
+      "launch": 11,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.852632901913052,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2984192165887976e-07
+    },
+    {
+      "launch": 11,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.918464447195349,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.339626690745945e-07
+    },
+    {
+      "launch": 11,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.918464447195349,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.407663602989942e-07
+    },
+    {
+      "launch": 12,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0008844561170081588
+    },
+    {
+      "launch": 12,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002524220196248317
+    },
+    {
+      "launch": 12,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.048334151627529e-05
+    },
+    {
+      "launch": 12,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.127360261405258e-05
+    },
+    {
+      "launch": 12,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.083395686615425e-05
+    },
+    {
+      "launch": 12,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.411702497350792e-05
+    },
+    {
+      "launch": 12,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.110002933102372e-05
+    },
+    {
+      "launch": 12,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.386533254317147e-05
+    },
+    {
+      "launch": 12,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.770537430247689e-05
+    },
+    {
+      "launch": 12,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.349515524836871e-05
+    },
+    {
+      "launch": 12,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.424351890907623e-05
+    },
+    {
+      "launch": 12,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.900096880342211e-06
+    },
+    {
+      "launch": 12,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8460916650475667e-05
+    },
+    {
+      "launch": 12,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00013305335891311554
+    },
+    {
+      "launch": 12,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 6.033746346826843,
+      "score_difference": 5.898137089843658e-09,
+      "terminal_state_difference": 2.5966544470179542e-08
+    },
+    {
+      "launch": 12,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.474497472379767,
+      "score_difference": 6.933241891715625e-08,
+      "terminal_state_difference": 5.868794161756341e-08
+    },
+    {
+      "launch": 12,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 9.474497472379767,
+      "score_difference": 7.423280834473189e-08,
+      "terminal_state_difference": 6.237563354716258e-08
+    },
+    {
+      "launch": 12,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.542653748693009,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.3581673259704985e-09
+    },
+    {
+      "launch": 12,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.39663510218991,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.738018226177701e-09
+    },
+    {
+      "launch": 12,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.433270528948853,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3746880017938565e-08
+    },
+    {
+      "launch": 12,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 9.433270528948853,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.7796559720627556e-08
+    },
+    {
+      "launch": 12,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.088706992321574,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1995195503544664e-08
+    },
+    {
+      "launch": 12,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.88179709707986,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.299313755533717e-08
+    },
+    {
+      "launch": 12,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.91765128624689,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 8.999329281778046e-08
+    },
+    {
+      "launch": 12,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.91765128624689,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0695307217645222e-07
+    },
+    {
+      "launch": 12,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.628940103259498,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.160259121059994e-08
+    },
+    {
+      "launch": 12,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.8717709369380255,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.589295141803177e-08
+    },
+    {
+      "launch": 12,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.941565545336736,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.3630776979643997e-07
+    },
+    {
+      "launch": 12,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.941565545336736,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.0546442708612176e-07
+    },
+    {
+      "launch": 13,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.000333366396327639
+    },
+    {
+      "launch": 13,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0002598745681346992
+    },
+    {
+      "launch": 13,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.111589065731614e-05
+    },
+    {
+      "launch": 13,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.90064671606871e-05
+    },
+    {
+      "launch": 13,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.90064671606871e-05
+    },
+    {
+      "launch": 13,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.59863680378503e-05
+    },
+    {
+      "launch": 13,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.305660085621941e-05
+    },
+    {
+      "launch": 13,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.7683022105363655e-05
+    },
+    {
+      "launch": 13,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.3200333117024954e-05
+    },
+    {
+      "launch": 13,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00010939519933117481
+    },
+    {
+      "launch": 13,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00023394757965666813
+    },
+    {
+      "launch": 13,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.956888760518588e-05
+    },
+    {
+      "launch": 13,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8275898803210566e-05
+    },
+    {
+      "launch": 13,
+      "plan": 13,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 4.589477875150774,
+      "score_difference": 5.135832736868906e-07,
+      "terminal_state_difference": 6.658762554678788e-07
+    },
+    {
+      "launch": 13,
+      "plan": 14,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 7.315573679813959,
+      "score_difference": 3.099910905746128e-08,
+      "terminal_state_difference": 3.6455536367441255e-08
+    },
+    {
+      "launch": 13,
+      "plan": 15,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.315573679813959,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 4.161455113838031e-08
+    },
+    {
+      "launch": 13,
+      "plan": 16,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.315573679813959,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.2828509627668154e-08
+    },
+    {
+      "launch": 13,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.481785164605245,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.1297148994060535e-08
+    },
+    {
+      "launch": 13,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.304483287139138,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.9901122022835125e-08
+    },
+    {
+      "launch": 13,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.304483287139138,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.603947940078456e-08
+    },
+    {
+      "launch": 13,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.304483287139138,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.971417905646035e-08
+    },
+    {
+      "launch": 13,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.506528654978707,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.287482013864974e-08
+    },
+    {
+      "launch": 13,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.055624717857205,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.733339441566955e-08
+    },
+    {
+      "launch": 13,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.055624717857205,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.0686999019071663e-07
+    },
+    {
+      "launch": 13,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.055624717857205,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.0039823017393701e-07
+    },
+    {
+      "launch": 13,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.081678015587394,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.251133858967364e-08
+    },
+    {
+      "launch": 13,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.472650478769687,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.4663409775295122e-07
+    },
+    {
+      "launch": 13,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.472650478769687,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.540683059493176e-07
+    },
+    {
+      "launch": 13,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.472650478769687,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3756201272817634e-07
+    },
+    {
+      "launch": 14,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0003988275006518993
+    },
+    {
+      "launch": 14,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.23144462685854e-05
+    },
+    {
+      "launch": 14,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.724560872617964e-05
+    },
+    {
+      "launch": 14,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.949081350406729e-06
+    },
+    {
+      "launch": 14,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.949081350406729e-06
+    },
+    {
+      "launch": 14,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.474395269084887e-05
+    },
+    {
+      "launch": 14,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.69779400982706e-05
+    },
+    {
+      "launch": 14,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.344340212318997e-06
+    },
+    {
+      "launch": 14,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.2438680878932313e-06
+    },
+    {
+      "launch": 14,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.480324876947165e-05
+    },
+    {
+      "launch": 14,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00016764837538973953
+    },
+    {
+      "launch": 14,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.1240891558103066e-05
+    },
+    {
+      "launch": 14,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.968239101415083e-05
+    },
+    {
+      "launch": 14,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00042859053300203787
+    },
+    {
+      "launch": 14,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00031075133251323717
+    },
+    {
+      "launch": 14,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 6.918086767933133,
+      "score_difference": 5.15859873928548e-07,
+      "terminal_state_difference": 4.334519054793873e-07
+    },
+    {
+      "launch": 14,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 6.918086767933133,
+      "score_difference": 5.568154399782088e-07,
+      "terminal_state_difference": 4.6584784740844043e-07
+    },
+    {
+      "launch": 14,
+      "plan": 17,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 5.068412709127823,
+      "score_difference": 4.438185285948748e-08,
+      "terminal_state_difference": 8.405430929059321e-08
+    },
+    {
+      "launch": 14,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.97131332023859,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.1421902857431405e-08
+    },
+    {
+      "launch": 14,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.97131332023859,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.499323980056147e-08
+    },
+    {
+      "launch": 14,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.97131332023859,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.864283065231234e-08
+    },
+    {
+      "launch": 14,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.571597280735902,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.102146065169791e-08
+    },
+    {
+      "launch": 14,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.643836211848788,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.789188665758729e-08
+    },
+    {
+      "launch": 14,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.643836211848788,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.2817814898369306e-07
+    },
+    {
+      "launch": 14,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.643836211848788,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.255722832382844e-07
+    },
+    {
+      "launch": 14,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.185829856566132,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3580554397995002e-07
+    },
+    {
+      "launch": 14,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.966557088941014,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.3216664235548023e-07
+    },
+    {
+      "launch": 14,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.978648485171164,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 3.196960633999879e-07
+    },
+    {
+      "launch": 14,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.978648485171164,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.040130653886308e-07
+    },
+    {
+      "launch": 15,
+      "plan": 0,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0003257613023447403
+    },
+    {
+      "launch": 15,
+      "plan": 1,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.00023588653150918848
+    },
+    {
+      "launch": 15,
+      "plan": 2,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.839651990693142e-06
+    },
+    {
+      "launch": 15,
+      "plan": 3,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8769607506907704e-05
+    },
+    {
+      "launch": 15,
+      "plan": 4,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.8769607506907704e-05
+    },
+    {
+      "launch": 15,
+      "plan": 5,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 6.271763555465437e-05
+    },
+    {
+      "launch": 15,
+      "plan": 6,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2470554419663493e-05
+    },
+    {
+      "launch": 15,
+      "plan": 7,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.21678632401634e-05
+    },
+    {
+      "launch": 15,
+      "plan": 8,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.605041332410135e-05
+    },
+    {
+      "launch": 15,
+      "plan": 9,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 9.953626152281458e-05
+    },
+    {
+      "launch": 15,
+      "plan": 10,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.7203328333366166e-05
+    },
+    {
+      "launch": 15,
+      "plan": 11,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.672423199767131e-06
+    },
+    {
+      "launch": 15,
+      "plan": 12,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.840321976899546e-06
+    },
+    {
+      "launch": 15,
+      "plan": 13,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0001428094776713129
+    },
+    {
+      "launch": 15,
+      "plan": 14,
+      "rk4_status": "safety_cutoff",
+      "rk8_status": "safety_cutoff",
+      "minimum_radius": 2.1,
+      "score_difference": 0.0,
+      "terminal_state_difference": 0.0005933298809845944
+    },
+    {
+      "launch": 15,
+      "plan": 15,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.633795329436147,
+      "score_difference": 2.089595696475044e-07,
+      "terminal_state_difference": 1.750766482899735e-07
+    },
+    {
+      "launch": 15,
+      "plan": 16,
+      "rk4_status": "flying",
+      "rk8_status": "flying",
+      "minimum_radius": 8.633795329436147,
+      "score_difference": 2.2221866302629678e-07,
+      "terminal_state_difference": 1.8608783847184895e-07
+    },
+    {
+      "launch": 15,
+      "plan": 17,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.217872040945673,
+      "score_difference": 0.0,
+      "terminal_state_difference": 5.463323216048366e-08
+    },
+    {
+      "launch": 15,
+      "plan": 18,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.54981095207976,
+      "score_difference": 0.0,
+      "terminal_state_difference": 8.50368575555649e-09
+    },
+    {
+      "launch": 15,
+      "plan": 19,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.627971448943926,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.4362194039895257e-08
+    },
+    {
+      "launch": 15,
+      "plan": 20,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.627971448943926,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.8665652074266745e-08
+    },
+    {
+      "launch": 15,
+      "plan": 21,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 6.118321362721515,
+      "score_difference": 0.0,
+      "terminal_state_difference": 2.5866895292381287e-08
+    },
+    {
+      "launch": 15,
+      "plan": 22,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.08072407274548,
+      "score_difference": 0.0,
+      "terminal_state_difference": 4.2514079368061175e-08
+    },
+    {
+      "launch": 15,
+      "plan": 23,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.116258113602909,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 1.039302581773427e-07
+    },
+    {
+      "launch": 15,
+      "plan": 24,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 8.116258113602909,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2195148890725704e-07
+    },
+    {
+      "launch": 15,
+      "plan": 25,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 5.734843080191656,
+      "score_difference": 0.0,
+      "terminal_state_difference": 7.511821387140571e-08
+    },
+    {
+      "launch": 15,
+      "plan": 26,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.093498110517364,
+      "score_difference": 0.0,
+      "terminal_state_difference": 1.2000877269713328e-07
+    },
+    {
+      "launch": 15,
+      "plan": 27,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.169232675983051,
+      "score_difference": 2.842170943040401e-14,
+      "terminal_state_difference": 2.8631333393036584e-07
+    },
+    {
+      "launch": 15,
+      "plan": 28,
+      "rk4_status": "escaped",
+      "rk8_status": "escaped",
+      "minimum_radius": 7.169232675983051,
+      "score_difference": 0.0,
+      "terminal_state_difference": 3.5356243088813244e-07
+    }
+  ],
+  "adaptive_references": [
+    {
+      "launch": 0,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9205161164955986,
+        3.724420870450779,
+        3.326365562184322,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0004284559008590483,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.4682686240163889e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 0,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1000000000000005,
+        -0.9248439532348582,
+        -0.4780735865480268,
+        0.18154987435533193,
+        0.6028341113842758
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1000000000000005,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.761978971570599e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 3.57730164712855e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "launch": 0,
+      "plan": 8,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8164913035589444,
+        -0.8376916115530244,
+        -0.09563684804217955,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.078677352268521e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.0697351777474466e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 0,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        29.82335611228694,
+        0.15990319439419845,
+        3.6544522131100097,
+        2.138808973585996,
+        0.7
+      ],
+      "score": -17.603752018290084,
+      "minimum_radius": 8.26335311680322,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 9.597243888492812e-08,
+        "score_error": 1.1435551527938514e-07,
+        "minimum_radius_error": 1.6561827465011447e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 5.9977836031066545e-09,
+        "score_error": 7.1463936990312504e-09,
+        "minimum_radius_error": 1.0440714959258912e-10
+      }
+    },
+    {
+      "launch": 1,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1000000000000005,
+        -0.9277538769023579,
+        3.667510476692328,
+        3.200969313575263,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1000000000000005,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.000215172592760271,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.8951987067760143e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "launch": 1,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9863348149354306,
+        -1.727177965970941,
+        -0.49254492785320786,
+        0.690428706313381
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 7.660437985967938e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.54580787906189e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 1,
+      "plan": 12,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8514760493197377,
+        0.08395778115405458,
+        0.414567398148557,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 5.92052281589428e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 7.587464656566567e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 1,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        28.284904501936687,
+        0.12864728656828797,
+        3.5796965567313057,
+        1.7749327557807237,
+        0.7
+      ],
+      "score": -19.66717606303435,
+      "minimum_radius": 9.627129023739435,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 8.015162933361353e-08,
+        "score_error": 9.522764798930439e-08,
+        "minimum_radius_error": 1.4407675053007551e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 5.0089852265955415e-09,
+        "score_error": 5.950901993401203e-09,
+        "minimum_radius_error": 9.104716980345984e-11
+      }
+    },
+    {
+      "launch": 2,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9681705551507923,
+        2.9350848034853048,
+        1.6811488607044542,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00016249254881728348,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.512703742587387e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 2,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9239883321767758,
+        0.8022295587459202,
+        0.6669671343024562,
+        0.374101425187342
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.944309605590334e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.7530872450377544e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 2,
+      "plan": 16,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.7474336005274024,
+        2.573163892640891,
+        2.6331576939794332,
+        0.6344158917718111
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.000200102909347466,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.2715006563857045e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 2,
+      "plan": 20,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.5981218221590545,
+        5.1004197820413575,
+        5.167248403425551,
+        0.7
+      ],
+      "score": 149.0,
+      "minimum_radius": 4.194238580660723,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 4.160165650191061e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 6.225345208221711e-07
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 2.649173715951747e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 3.967861239573267e-08
+      }
+    },
+    {
+      "launch": 2,
+      "plan": 22,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.5877635302464966,
+        5.033207459042386,
+        7.064592404186796,
+        0.3499999999999999
+      ],
+      "score": 173.34,
+      "minimum_radius": 3.8386652773489427,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 1.5969057360010197e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.5184143218327506e-06
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 1.0098322897889034e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 9.699142600183563e-08
+      }
+    },
+    {
+      "launch": 3,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9285282892877548,
+        3.052099100913704,
+        2.0677553306267935,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00018813677178597388,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 5.895989209858676e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 3,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8956289161105534,
+        0.3249069462464618,
+        0.5244365735936083,
+        0.45696537809869764
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.637639826552629e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.7951333360910482e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 3,
+      "plan": 16,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8272142941322825,
+        2.8898228689398238,
+        5.609116815051665,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00015427547290347565,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.257249580297273e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 3,
+      "plan": 24,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.9912181788915726,
+        8.43715324324597,
+        3.221215213294778,
+        0.7
+      ],
+      "score": 149.64,
+      "minimum_radius": 5.691008851007929,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 2.2562191936970066e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 6.928664753047542e-09
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 1.453187126188027e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.0177307885328446e-09
+      }
+    },
+    {
+      "launch": 4,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1000000000000005,
+        -0.9081633597411374,
+        3.9949813147384674,
+        4.395362827517904,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1000000000000005,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00032743748945640583,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.2440923815026927e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "launch": 4,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8609639286630968,
+        0.5354619301977316,
+        0.8260823064372761,
+        0.5489722941766387
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.007256767266874e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.100671630838157e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 4,
+      "plan": 8,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.7573937859235911,
+        0.07273255186996616,
+        0.7573431288254304,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.1910107994617114e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.4339722160557926e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 4,
+      "plan": 16,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.3440253126502241,
+        4.0049465426922755,
+        1.9816984235219404,
+        0.7
+      ],
+      "score": 148.92,
+      "minimum_radius": 7.25339920885719,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 4.587561552860109e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 7.962022152696591e-10
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 2.869487758516698e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.8185455625571194e-11
+      }
+    },
+    {
+      "launch": 5,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9228618233099162,
+        3.042482364130406,
+        2.0562722548179626,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00019913532639015408,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 5.874798922567148e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 5,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.88162285290329,
+        0.522952281161309,
+        0.6326193382209297,
+        0.4366726951361699
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.2417869019509808e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 8.088346846735206e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 5,
+      "plan": 12,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.6885340398729625,
+        0.8938965208226525,
+        1.3388090780687982,
+        0.6897942913918862
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.047163654173012e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 6.668510066365485e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 5,
+      "plan": 16,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8195331813738307,
+        2.8760070865771388,
+        5.286240677210742,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00022950442084435085,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.0597346402629881e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 6,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8877635990269652,
+        3.8396546788160846,
+        4.962417841830362,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0002484778792387621,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 8.345764557804447e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 6,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9132185470049456,
+        -1.0650397459676977,
+        -0.08512187308943557,
+        0.693616625863239
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.335144949527912e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 3.9642424625174755e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 6,
+      "plan": 16,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.34674326940626443,
+        3.8991071581788552,
+        1.27783552586236,
+        0.7
+      ],
+      "score": 149.16,
+      "minimum_radius": 9.008699178056952,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 1.8903834053674018e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 5.472955422192172e-11
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 1.184160547396118e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 2.7551294579097885e-12
+      }
+    },
+    {
+      "launch": 6,
+      "plan": 20,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.697385490178972,
+        8.02435898447945,
+        1.6113540725929332,
+        0.7
+      ],
+      "score": 149.64,
+      "minimum_radius": 8.960010013619906,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 2.830198830849895e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 3.120549152413332e-09
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 1.7490258130692382e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.7034906818480522e-10
+      }
+    },
+    {
+      "launch": 7,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9496014845487848,
+        3.2193148847041058,
+        2.294445614593855,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.000867685389610573,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 6.679337061599178e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 7,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9866403218518264,
+        -1.3334051498786694,
+        -0.3166872621394538,
+        0.6114328504659906
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.142262001705088e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.8453526444695e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 7,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        8.581662212501243,
+        -0.15738976890582632,
+        3.074353580873636,
+        3.2691296605360014,
+        0.7
+      ],
+      "score": -43.720117264554204,
+      "minimum_radius": 8.514373950348853,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 3.9484796232613917e-07,
+        "score_error": 4.924717913468157e-07,
+        "minimum_radius_error": 6.262943941237609e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 2.464157589088245e-08,
+        "score_error": 3.0734021549960744e-08,
+        "minimum_radius_error": 3.929070402364232e-10
+      }
+    },
+    {
+      "launch": 7,
+      "plan": 24,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.9044712273565496,
+        9.99122430486997,
+        2.385163988140423,
+        0.7
+      ],
+      "score": 149.64,
+      "minimum_radius": 7.9713384602584805,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 1.492466328301134e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 5.186463170048228e-08
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 9.273176004853667e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 2.815448318926883e-09
+      }
+    },
+    {
+      "launch": 8,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9236574321159674,
+        3.763206799006495,
+        3.470016887770921,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0012317083314604682,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 9.779889716377e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 8,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9833443097129975,
+        -1.7177827155365353,
+        -0.48155284114605107,
+        0.6996180839156874
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 7.341361025670068e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.015518058451349e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 8,
+      "plan": 8,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.853185947745408,
+        -1.7505578356518636,
+        -1.0057105891431537,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 6.148556322660426e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.2906917263855178e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 8,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        30.918241059101483,
+        0.15941611171145303,
+        3.686213350086648,
+        1.7170890427927314,
+        0.7
+      ],
+      "score": -16.495630313608466,
+      "minimum_radius": 9.727348033510385,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 5.345417264379648e-08,
+        "score_error": 6.354784432005545e-08,
+        "minimum_radius_error": 9.493597019627487e-10
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 3.3416789335660724e-09,
+        "score_error": 3.972431272813992e-09,
+        "minimum_radius_error": 6.033218369339011e-11
+      }
+    },
+    {
+      "launch": 9,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9519401981666911,
+        3.3037810251625235,
+        2.285443876923276,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0005963058751272676,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.3350045412449134e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 9,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9463395066138575,
+        -0.24695839012839252,
+        0.22967775038429708,
+        0.5255246571715713
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.8546737039447656e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.8200131145507115e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 9,
+      "plan": 12,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.7803649736400384,
+        0.5230709853653494,
+        0.9016803833312123,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.6435201162522404e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.767131298846536e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 9,
+      "plan": 16,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8488983568121854,
+        3.13046217174595,
+        7.458813737195872,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0005337132609648521,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 3.9979876752638255e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 10,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.934603149512962,
+        3.6550944172761657,
+        3.0626923384589078,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0004659765176643349,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.1678930495983018e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 10,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9844014430279556,
+        -1.5042322859334378,
+        -0.37659055663798396,
+        0.6670632174718278
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00012240924425910293,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 8.370253570810782e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 10,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        25.594994095233773,
+        0.1001522783775088,
+        3.5461814767254984,
+        1.9333997541174448,
+        0.7
+      ],
+      "score": -22.84149934136828,
+      "minimum_radius": 9.365946352056556,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 9.178770099538269e-08,
+        "score_error": 1.090123333824522e-07,
+        "minimum_radius_error": 1.4959109506662571e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 5.734889896302775e-09,
+        "score_error": 6.810854102923258e-09,
+        "minimum_radius_error": 9.451106564029033e-11
+      }
+    },
+    {
+      "launch": 10,
+      "plan": 20,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.6023319980591595,
+        7.6883770165177765,
+        1.7220769612145055,
+        0.7
+      ],
+      "score": 149.48,
+      "minimum_radius": 9.326563208937442,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 3.202156317883009e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 6.42877395762298e-09
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 1.9859722755199982e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 3.6487080024016905e-10
+      }
+    },
+    {
+      "launch": 11,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9537886799730104,
+        3.2406588850528175,
+        2.296572747108164,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00024866563538017417,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.198588052171324e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 11,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.99580964536418,
+        -1.4470984754537772,
+        -0.3731450407533752,
+        0.6191213149322682
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 6.71688555636818e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 3.231220727095696e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 11,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        8.620109483365914,
+        -0.15551943657590403,
+        3.0880604119094692,
+        3.2374509335497375,
+        0.7
+      ],
+      "score": -43.651498305193115,
+      "minimum_radius": 8.620109483365914,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 3.5595587632997194e-07,
+        "score_error": 4.4236886509452233e-07,
+        "minimum_radius_error": 3.5595587632997194e-07
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 2.2213205497223498e-08,
+        "score_error": 2.7605693730947678e-08,
+        "minimum_radius_error": 2.2213205497223498e-08
+      }
+    },
+    {
+      "launch": 11,
+      "plan": 24,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.9026760811151414,
+        10.10574953335532,
+        2.3627393948490685,
+        0.7
+      ],
+      "score": 149.64,
+      "minimum_radius": 8.083588035489893,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 1.508413483009008e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 5.1975526105252357e-08
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 9.378387844094505e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 2.8362947546156647e-09
+      }
+    },
+    {
+      "launch": 12,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9187770979968231,
+        3.709908994536564,
+        3.4300436713337787,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0009589348143450582,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 7.447869733689938e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 12,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9689542058761487,
+        -1.5283985453653304,
+        -0.38183367441825505,
+        0.6865738370361064
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 9.715080506456086e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 6.3168481984066105e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 12,
+      "plan": 8,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1000000000000005,
+        -0.8473386106669245,
+        -1.624801622361759,
+        -0.8779637291071515,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1000000000000005,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 4.029771077063149e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.592336468154599e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "launch": 12,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        31.399415501561062,
+        0.16551812749042275,
+        3.6484351708492095,
+        1.7357585067869996,
+        0.7
+      ],
+      "score": -15.911862447800317,
+      "minimum_radius": 9.474497472461602,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 6.65345645245452e-08,
+        "score_error": 7.918204403267737e-08,
+        "minimum_radius_error": 1.2936087756543202e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 4.158930977382624e-09,
+        "score_error": 4.949235687945475e-09,
+        "minimum_radius_error": 8.183498323433014e-11
+      }
+    },
+    {
+      "launch": 13,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8924236853009931,
+        3.8058350471102074,
+        4.229395949959436,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.00033430403572320966,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 7.073852510863787e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 13,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8493278000149709,
+        0.3282381798101002,
+        0.7333437270984782,
+        0.5639809141185458
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.031674024771668e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.3102730870295787e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 13,
+      "plan": 12,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.8135496595315937,
+        1.0675069935076826,
+        1.8113265925749846,
+        0.7
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.2046365115935274e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 3.7704663127247073e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 13,
+      "plan": 16,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.34705493715564556,
+        3.8592528234819645,
+        1.8392078809277443,
+        0.7
+      ],
+      "score": 149.0,
+      "minimum_radius": 7.315573679894343,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 4.56856508179726e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.2775815960708314e-09
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 2.8571411903044464e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 8.038458787495983e-11
+      }
+    },
+    {
+      "launch": 14,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.910986715057822,
+        3.5288240496988896,
+        2.946065557048533,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0004183506181603125,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.952311750841318e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 14,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.874528508616129,
+        0.3221812653086481,
+        0.6249344870507946,
+        0.5191469652397779
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.0502630351405529e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 1.5535490009987996e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 14,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        25.94339916275524,
+        0.12171186078057233,
+        3.474155525461768,
+        2.7268848389772256,
+        0.7
+      ],
+      "score": -22.174332864810072,
+      "minimum_radius": 6.9180867685338,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 4.968905251701017e-07,
+        "score_error": 5.939196690007975e-07,
+        "minimum_radius_error": 9.603787987089163e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 3.104267776166125e-08,
+        "score_error": 3.71042290225887e-08,
+        "minimum_radius_error": 6.006670716374174e-10
+      }
+    },
+    {
+      "launch": 14,
+      "plan": 20,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.7088486300955932,
+        6.887364623692752,
+        2.2737530166938438,
+        0.7
+      ],
+      "score": 149.56,
+      "minimum_radius": 6.971313320127418,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 5.195055496898249e-08,
+        "score_error": 0.0,
+        "minimum_radius_error": 2.8283748676471987e-09
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 3.3077243166701464e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.1117151643702528e-10
+      }
+    },
+    {
+      "launch": 15,
+      "plan": 0,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9258715447808586,
+        3.4502045981077134,
+        2.7981356044921335,
+        0.0
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 0.0003345526725124781,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 8.791370167737789e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 15,
+      "plan": 4,
+      "status": "safety_cutoff",
+      "terminal": [
+        2.1,
+        -0.9532512059311854,
+        -1.068904659849864,
+        -0.15724112239441435,
+        0.625381311965628
+      ],
+      "score": -1001.14,
+      "minimum_radius": 2.1,
+      "4": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.0841431478402228e-05,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      },
+      "8": {
+        "status": "safety_cutoff",
+        "terminal_state_error": 2.071823971494524e-06,
+        "score_error": 0.0,
+        "minimum_radius_error": 0.0
+      }
+    },
+    {
+      "launch": 15,
+      "plan": 16,
+      "status": "flying",
+      "terminal": [
+        22.90369783417523,
+        0.06715121105620502,
+        3.3624447681266414,
+        2.125619340857193,
+        0.7
+      ],
+      "score": -26.09263524253422,
+      "minimum_radius": 8.63379532964963,
+      "4": {
+        "status": "flying",
+        "terminal_state_error": 1.9848653920462311e-07,
+        "score_error": 2.37024440963296e-07,
+        "minimum_radius_error": 3.397992998088739e-09
+      },
+      "8": {
+        "status": "flying",
+        "terminal_state_error": 1.239870073277416e-08,
+        "score_error": 1.480577793699922e-08,
+        "minimum_radius_error": 2.134825649591221e-10
+      }
+    },
+    {
+      "launch": 15,
+      "plan": 24,
+      "status": "escaped",
+      "terminal": [
+        20.000000000000004,
+        0.9203217652172191,
+        10.372077786896455,
+        2.2828499038813095,
+        0.7
+      ],
+      "score": 149.72,
+      "minimum_radius": 8.116258112276876,
+      "4": {
+        "status": "escaped",
+        "terminal_state_error": 1.300115375357791e-07,
+        "score_error": 0.0,
+        "minimum_radius_error": 2.5671232251056608e-08
+      },
+      "8": {
+        "status": "escaped",
+        "terminal_state_error": 8.060048628522054e-09,
+        "score_error": 0.0,
+        "minimum_radius_error": 1.326032617043893e-09
+      }
+    }
+  ],
+  "elapsed_seconds": 6.559925708977971
+}

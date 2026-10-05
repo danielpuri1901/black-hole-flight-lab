@@ -1,0 +1,291 @@
+{
+  "groups": [
+    {
+      "split": "test",
+      "controller": "coast",
+      "flights": 32,
+      "escaped": 0,
+      "safety_cutoff": 30,
+      "timeout": 2,
+      "success_fraction": 0.0,
+      "wilson_95": [
+        0.0,
+        0.1071791982550706
+      ],
+      "mean_fuel_used": 0.0,
+      "median_minimum_radius": 2.1,
+      "mean_decision_seconds": 8.897920424985413e-07,
+      "mean_flight_compute_seconds": 1.4042030670680106e-05
+    },
+    {
+      "split": "test",
+      "controller": "radial",
+      "flights": 32,
+      "escaped": 14,
+      "safety_cutoff": 10,
+      "timeout": 8,
+      "success_fraction": 0.4375,
+      "wilson_95": [
+        0.2816533111504036,
+        0.6067440886314801
+      ],
+      "mean_fuel_used": 0.9999999999999998,
+      "median_minimum_radius": 7.267509352631999,
+      "mean_decision_seconds": 2.147873599136147e-06,
+      "mean_flight_compute_seconds": 9.739264351082966e-05
+    },
+    {
+      "split": "test",
+      "controller": "classical",
+      "flights": 32,
+      "escaped": 32,
+      "safety_cutoff": 0,
+      "timeout": 0,
+      "success_fraction": 1.0,
+      "wilson_95": [
+        0.8928208017449293,
+        1.0
+      ],
+      "mean_fuel_used": 0.2444783906240357,
+      "median_minimum_radius": 5.1402832103093425,
+      "mean_decision_seconds": 0.33726198491742143,
+      "mean_flight_compute_seconds": 11.213960998504263
+    },
+    {
+      "split": "test",
+      "controller": "learned",
+      "flights": 32,
+      "escaped": 30,
+      "safety_cutoff": 2,
+      "timeout": 0,
+      "success_fraction": 0.9375,
+      "wilson_95": [
+        0.7985287685584542,
+        0.982689432968359
+      ],
+      "mean_fuel_used": 0.3269271541428344,
+      "median_minimum_radius": 5.740500207134707,
+      "mean_decision_seconds": 0.008979183511882358,
+      "mean_flight_compute_seconds": 0.26011572235984204
+    },
+    {
+      "split": "test",
+      "controller": "checked",
+      "flights": 32,
+      "escaped": 32,
+      "safety_cutoff": 0,
+      "timeout": 0,
+      "success_fraction": 1.0,
+      "wilson_95": [
+        0.8928208017449293,
+        1.0
+      ],
+      "mean_fuel_used": 0.2509839449106651,
+      "median_minimum_radius": 5.102299190841377,
+      "mean_decision_seconds": 0.03550848467838626,
+      "mean_flight_compute_seconds": 1.1928631571645383
+    },
+    {
+      "split": "test",
+      "controller": "hybrid",
+      "flights": 32,
+      "escaped": 32,
+      "safety_cutoff": 0,
+      "timeout": 0,
+      "success_fraction": 1.0,
+      "wilson_95": [
+        0.8928208017449293,
+        1.0
+      ],
+      "mean_fuel_used": 0.23691433223309272,
+      "median_minimum_radius": 5.120346024503861,
+      "mean_decision_seconds": 0.1057279891537262,
+      "mean_flight_compute_seconds": 3.584839632243529
+    },
+    {
+      "split": "test",
+      "controller": "random_checked",
+      "flights": 32,
+      "escaped": 30,
+      "safety_cutoff": 2,
+      "timeout": 0,
+      "success_fraction": 0.9375,
+      "wilson_95": [
+        0.7985287685584542,
+        0.982689432968359
+      ],
+      "mean_fuel_used": 0.971967170084276,
+      "median_minimum_radius": 5.090369972983966,
+      "mean_decision_seconds": 0.05723848253082151,
+      "mean_flight_compute_seconds": 1.2717675337316905
+    },
+    {
+      "split": "stress",
+      "controller": "coast",
+      "flights": 32,
+      "escaped": 0,
+      "safety_cutoff": 32,
+      "timeout": 0,
+      "success_fraction": 0.0,
+      "wilson_95": [
+        0.0,
+        0.1071791982550706
+      ],
+      "mean_fuel_used": 0.0,
+      "median_minimum_radius": 2.1,
+      "mean_decision_seconds": 7.447638552807365e-07,
+      "mean_flight_compute_seconds": 5.562455044128001e-06
+    },
+    {
+      "split": "stress",
+      "controller": "radial",
+      "flights": 32,
+      "escaped": 9,
+      "safety_cutoff": 12,
+      "timeout": 11,
+      "success_fraction": 0.28125,
+      "wilson_95": [
+        0.15564580497742764,
+        0.45374509425916565
+      ],
+      "mean_fuel_used": 0.9565155773650623,
+      "median_minimum_radius": 4.5428111680584795,
+      "mean_decision_seconds": 2.1176949793152154e-06,
+      "mean_flight_compute_seconds": 8.18621465441538e-05
+    },
+    {
+      "split": "stress",
+      "controller": "classical",
+      "flights": 32,
+      "escaped": 28,
+      "safety_cutoff": 4,
+      "timeout": 0,
+      "success_fraction": 0.875,
+      "wilson_95": [
+        0.7193169451834978,
+        0.9502986561251991
+      ],
+      "mean_fuel_used": 0.31159982632283245,
+      "median_minimum_radius": 4.038013085973131,
+      "mean_decision_seconds": 0.3102231106277759,
+      "mean_flight_compute_seconds": 7.755577765694397
+    },
+    {
+      "split": "stress",
+      "controller": "learned",
+      "flights": 32,
+      "escaped": 14,
+      "safety_cutoff": 18,
+      "timeout": 0,
+      "success_fraction": 0.4375,
+      "wilson_95": [
+        0.2816533111504036,
+        0.6067440886314801
+      ],
+      "mean_fuel_used": 0.3374541225837757,
+      "median_minimum_radius": 2.1,
+      "mean_decision_seconds": 0.009838748155178953,
+      "mean_flight_compute_seconds": 0.16633633599849418
+    },
+    {
+      "split": "stress",
+      "controller": "checked",
+      "flights": 32,
+      "escaped": 23,
+      "safety_cutoff": 9,
+      "timeout": 0,
+      "success_fraction": 0.71875,
+      "wilson_95": [
+        0.5462549057408342,
+        0.8443541950225723
+      ],
+      "mean_fuel_used": 0.3539453673307371,
+      "median_minimum_radius": 3.95250053873301,
+      "mean_decision_seconds": 0.034169860608686556,
+      "mean_flight_compute_seconds": 0.7805677532796835
+    },
+    {
+      "split": "stress",
+      "controller": "hybrid",
+      "flights": 32,
+      "escaped": 28,
+      "safety_cutoff": 4,
+      "timeout": 0,
+      "success_fraction": 0.875,
+      "wilson_95": [
+        0.7193169451834978,
+        0.9502986561251991
+      ],
+      "mean_fuel_used": 0.3697081079661543,
+      "median_minimum_radius": 3.95386468355967,
+      "mean_decision_seconds": 0.09700546757310206,
+      "mean_flight_compute_seconds": 2.510016473454016
+    },
+    {
+      "split": "stress",
+      "controller": "random_checked",
+      "flights": 32,
+      "escaped": 21,
+      "safety_cutoff": 11,
+      "timeout": 0,
+      "success_fraction": 0.65625,
+      "wilson_95": [
+        0.4831108797896222,
+        0.7958956207556682
+      ],
+      "mean_fuel_used": 0.8209638962738399,
+      "median_minimum_radius": 4.0096471702236824,
+      "mean_decision_seconds": 0.05772185582098692,
+      "mean_flight_compute_seconds": 0.9560182370350958
+    }
+  ],
+  "paired_raw_checked": [
+    {
+      "split": "test",
+      "flights": 32,
+      "rescued": 2,
+      "harmed": 0,
+      "both_escaped": 30,
+      "neither_escaped": 0
+    },
+    {
+      "split": "stress",
+      "flights": 32,
+      "rescued": 9,
+      "harmed": 0,
+      "both_escaped": 14,
+      "neither_escaped": 9
+    }
+  ],
+  "manifest": {
+    "sha256": {
+      "pilot_physics.py": "fda5353bc2ea5335acc908d2f4e84316180396b34395d80b900eff92c2892d5f",
+      "pilot_control.py": "b8be07868c9a88704530a962d80530aa7df77ebf4015f286a20c204da1add6c3",
+      "pilot_model.py": "0aeddd034dbba7979f3a3b5f723fa454176819187fa23c2d8e130758b638d4de",
+      "missions": "861955be5a146cec2a55af5723a0319894165f9a5bcc95a3dad7b58f52e7fc00",
+      "weights": "f0e554b39b0536862d2238e5bf004754d9f2e20ded28d95daecafae0dd9d99ff"
+    },
+    "python": "3.14.0",
+    "numpy": "2.4.2",
+    "candidate_count": 16,
+    "machine": "arm64",
+    "workers": 2,
+    "blas_thread_limit": "1",
+    "timing_note": "Observed wall time on a shared computer, not an isolated latency benchmark.",
+    "controller_seed": "91000 + mission index, shared across controllers",
+    "test_splits": [
+      "test",
+      "stress"
+    ]
+  },
+  "limitations": [
+    "The full benchmark uses one fit seed; two more fits have a separate sensitivity check.",
+    "Small fixed mission samples.",
+    "Numerical look-ahead is not a formal safety proof.",
+    "Classical teacher uses more candidates than learned selection.",
+    "Random checked and learned checked each score 16 proposals.",
+    "Raw control generates 16 proposals but executes the first without scoring.",
+    "Hybrid also scores 29 hand-designed burn/coast plans.",
+    "Fuel averages include failed flights; compare success and fuel together."
+  ]
+}
